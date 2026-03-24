@@ -1,0 +1,231 @@
+% Appendix A: Code Samples
+
+\chapter{Code Samples}
+
+\section{Backend Code Samples}
+
+\subsection{JWT Authentication Implementation}
+
+\begin{lstlisting}
+// JwtAuthenticationFilter.java
+@Component
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
+    private final TokenProvider tokenProvider;
+    private final UserRepository userRepository;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain)
+            throws ServletException, IOException {
+
+        final String requestTokenHeader = request.getHeader("Authorization");
+
+        String username = null;
+        String jwtToken = null;
+
+        if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
+            jwtToken = requestTokenHeader.substring(7);
+            try {
+                username = tokenProvider.getUsernameFromToken(jwtToken);
+            } catch (IllegalArgumentException e) {
+                logger.error("Unable to get JWT Token");
+            } catch (ExpiredJwtException e) {
+                logger.error("JWT Token has expired");
+            }
+        }
+
+        if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+            UserDetails userDetails = userRepository.findByLogin(username);
+
+            if (tokenProvider.validateToken(jwtToken, userDetails)) {
+                UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(
+                        userDetails, null, userDetails.getAuthorities());
+
+                authenticationToken.setDetails(
+                    new WebAuthenticationDetailsSource().buildDetails(request));
+
+                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            }
+        }
+        filterChain.doFilter(request, response);
+    }
+}
+\end{lstlisting}
+
+\subsection{JSONB Entity Mapping}
+
+\begin{lstlisting}
+// RapportRequest.java - JSONB field mapping
+@Entity
+@Table(name = "rapport_request")
+@TypeDefs({
+    @TypeDef(name = "jsonb", typeClass = JsonBinaryType.class),
+})
+public class RapportRequest extends AbstractAuditingEntity {
+
+    @Type(type = "jsonb")
+    @Column(columnDefinition = "jsonb")
+    private Object reportLineData;
+
+    @Type(type = "jsonb")
+    @Column(columnDefinition = "jsonb")
+    private Object filedefinition;
+
+    // getters and setters
+}
+\end{lstlisting}
+
+\section{Frontend Code Samples}
+
+\subsection{Angular Authentication Service}
+
+\begin{lstlisting}
+// auth.service.ts
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+
+  private apiUrl = environment.apiUrl + '/authenticate';
+  private tokenKey = 'authToken';
+
+  constructor(private http: HttpClient, private router: Router) {}
+
+  login(credentials: {username: string, password: string}): Observable<any> {
+    return this.http.post(this.apiUrl, credentials).pipe(
+      tap((response: any) => {
+        if (response.token) {
+          localStorage.setItem(this.tokenKey, response.token);
+        }
+      }),
+      catchError(error => {
+        console.error('Login error:', error);
+        return throwError(error);
+      })
+    );
+  }
+
+  logout(): void {
+    localStorage.removeItem(this.tokenKey);
+    this.router.navigate(['/login']);
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem(this.tokenKey);
+  }
+
+  isAuthenticated(): boolean {
+    const token = this.getToken();
+    return !!token && !this.isTokenExpired(token);
+  }
+
+  private isTokenExpired(token: string): boolean {
+    // Implement token expiration check
+    return false;
+  }
+}
+\end{lstlisting}
+
+\section{Mobile Code Samples}
+
+\subsection{Flutter BLoC Implementation}
+
+\begin{lstlisting}
+// login_bloc.dart
+class LoginBloc extends Bloc<LoginEvent, LoginState> {
+  final LoginRepository loginRepository;
+
+  LoginBloc(this.loginRepository) : super(LoginInitial()) {
+    on<LoginRequested>(_onLoginRequested);
+  }
+
+  Future<void> _onLoginRequested(
+    LoginRequested event,
+    Emitter<LoginState> emit,
+  ) async {
+    emit(LoginLoading());
+    try {
+      final response = await loginRepository.login(
+        event.email,
+        event.password,
+      );
+
+      // Store token securely
+      await _secureStorage.write(
+        key: 'jwt_token',
+        value: response.token,
+      );
+
+      emit(LoginSuccess(user: response.user));
+    } catch (e) {
+      emit(LoginFailure(error: e.toString()));
+    }
+  }
+}
+\end{lstlisting}
+
+\subsection{Dynamic Form Widget}
+
+\begin{lstlisting}
+// dynamic_form_widget.dart
+class DynamicFormWidget extends StatefulWidget {
+  final Map<String, dynamic> formSchema;
+  final Function(Map<String, dynamic>) onFormChanged;
+
+  const DynamicFormWidget({
+    Key? key,
+    required this.formSchema,
+    required this.onFormChanged,
+  }) : super(key: key);
+
+  @override
+  State<DynamicFormWidget> createState() => _DynamicFormWidgetState();
+}
+
+class _DynamicFormWidgetState extends State<DynamicFormWidget> {
+  final Map<String, dynamic> _formData = {};
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: widget.formSchema['fields']?.length ?? 0,
+      itemBuilder: (context, index) {
+        final field = widget.formSchema['fields'][index];
+        return _buildFormField(field);
+      },
+    );
+  }
+
+  Widget _buildFormField(Map<String, dynamic> field) {
+    final fieldType = field['type'];
+    final fieldName = field['name'];
+    final label = field['label'];
+
+    switch (fieldType) {
+      case 'text':
+        return TextFormField(
+          decoration: InputDecoration(labelText: label),
+          onChanged: (value) {
+            _formData[fieldName] = value;
+            widget.onFormChanged(_formData);
+          },
+        );
+      case 'number':
+        return TextFormField(
+          decoration: InputDecoration(labelText: label),
+          keyboardType: TextInputType.number,
+          onChanged: (value) {
+            _formData[fieldName] = num.tryParse(value);
+            widget.onFormChanged(_formData);
+          },
+        );
+      // Add more field types as needed
+      default:
+        return const SizedBox.shrink();
+    }
+  }
+}
+\end{lstlisting}

@@ -1,0 +1,121 @@
+\chapter{Implementation}
+
+\section{Introduction}
+
+This chapter presents the technical realization of RM. It describes implementation choices for backend services, web and mobile interfaces, workflow modules, and reporting capabilities. The objective is to show how design artifacts were translated into a working system.
+
+\section{Implementation Environment}
+
+\subsection{Method and Incremental Delivery}
+
+Implementation followed iterative increments aligned with agile sprint planning. Technical progress moved from foundational infrastructure to advanced operational features.
+
+\subsection{Technology Stack}
+
+\begin{itemize}
+\item \textbf{Backend}: Spring Boot ecosystem for service logic and API exposure.
+\item \textbf{Data}: PostgreSQL for persistent storage.
+\item \textbf{Web frontend}: Angular-based interface for management workflows.
+\item \textbf{Mobile frontend}: Flutter client for field operations.
+\item \textbf{Deployment support}: containerized runtime and environment isolation.
+\end{itemize}
+
+\section{Backend Realization}
+
+\subsection{Security and Access Layer}
+
+The backend implements authenticated access and role-based authorization. Core mechanisms include secure identity validation, controlled endpoint exposure, and permission checks by user role.
+
+\subsection{Domain Services}
+
+Implementation is structured around domain services:
+
+\begin{enumerate}
+\item \textbf{Template service}: creation, update, and lifecycle of reusable form templates.
+\item \textbf{Intervention service}: request creation, assignment, execution submission, and status transition management.
+\item \textbf{Validation service}: approval and rejection logic with traceable feedback.
+\item \textbf{Attachment service}: evidence storage and retrieval linked to interventions.
+\item \textbf{Reporting service}: extraction and formatting of operational outputs.
+\end{enumerate}
+
+\subsection{Persistence and Data Access}
+
+The persistence layer combines stable relational entities and flexible form payload structures. Repository and service abstractions isolate data access concerns and improve maintainability.
+
+\section{Web Application Realization}
+
+\subsection{Coordinator Features}
+
+Implemented coordinator capabilities include:
+
+\begin{itemize}
+\item creation and management of intervention requests,
+\item template definition and updates,
+\item consultation of intervention progress,
+\item report launch and export workflows.
+\end{itemize}
+
+\subsection{Supervisor Features}
+
+Implemented supervisor capabilities include:
+
+\begin{itemize}
+\item intervention assignment to technicians,
+\item pending-validation monitoring,
+\item approval/rejection actions with comments,
+\item visibility over status progression.
+\end{itemize}
+
+\subsection{Administrator Features}
+
+The administration scope includes user-role governance and configuration-level controls supporting platform reliability and secure operation.
+
+\section{Mobile Application Realization}
+
+\subsection{Field Execution Workflow}
+
+The mobile client supports the full field cycle:
+
+\begin{enumerate}
+\item retrieve assigned intervention,
+\item open dynamic form generated from template,
+\item capture required values,
+\item attach photos/documents,
+\item submit execution output for validation.
+\end{enumerate}
+
+\subsection{Evidence Capture and Synchronization}
+
+Mobile implementation provides evidence handling with controlled upload behavior and synchronization support adapted to variable network conditions.
+
+\section{Cross-Module Integration}
+
+\subsection{Status and Traceability}
+
+A shared status model ensures consistency between web and mobile channels. Every critical transition is logged with actor and time information for auditability.
+
+\subsection{Notification and Collaboration Flow}
+
+Status-driven notifications support coordination between technicians, supervisors, and coordinators. This reduces processing latency between execution and validation stages.
+
+\section{Implementation by Major Functional Blocks}
+
+\subsection{Block A: Foundation Services}
+
+Delivered components include project infrastructure, identity management, and core domain setup.
+
+\subsection{Block B: Intervention and Template Core}
+
+Delivered components include request management, template-driven forms, and assignment workflows.
+
+\subsection{Block C: Evidence and Validation Enhancements}
+
+Delivered components include file management, workflow validation, and status governance.
+
+\subsection{Block D: Reporting and Optimization Extensions}
+
+Delivered components include report generation features and operational optimization mechanisms.
+
+\section{Chapter Conclusion}
+
+This chapter detailed the implementation of RM across backend, web, and mobile dimensions, with integration mechanisms that ensure coherent operation. The next chapter evaluates obtained results and discusses system performance, value, and limitations.

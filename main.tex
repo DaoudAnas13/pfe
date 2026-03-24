@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper]{report}
+
+% Page geometry and layout
+\usepackage[margin=2.5cm, headheight=15pt]{geometry}
+
+% Professional headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Enhanced title formatting
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{40pt}
+
+% Table of contents enhancements
+\usepackage{tocbibind}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+% Graphics and diagrams
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes.geometric,arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% Additional packages for academic writing
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{footnote}
+\usepackage{subcaption}
+\usepackage{pgf-umlsd}
+\usepackage{pdfpages}
+
+% Code formatting for environments migrated from minted to listings
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  frame=single,
+  showstringspaces=false,
+  tabsize=2
+}
+
+% Shared TikZ styles used across chapter diagrams
+\tikzset{
+  actor/.style={ellipse, draw, minimum width=2.2cm, minimum height=0.9cm, align=center},
+  system/.style={rectangle, draw, thick, rounded corners, minimum width=3.2cm, minimum height=1.1cm, align=center},
+  usecase/.style={ellipse, draw, minimum width=2.4cm, minimum height=1.0cm, align=center},
+  entity/.style={rectangle, draw, rounded corners, minimum width=2.4cm, minimum height=0.9cm, align=center},
+  relationship/.style={diamond, draw, aspect=1.6, minimum width=1.8cm, align=center},
+  umlclass/.style={rectangle, draw, rounded corners, minimum width=4.0cm, minimum height=1.2cm, align=left, font=\small\ttfamily, inner sep=4pt},
+  state/.style={rectangle, draw, rounded corners, minimum width=2.2cm, minimum height=0.8cm, align=center}
+}
+
+% Enhanced tables
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Hyperlinks and cross-references
+\usepackage[pdftex,
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue,
+  pdftitle={RM - Report Manager: Web and Mobile Application for IT Equipment Installation Management},
+  pdfauthor={Your Name},
+  pdfsubject={Master's Final Year Engineering Project},
+  pdfkeywords={Spring Boot, JHipster, Angular, Flutter, PostgreSQL, Docker, SCRUM}
+]{hyperref}
+\usepackage{cleveref}
+
+% Custom commands for consistent formatting
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\api}[1]{\texttt{/api/#1}}
+\newcommand{\entity}[1]{\textit{#1}}
+\newcommand{\usecase}[1]{\textbf{UC-#1}}
+
+\begin{document}
+\includepdf[pages=-]{garde_organized.pdf}
+
+% Title page
+
+% Abstract
+\include{ded}
+\include{rem}
+
+% Table of contents
+\tableofcontents
+
+% List of figures
+\listoffigures
+
+% List of tables
+\listoftables
+
+% General Introduction
+\include{introduction}
+
+% Chapter 1: General Presentation
+\include{chapter1}
+
+% Chapter 2: Analysis and Requirements Specification
+\include{chapter2}
+
+% Chapter 3: System Design
+\include{chapter3}
+
+% Chapter 4: Implementation
+\include{chapter4}
+
+% Chapter 5: Results and Discussion
+\include{chapter5}
+
+% General Conclusion
+\include{conclusion}
+
+\end{document}

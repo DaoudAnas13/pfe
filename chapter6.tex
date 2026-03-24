@@ -1,0 +1,436 @@
+% Chapter 6: Sprint 3 - File Management & Geolocation Tracking
+
+\chapter{Sprint 3: File Management and Geolocation Tracking}
+
+\section{Introduction}
+
+Sprint 3 extends the core intervention management system with file management capabilities and geolocation tracking. This sprint enables technicians to capture and upload photographic evidence, attach documents, and track intervention location data. The implementation provides secure file storage, offline file queuing for mobile devices, and location-aware intervention tracking.
+
+The sprint delivers critical functionality for evidence management, allowing supervisors and clients to access comprehensive documentation of completed interventions. Geolocation tracking provides accountability and operational insights into technician activities and intervention execution locations.
+
+\section{Sprint Preview and Objectives}
+
+\subsection{User Stories}
+
+\begin{enumerate}
+\item \textbf{US-S3-001: File Upload and Management}
+  \begin{itemize}
+  \item \textbf{As a} technician
+  \item \textbf{I want} to attach photos and documents to interventions
+  \item \textbf{So that} I can provide evidence of work completion
+  \item \textbf{Story Points:} 13
+  \end{itemize}
+
+\item \textbf{US-S3-002: Geolocation Tracking}
+  \begin{itemize}
+  \item \textbf{As a} system
+  \item \textbf{I want} to capture technician location during interventions
+  \item \textbf{So that} supervisors can verify work locations and track movements
+  \item \textbf{Story Points:} 8
+  \end{itemize}
+
+\item \textbf{US-S3-003: File Download and Sharing}
+  \begin{itemize}
+  \item \textbf{As a} supervisor
+  \item \textbf{I want} to download and share intervention files with clients
+  \item \textbf{So that} clients can access evidence and documentation
+  \item \textbf{Story Points:} 8
+  \end{itemize}
+
+\item \textbf{US-S3-004: Image Compression and Optimization}
+  \begin{itemize}
+  \item \textbf{As a} system
+  \item \textbf{I want} to compress and optimize uploaded images
+  \item \textbf{So that} storage space is used efficiently and downloads are fast
+  \item \textbf{Story Points:} 8
+  \end{itemize}
+
+\item \textbf{US-S3-005: Offline File Queue}
+  \begin{itemize}
+  \item \textbf{As a} technician
+  \item \textbf{I want} to queue files for upload when offline
+  \item \textbf{So that} I can continue working without internet connectivity
+  \item \textbf{Story Points:} 8
+  \end{itemize}
+\end{enumerate}
+
+\subsection{Sprint Goals}
+
+\begin{enumerate}
+\item \textbf{File Management:} Implement secure file upload, storage, and retrieval with access control
+\item \textbf{Location Services:} Integrate GPS tracking with intervention data capture
+\item \textbf{Mobile Optimization:} Implement image compression and offline file queuing
+\item \textbf{Evidence Management:} Enable supervisors to manage and share intervention evidence
+\end{enumerate}
+
+\section{Sprint Backlog}
+
+The 45-point sprint focuses on file operations and location tracking:
+
+\begin{table}[H]
+\centering
+\caption{Sprint 3 Backlog}
+\label{tab:sprint3_backlog}
+\begin{tabularx}{\textwidth}{|l|X|l|l|}
+\hline
+\textbf{ID} & \textbf{User Story} & \textbf{Points} & \textbf{Status} \\
+\hline
+S3-1 & File upload and management & 13 & Completed \\
+\hline
+S3-2 & Geolocation tracking & 8 & Completed \\
+\hline
+S3-3 & File download and sharing & 8 & Completed \\
+\hline
+S3-4 & Image compression & 8 & Completed \\
+\hline
+S3-5 & Offline file queue & 8 & Completed \\
+\hline
+\textbf{Total} & & \textbf{45} & \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Functional Specification}
+
+\subsection{Use Cases}
+
+\textbf{UC-FILE-001: Upload Intervention File}
+\begin{itemize}
+\item \textbf{Primary Actor:} Technician
+\item \textbf{Main Success Scenario:}
+  \begin{enumerate}
+  \item Technician selects intervention
+  \item Technician attaches file (photo, document)
+  \item System validates file type and size
+  \item System compresses image if applicable
+  \item System uploads file to storage
+  \item System links file to intervention
+  \item Technician receives upload confirmation
+  \end{enumerate}
+\end{itemize}
+
+\textbf{UC-GPS-001: Capture Location Data}
+\begin{itemize}
+\item \textbf{Primary Actor:} Mobile Application
+\item \textbf{Main Success Scenario:}
+  \begin{enumerate}
+  \item Technician opens intervention
+  \item System requests location permission
+  \item System captures GPS coordinates
+  \item System records timestamp
+  \item Technician completes intervention
+  \item System stores location with intervention data
+  \end{enumerate}
+\end{itemize}
+
+\section{Conception}
+
+\subsection{Class Diagram}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=2cm, auto]
+  \node[umlclass] (request) at (0, 2) {
+    RapportRequest\\
+    --------------------\\
+    - id: Long\\
+    - reference: String\\
+    - files: Set<Files>
+  };
+
+  \node[umlclass] (files) at (3, 2) {
+    Files\\
+    --------------------\\
+    - id: Long\\
+    - filename: String\\
+    - fileType: String\\
+    - fileSize: Long\\
+    - filePath: String\\
+    - uploadDate: ZonedDateTime
+  };
+
+  \node[umlclass] (execDetails) at (0, -1) {
+    ExecutionDetails\\
+    --------------------\\
+    - id: Long\\
+    - latitude: Double\\
+    - longitude: Double\\
+    - startTime: ZonedDateTime\\
+    - endTime: ZonedDateTime
+  };
+
+  \draw[->] (request) -- (files) node[midway, above] {has};
+  \draw[->] (request) -- (execDetails) node[midway, left] {includes};
+
+\end{tikzpicture}
+\caption{Sprint 3 Class Diagram - Files and Execution Details}
+\label{fig:sprint3_class}
+\end{figure}
+
+\section{Realization}
+
+\subsection{Backend Implementation}
+
+\textbf{Files Entity:}
+\begin{lstlisting}
+@Entity
+@Table(name = "files")
+public class Files extends AbstractAuditingEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+    @NotNull
+    @Column(name = "filename")
+    private String filename;
+
+    @Column(name = "file_type")
+    private String fileType;
+
+    @Column(name = "file_size")
+    private Long fileSize;
+
+    @Column(name = "file_path")
+    private String filePath;
+
+    @Column(name = "upload_date")
+    private ZonedDateTime uploadDate;
+
+    @ManyToOne
+    private RapportRequest rapportRequest;
+
+    // getters, setters
+}
+\end{lstlisting}
+
+\textbf{ExecutionDetails Entity:}
+\begin{lstlisting}
+@Entity
+@Table(name = "execution_details")
+public class ExecutionDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(name = "latitude", precision = 10, scale = 8)
+    private Double latitude;
+
+    @Column(name = "longitude", precision = 11, scale = 8)
+    private Double longitude;
+
+    @Column(name = "start_time")
+    private ZonedDateTime startTime;
+
+    @Column(name = "end_time")
+    private ZonedDateTime endTime;
+
+    @OneToOne
+    private RapportRequest rapportRequest;
+}
+\end{lstlisting}
+
+\textbf{File Upload Service:}
+\begin{lstlisting}
+@Service
+public class FileUploadService {
+
+    private final FilesRepository filesRepository;
+    private final FileStorageService storageService;
+    private final ImageCompressionService compressionService;
+
+    public FileDTO uploadFile(MultipartFile file, Long requestId) {
+        // Validate file
+        validateFileUpload(file);
+
+        // Compress if image
+        MultipartFile processedFile = file;
+        if (isImageFile(file)) {
+            processedFile = compressionService.compress(file);
+        }
+
+        // Store file
+        String filePath = storageService.saveFile(processedFile);
+
+        // Create file record
+        Files fileEntity = new Files();
+        fileEntity.setFilename(file.getOriginalFilename());
+        fileEntity.setFileType(file.getContentType());
+        fileEntity.setFileSize(processedFile.getSize());
+        fileEntity.setFilePath(filePath);
+        fileEntity.setUploadDate(ZonedDateTime.now());
+
+        RapportRequest request = requestRepository.findById(requestId)
+            .orElseThrow();
+        fileEntity.setRapportRequest(request);
+
+        fileEntity = filesRepository.save(fileEntity);
+        return mapper.toDto(fileEntity);
+    }
+
+    private void validateFileUpload(MultipartFile file) {
+        if (file.isEmpty()) {
+            throw new IllegalArgumentException("File is empty");
+        }
+        if (file.getSize() > 50 * 1024 * 1024) { // 50MB limit
+            throw new IllegalArgumentException("File too large");
+        }
+    }
+
+    private boolean isImageFile(MultipartFile file) {
+        String contentType = file.getContentType();
+        return contentType != null && contentType.startsWith("image/");
+    }
+}
+\end{lstlisting}
+
+\subsection{Mobile Implementation}
+
+\textbf{File Upload BLoC:}
+\begin{lstlisting}
+class FileUploadBloc extends Bloc<FileUploadEvent, FileUploadState> {
+  final FileUploadRepository fileRepository;
+  final ImageCompressionService compressionService;
+
+  FileUploadBloc(this.fileRepository, this.compressionService)
+      : super(FileUploadInitial()) {
+    on<UploadFile>(_onUploadFile);
+    on<QueueFileOffline>(_onQueueFileOffline);
+  }
+
+  Future<void> _onUploadFile(
+    UploadFile event,
+    Emitter<FileUploadState> emit,
+  ) async {
+    emit(FileUploading());
+    try {
+      // Compress image if needed
+      File processedFile = event.file;
+      if (_isImageFile(event.file)) {
+        processedFile = await compressionService.compressImage(event.file);
+      }
+
+      // Upload file
+      final response = await fileRepository.uploadFile(
+        processedFile,
+        event.requestId,
+      );
+
+      emit(FileUploadSuccess(file: response));
+    } on DioError catch (e) {
+      if (e.type == DioErrorType.other) {
+        // Queue offline
+        await _queueOffline(event.file, event.requestId);
+        emit(FileQueuedOffline());
+      } else {
+        emit(FileUploadFailure(error: e.message ?? 'Upload failed'));
+      }
+    }
+  }
+
+  bool _isImageFile(File file) {
+    final ext = file.path.split('.').last.toLowerCase();
+    return ['jpg', 'jpeg', 'png', 'gif'].contains(ext);
+  }
+
+  Future<void> _queueOffline(File file, int requestId) async {
+    // Store in local database for later sync
+  }
+}
+\end{lstlisting}
+
+\textbf{Geolocation Service:}
+\begin{lstlisting}
+class GeolocationService {
+  final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
+
+  Future<Position?> getCurrentLocation() async {
+    try {
+      final hasPermission = await _handleLocationPermission();
+      if (!hasPermission) {
+        return null;
+      }
+
+      const LocationSettings locationSettings = LocationSettings(
+        accuracy: LocationAccuracy.best,
+        distanceFilter: 5, // 5 meters
+      );
+
+      return await _geolocatorPlatform.getCurrentPosition(
+        locationSettings: locationSettings,
+      );
+    } catch (e) {
+      print('Error getting location: $e');
+      return null;
+    }
+  }
+
+  Future<bool> _handleLocationPermission() async {
+    bool serviceEnabled = await _geolocatorPlatform.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      return false;
+    }
+
+    LocationPermission permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+    }
+
+    return permission != LocationPermission.denied &&
+        permission != LocationPermission.deniedForever;
+  }
+}
+\end{lstlisting}
+
+\section{Tests and Validation}
+
+\subsubsection{File Upload Tests}
+
+\begin{lstlisting}
+@SpringBootTest
+class FileUploadServiceTest {
+
+    @Autowired
+    private FileUploadService service;
+
+    @Mock
+    private FileStorageService storageService;
+
+    @Test
+    void uploadValidFile() {
+        MultipartFile file = new MockMultipartFile(
+            "file", "test.jpg", "image/jpeg", "test data".getBytes());
+
+        FileDTO result = service.uploadFile(file, 1L);
+
+        assertThat(result).isNotNull();
+        assertThat(result.getFilename()).isEqualTo("test.jpg");
+    }
+
+    @Test
+    void rejectOversizedFile() {
+        MockMultipartFile file = new MockMultipartFile(
+            "file", "large.jpg", "image/jpeg",
+            new byte[51 * 1024 * 1024]);
+
+        assertThatThrownBy(() -> service.uploadFile(file, 1L))
+            .isInstanceOf(IllegalArgumentException.class);
+    }
+}
+\end{lstlisting}
+
+\section{Conclusion}
+
+Sprint 3 successfully extended the system with comprehensive file management and geolocation capabilities. Technicians can now capture and upload evidence files, with automatic image compression optimizing storage. The offline file queue ensures continuity of work even without internet connectivity, while geolocation tracking provides accountability and operational insights.
+
+Key achievements:
+\begin{itemize}
+\item Secure file upload and storage with access control
+\item Automatic image compression and optimization
+\item Mobile geolocation tracking integration
+\item Offline file queuing for offline-first functionality
+\item File download and sharing capabilities
+\end{itemize}
+
+Sprint 4 will focus on the approval workflow and status management, enabling supervisors to review and approve completed interventions.

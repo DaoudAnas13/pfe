@@ -1,0 +1,145 @@
+\chapter{System Design}
+
+\section{Introduction}
+
+This chapter presents the design choices retained for RM. It covers architectural principles, logical decomposition, data design, workflow modeling, and interface structuring. The objective is to show how the design responds directly to the requirements defined in Chapter 2.
+
+\section{Design Principles}
+
+The design is guided by five principles:
+
+\begin{enumerate}
+\item \textbf{Separation of concerns}: clear distinction between business logic, data access, and presentation layers.
+\item \textbf{Traceability}: explicit status transitions and historical records for intervention follow-up.
+\item \textbf{Configurability}: template-based forms to support heterogeneous intervention scenarios.
+\item \textbf{Security by design}: role-aware access and controlled data exposure.
+\item \textbf{Scalability}: modular components that can evolve with organizational growth.
+\end{enumerate}
+
+\section{Global Architecture}
+
+\subsection{Physical and Deployment View}
+
+The system is organized around a web client, a mobile client, and backend services connected to persistent storage. This deployment supports office workflows and field operations simultaneously.
+
+\begin{itemize}
+\item \textbf{Web layer}: supervision, request creation, template configuration, and reporting.
+\item \textbf{Mobile layer}: field execution, dynamic form completion, evidence capture.
+\item \textbf{Backend layer}: authentication, intervention lifecycle services, reporting services.
+\item \textbf{Data layer}: structured entities and dynamic payload storage.
+\end{itemize}
+
+\subsection{Logical View}
+
+The logical decomposition follows domain-oriented modules:
+
+\begin{enumerate}
+\item Identity and access management
+\item Intervention and status management
+\item Template and dynamic form management
+\item Evidence and file management
+\item Reporting and monitoring
+\end{enumerate}
+
+\section{Domain and Data Design}
+
+\subsection{Core Domain Entities}
+
+The conceptual domain includes the following core entities:
+
+\begin{itemize}
+\item \textbf{User} and \textbf{Role}: identity and authorization model.
+\item \textbf{Project} and \textbf{Client}: organizational context of interventions.
+\item \textbf{Template}: reusable form structure and validation rules.
+\item \textbf{Intervention Request}: operational unit assigned for execution.
+\item \textbf{Intervention Status History}: lifecycle traceability.
+\item \textbf{Attachment}: evidence files linked to interventions.
+\end{itemize}
+
+\subsection{Data Modeling Strategy}
+
+A hybrid data model is retained:
+
+\begin{itemize}
+\item relational entities for stable business objects,
+\item structured dynamic payloads for template-driven intervention data.
+\end{itemize}
+
+This strategy balances consistency for core operations and flexibility for evolving field forms.
+
+\section{Process and Workflow Design}
+
+\subsection{Intervention Lifecycle Model}
+
+The intervention lifecycle is designed as a controlled state machine:
+
+\begin{center}
+PLANNED $\rightarrow$ EXECUTED $\rightarrow$ PENDING\_VALIDATION $\rightarrow$ APPROVED $\rightarrow$ ARCHIVED
+\end{center}
+
+Rejected interventions are redirected to a correction loop before resubmission. This model ensures quality gates while preserving operational fluidity.
+
+\subsection{Approval Workflow}
+
+The approval process formalizes quality control responsibilities:
+
+\begin{enumerate}
+\item Technician submits completed intervention.
+\item Supervisor reviews form values and evidence.
+\item Supervisor approves or rejects with explicit feedback.
+\item System records transition and notifies stakeholders.
+\end{enumerate}
+
+\section{Use Case Realization Design}
+
+\subsection{Representative Realization: Dynamic Intervention Execution}
+
+The design of dynamic execution follows the sequence below:
+
+\begin{enumerate}
+\item Coordinator configures a template.
+\item Supervisor creates an intervention request based on that template.
+\item Technician receives assignment and opens generated form.
+\item Technician captures required values and attachments.
+\item Submission triggers validation and status update.
+\end{enumerate}
+
+This realization links requirement-level use cases to concrete service interactions.
+
+\section{Interface Design}
+
+\subsection{Web Interface Design}
+
+The web interface is designed around role-driven dashboards:
+
+\begin{itemize}
+\item coordinator workspace for planning and template management,
+\item supervisor workspace for assignment and validation,
+\item administration workspace for configuration and governance.
+\end{itemize}
+
+\subsection{Mobile Interface Design}
+
+The mobile interface prioritizes field usability:
+
+\begin{itemize}
+\item fast intervention access,
+\item guided dynamic form completion,
+\item evidence capture,
+\item resilient behavior under unstable connectivity conditions.
+\end{itemize}
+
+\section{Design Validation Against Requirements}
+
+The proposed design satisfies key requirement families:
+
+\begin{itemize}
+\item \textbf{Functional fit}: complete coverage of intervention, template, validation, and reporting flows.
+\item \textbf{Security fit}: role-centered access and controlled operations.
+\item \textbf{Performance fit}: modular decomposition and efficient data access paths.
+\item \textbf{Maintainability fit}: clear architecture boundaries and extensible modules.
+\end{itemize}
+
+\section{Chapter Conclusion}
+
+This chapter established the architectural and modeling foundation of RM. It demonstrated how requirements were translated into a coherent system structure. The next chapter details the implementation strategy and the realization of key modules.
