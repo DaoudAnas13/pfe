@@ -1,121 +1,235 @@
-\chapter{Implementation}
+\chapter{Sprint 1: Foundation and Core Infrastructure}
 
 \section{Introduction}
 
-This chapter presents the technical realization of RM. It describes implementation choices for backend services, web and mobile interfaces, workflow modules, and reporting capabilities. The objective is to show how design artifacts were translated into a working system.
+Sprint 1 established the technical foundation of RM and created the minimum viable platform infrastructure required for subsequent business features. This sprint focused on identity and access management, project setup, baseline database design, and core backend scaffolding.
 
-\section{Implementation Environment}
+The objective was to secure the platform early, define stable architectural conventions, and deliver a deployable base increment that could host intervention management features in Sprint 2.
 
-\subsection{Method and Incremental Delivery}
+\section{Preview of Sprint}
 
-Implementation followed iterative increments aligned with agile sprint planning. Technical progress moved from foundational infrastructure to advanced operational features.
-
-\subsection{Technology Stack}
-
-\begin{itemize}
-\item \textbf{Backend}: Spring Boot ecosystem for service logic and API exposure.
-\item \textbf{Data}: PostgreSQL for persistent storage.
-\item \textbf{Web frontend}: Angular-based interface for management workflows.
-\item \textbf{Mobile frontend}: Flutter client for field operations.
-\item \textbf{Deployment support}: containerized runtime and environment isolation.
-\end{itemize}
-
-\section{Backend Realization}
-
-\subsection{Security and Access Layer}
-
-The backend implements authenticated access and role-based authorization. Core mechanisms include secure identity validation, controlled endpoint exposure, and permission checks by user role.
-
-\subsection{Domain Services}
-
-Implementation is structured around domain services:
+\subsection{Sprint Objectives}
 
 \begin{enumerate}
-\item \textbf{Template service}: creation, update, and lifecycle of reusable form templates.
-\item \textbf{Intervention service}: request creation, assignment, execution submission, and status transition management.
-\item \textbf{Validation service}: approval and rejection logic with traceable feedback.
-\item \textbf{Attachment service}: evidence storage and retrieval linked to interventions.
-\item \textbf{Reporting service}: extraction and formatting of operational outputs.
+\item Initialize the backend, web, and mobile workspaces with coherent configuration.
+\item Implement authentication and authorization with role-based access control.
+\item Create initial database schema for users, roles, and core audit entities.
+\item Deliver first API endpoints and shared error-handling conventions.
+\item Validate end-to-end login flow from web and mobile clients.
 \end{enumerate}
 
-\subsection{Persistence and Data Access}
+\subsection{Sprint Scope Statement}
 
-The persistence layer combines stable relational entities and flexible form payload structures. Repository and service abstractions isolate data access concerns and improve maintainability.
+This sprint does not target complete business coverage. It targets infrastructural readiness and controlled access so that feature sprints can be implemented on a secure and consistent foundation.
 
-\section{Web Application Realization}
+\section{Sprint Backlog}
 
-\subsection{Coordinator Features}
+\begin{table}[H]
+\centering
+\caption{Sprint 1 Backlog}
+\label{tab:sprint1_backlog}
+\begin{tabularx}{\textwidth}{|l|X|l|l|}
+\hline
+\textbf{ID} & \textbf{User Story / Technical Story} & \textbf{Points} & \textbf{Status} \\
+\hline
+S1-1 & Initialize backend project structure and environment profiles & 8 & Completed \\
+\hline
+S1-2 & Implement JWT authentication and role-based authorization & 13 & Completed \\
+\hline
+S1-3 & Create user and role management baseline entities and repositories & 8 & Completed \\
+\hline
+S1-4 & Integrate Angular and Flutter authentication clients & 8 & Completed \\
+\hline
+S1-5 & Establish API error handling, logging, and audit foundations & 8 & Completed \\
+\hline
+\textbf{Total} & & \textbf{45} & \\
+\hline
+\end{tabularx}
+\end{table}
 
-Implemented coordinator capabilities include:
+\section{Functional Specifications}
 
+\subsection{Detailed Use Cases}
+
+\textbf{UC-S1-01: User Authentication}
+
+\textbf{Primary Actor:} Platform User (Technician, Supervisor, Coordinator, Administrator)
+
+\textbf{Preconditions:}
 \begin{itemize}
-\item creation and management of intervention requests,
-\item template definition and updates,
-\item consultation of intervention progress,
-\item report launch and export workflows.
+\item User account exists and is active.
+\item Authentication service is reachable.
 \end{itemize}
 
-\subsection{Supervisor Features}
-
-Implemented supervisor capabilities include:
-
-\begin{itemize}
-\item intervention assignment to technicians,
-\item pending-validation monitoring,
-\item approval/rejection actions with comments,
-\item visibility over status progression.
-\end{itemize}
-
-\subsection{Administrator Features}
-
-The administration scope includes user-role governance and configuration-level controls supporting platform reliability and secure operation.
-
-\section{Mobile Application Realization}
-
-\subsection{Field Execution Workflow}
-
-The mobile client supports the full field cycle:
-
+\textbf{Main Flow:}
 \begin{enumerate}
-\item retrieve assigned intervention,
-\item open dynamic form generated from template,
-\item capture required values,
-\item attach photos/documents,
-\item submit execution output for validation.
+\item User submits email and password.
+\item Backend validates credentials.
+\item Backend issues JWT token with role claims and expiration.
+\item Client stores token securely and starts authenticated session.
+\item User is redirected to role-appropriate dashboard.
 \end{enumerate}
 
-\subsection{Evidence Capture and Synchronization}
+\textbf{Postconditions:}
+\begin{itemize}
+\item Authenticated session is active.
+\item Access to protected resources is enabled according to role policy.
+\end{itemize}
 
-Mobile implementation provides evidence handling with controlled upload behavior and synchronization support adapted to variable network conditions.
+\textbf{UC-S1-02: Role-Based Endpoint Authorization}
 
-\section{Cross-Module Integration}
+\textbf{Primary Actor:} System
 
-\subsection{Status and Traceability}
+\textbf{Main Flow:}
+\begin{enumerate}
+\item Client requests protected endpoint.
+\item Security filter validates JWT signature and expiration.
+\item Authorization layer resolves role permissions.
+\item Endpoint execution is granted or denied.
+\item Attempt is logged for traceability.
+\end{enumerate}
 
-A shared status model ensures consistency between web and mobile channels. Every critical transition is logged with actor and time information for auditability.
+\subsection{Textual Specifications}
 
-\subsection{Notification and Collaboration Flow}
+\begin{table}[H]
+\centering
+\caption{Sprint 1 Functional Specification Summary}
+\label{tab:sprint1_functional_specs}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Spec ID} & \textbf{Specification} & \textbf{Verification Criterion} \\
+\hline
+S1-FS-01 & Secure login with JWT token issuance & Valid credentials return token and role payload \\
+\hline
+S1-FS-02 & Role-based API access control & Unauthorized role receives forbidden response \\
+\hline
+S1-FS-03 & Password change endpoint with validation & Password policy and confirmation checks are enforced \\
+\hline
+S1-FS-04 & Session persistence in web and mobile clients & Session is restored after app restart if token is valid \\
+\hline
+S1-FS-05 & Baseline audit logging on critical identity actions & Login and password events are traceable \\
+\hline
+\end{tabularx}
+\end{table}
 
-Status-driven notifications support coordination between technicians, supervisors, and coordinators. This reduces processing latency between execution and validation stages.
+\section{Conception}
 
-\section{Implementation by Major Functional Blocks}
+\subsection{Sequence Diagram (Placeholder)}
 
-\subsection{Block A: Foundation Services}
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+% TODO: Insert Sprint 1 authentication sequence diagram here
+Sequence Diagram Placeholder: User login request, authentication manager validation, JWT generation, response, secure client storage.
+}}
+\caption{Sprint 1 Authentication Sequence Diagram Placeholder}
+\label{fig:sprint1_sequence_placeholder}
+\end{figure}
 
-Delivered components include project infrastructure, identity management, and core domain setup.
+\subsection{Class Diagram (Placeholder)}
 
-\subsection{Block B: Intervention and Template Core}
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+% TODO: Insert Sprint 1 class diagram here
+Class Diagram Placeholder: User, Role, Permission, AuthToken, AuditEntry, and service components.
+}}
+\caption{Sprint 1 Core Security Class Diagram Placeholder}
+\label{fig:sprint1_class_placeholder}
+\end{figure}
 
-Delivered components include request management, template-driven forms, and assignment workflows.
+\section{Realization}
 
-\subsection{Block C: Evidence and Validation Enhancements}
+\subsection{Backend Implementation Details (Spring Boot)}
 
-Delivered components include file management, workflow validation, and status governance.
+Sprint 1 backend realization implemented:
 
-\subsection{Block D: Reporting and Optimization Extensions}
+\begin{itemize}
+\item JWT token generation and validation filters,
+\item role-aware endpoint protection through Spring Security,
+\item account and password management endpoints,
+\item centralized exception handling and standardized API error payloads,
+\item initial logging and auditing hooks for identity events.
+\end{itemize}
 
-Delivered components include report generation features and operational optimization mechanisms.
+Representative endpoint families introduced in this sprint include:
 
-\section{Chapter Conclusion}
+\begin{itemize}
+\item \api{authenticate}
+\item \api{account}
+\item \api{account/change-password}
+\item \api{admin/users} (baseline administration)
+\end{itemize}
 
-This chapter detailed the implementation of RM across backend, web, and mobile dimensions, with integration mechanisms that ensure coherent operation. The next chapter evaluates obtained results and discusses system performance, value, and limitations.
+\subsection{Frontend Implementation (Angular)}
+
+The Angular client delivered:
+
+\begin{itemize}
+\item login page with reactive validation,
+\item route guards and role-sensitive navigation,
+\item HTTP interceptor for token propagation,
+\item unauthorized and forbidden access handling.
+\end{itemize}
+
+\subsection{Mobile Implementation (Flutter + BLoC)}
+
+The Flutter client delivered:
+
+\begin{itemize}
+\item authentication flow using BLoC event/state transitions,
+\item secure token persistence,
+\item session restoration during app startup,
+\item controlled logout and token cleanup.
+\end{itemize}
+
+\subsection{Database Design (PostgreSQL)}
+
+The baseline schema introduced identity and governance entities:
+
+\begin{itemize}
+\item user and authority tables,
+\item role-assignment relations,
+\item audit metadata fields for traceability,
+\item constraints for unique login identifiers and data consistency.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.88\textwidth}{
+\centering
+% TODO: Insert Sprint 1 database schema snapshot here
+Database Placeholder: Identity tables, role mapping relations, and audit columns.
+}}
+\caption{Sprint 1 Database Baseline Placeholder}
+\label{fig:sprint1_db_placeholder}
+\end{figure}
+
+\subsection{API and Endpoint Summary}
+
+\begin{table}[H]
+\centering
+\caption{Sprint 1 API Summary}
+\label{tab:sprint1_api_summary}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Method} & \textbf{Endpoint} & \textbf{Purpose} \\
+\hline
+POST & \api{authenticate} & Validate credentials and issue JWT token \\
+\hline
+GET & \api{account} & Retrieve authenticated user profile and authorities \\
+\hline
+POST & \api{account/change-password} & Update user password with policy checks \\
+\hline
+GET & \api{admin/users} & Retrieve paginated users for administration \\
+\hline
+PUT & \api{admin/users} & Update user status or authority assignments \\
+\hline
+\end{tabularx}
+\end{table}
+
+\section{Conclusion}
+
+Sprint 1 delivered the strategic technical base of RM by implementing secure authentication, authorization controls, foundational persistence, and client-side session management. This increment reduced project risk by stabilizing cross-platform identity flows before introducing business-specific intervention logic. Sprint 2 builds directly on this foundation to implement rapport request management and dynamic form templates.

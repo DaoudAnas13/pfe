@@ -1,5 +1,34 @@
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Host Organization Structure Placeholder}}{16}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces As-Is and To-Be Process Comparison Placeholder}}{18}{figure.caption.7}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Physical Architecture of the RM Platform}}{21}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Microservices Communication Flow}}{22}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Actor-Based Use Case Diagram Placeholder}}{29}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Global Use Diagram Placeholder}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Web Interface Prototypes Placeholder}}{29}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Mobile Interface Prototypes Placeholder}}{29}{figure.caption.22}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Sprint 1 Authentication Sequence Diagram Placeholder}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sprint 1 Core Security Class Diagram Placeholder}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sprint 1 Database Baseline Placeholder}}{35}{figure.caption.29}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Sprint 2 Request and Template Sequence Placeholder}}{38}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Sprint 2 Domain Class Diagram Placeholder}}{39}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sprint 2 Database Schema Placeholder}}{40}{figure.caption.35}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Sprint 3 Class Diagram - Files and Execution Details}}{43}{figure.caption.38}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Intervention Status Lifecycle}}{51}{figure.caption.40}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Sprint 4 Class Diagram - Approval Workflow}}{51}{figure.caption.41}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Sprint 5 Class Diagram - Reporting and Export}}{60}{figure.caption.43}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Complete RM System Architecture}}{79}{figure.caption.47}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Database Entity-Relationship Diagram}}{80}{figure.caption.48}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Complete System Use Case Diagram}}{80}{figure.caption.49}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Authentication Flow Sequence Diagram}}{81}{figure.caption.50}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Intervention Lifecycle State Diagram}}{82}{figure.caption.51}%
 \addvspace {10\p@ }

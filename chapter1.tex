@@ -2,95 +2,160 @@
 
 \section{Introduction}
 
-This chapter presents the organizational and operational context of the project. It introduces Africom Services, clarifies the business environment in which the internship was conducted, formulates the project problematic, and defines the objectives that guided the development of the RM platform.
+This chapter establishes the strategic and operational framing of the project. It presents the general framework, introduces the host organization, details project background and problematic, and studies the existing intervention management process to justify the proposed digital solution.
 
-\section{Company Overview}
+\section{General Framework of the Project}
 
-\subsection{Company Identity}
+The RM project belongs to the digital transformation of field operations in telecom and IT equipment installation contexts. In such environments, intervention quality depends on rapid coordination between office teams and field technicians, consistent data collection, and reliable validation cycles.
 
-Africom Services is a Tunisian company created in January 2005 by experienced professionals in telecommunications. The company positions itself as an engineering and maintenance actor focused on communication infrastructure reliability and modernization.
-
-\subsection{Main Activity Domains}
-
-Africom Services operates across complementary domains:
-
-\begin{itemize}
-\item \textbf{Telecommunications}: installation and testing of transmission and multiplexing equipment.
-\item \textbf{Radio-electric networks}: deployment of microwave links and related infrastructure.
-\item \textbf{Fiber optics}: implementation of high-bandwidth connectivity solutions.
-\item \textbf{Maintenance}: preventive and corrective interventions on communication systems.
-\item \textbf{Electronic security}: GPS-based fleet monitoring and real-time tracking solutions.
-\item \textbf{Energy and IT integration}: adapted solutions for telecom infrastructure and information systems.
-\end{itemize}
-
-\subsection{Positioning and Partnerships}
-
-Africom Services supports telecom operators, private enterprises, and public institutions in infrastructure projects. Its partnership with Telecom Canada reinforces its technical capacity in private networks, wireless communication, and digital infrastructure deployment.
-
-\subsection{Strategic Orientation}
-
-The company strategy is based on four principles:
+From a systems engineering perspective, this context imposes five structural constraints:
 
 \begin{enumerate}
-\item \textbf{Innovation}: integration of modern digital tools and operational applications.
-\item \textbf{Quality}: alignment with recognized technical standards.
-\item \textbf{Client proximity}: adaptation of services to project-specific needs.
-\item \textbf{Responsibility}: attention to ethics, safety, and environmental constraints.
+\item distributed operations across multiple sites,
+\item heterogeneous intervention scenarios requiring configurable forms,
+\item strict accountability expectations from clients and operators,
+\item tight turnaround targets for validation and reporting,
+\item and high dependence on mobile data capture under variable connectivity.
 \end{enumerate}
 
-\section{Project Context}
+Consequently, the project is not only a software implementation effort. It is also a process reengineering initiative where workflow governance, traceability, and data quality control are central design objectives.
 
-\subsection{Operational Setting}
+\section{Presentation of the Host Organization}
 
-The project is situated in field intervention management for IT and telecom equipment. Interventions involve planning, assignment, on-site execution, quality validation, and final reporting. These activities are distributed across multiple stakeholders and geographic locations, which increases coordination complexity.
+\subsection{Organizational Identity}
 
-\subsection{Business Need}
+Africom Services is a Tunisian company founded in 2005 and active in telecommunications engineering, field deployment, and maintenance services. The organization supports telecom operators, enterprise clients, and institutional actors through project execution and technical operations.
 
-The host company required a unified information system capable of:
-
-\begin{itemize}
-\item structuring intervention workflows,
-\item improving execution traceability,
-\item reducing report production delays,
-\item and standardizing data capture quality.
-\end{itemize}
-
-This need led to the development of \textbf{RM (Report Manager)}, a platform combining web and mobile interfaces to manage interventions end-to-end.
-
-\section{Problematic}
-
-Before this project, intervention management faced recurring limitations:
+\subsection{Core Activity Areas}
 
 \begin{itemize}
-\item fragmented operational information,
-\item inconsistent field data quality,
-\item limited real-time visibility for supervisors,
-\item heavy manual effort for report consolidation,
-\item and delayed validation cycles.
+\item deployment and validation of telecom transmission equipment,
+\item radio network and microwave infrastructure projects,
+\item fiber optic implementation and maintenance,
+\item preventive and corrective technical interventions,
+\item operational monitoring solutions and connected security services.
 \end{itemize}
 
-The central problematic can therefore be expressed as follows:
+\subsection{Operational Characteristics}
+
+The organization combines office-based coordination with field execution teams. This dual operating model creates strong demand for synchronized information systems able to connect planning, execution evidence, quality control, and reporting.
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.88\textwidth}{
+\centering
+% TODO: Insert host organization chart here
+Organization Chart Placeholder: Operational management, coordination unit, supervision unit, field technician teams.
+}}
+\caption{Host Organization Structure Placeholder}
+\label{fig:host_org_structure_placeholder}
+\end{figure}
+
+\section{Project Presentation}
+
+\subsection{Project Background}
+
+Before RM, intervention governance relied on partially fragmented practices with heterogeneous tools and significant manual effort. The operational flow from assignment to final report delivery lacked a unified digital backbone. As intervention volume increased, this model exposed scalability limits.
+
+The PRD therefore defined RM as an integrated web and mobile platform with the following business mission:
+
+\begin{itemize}
+\item standardize intervention execution through template-driven processes,
+\item improve supervisor visibility on field progress,
+\item enforce validation and rejection governance,
+\item and automate client-ready Excel reporting.
+\end{itemize}
+
+\subsection{Problematic}
+
+The project problematic can be formalized as:
 
 \begin{quote}
-How can Africom Services implement a robust digital platform that standardizes intervention processes, strengthens traceability, and improves operational efficiency while supporting collaborative decision-making?
+How can a telecom field-operations organization move from fragmented, partly manual intervention tracking to a controlled, auditable, and scalable digital workflow without reducing field agility?
 \end{quote}
 
-\section{Project Objectives}
+This problematic combines business and technical dimensions:
 
-\subsection{General Objective}
+\begin{itemize}
+\item business dimension: cycle time reduction, quality consistency, and managerial visibility,
+\item technical dimension: secure multi-platform architecture, dynamic form support, and robust traceability.
+\end{itemize}
 
-Design and implement a scalable intervention management platform that supports planning, execution, validation, and reporting for IT equipment operations.
+\section{Study of the Existent}
 
-\subsection{Specific Objectives}
+\subsection{Analysis of the Existing}
+
+The initial process can be summarized in six stages:
 
 \begin{enumerate}
-\item Define a coherent role-based workflow for technicians, supervisors, coordinators, and administrators.
-\item Formalize intervention requirements and constraints in a structured specification.
-\item Design a maintainable system architecture for web and mobile usage.
-\item Implement core functional modules for intervention management and reporting.
-\item Evaluate technical and operational outcomes through measurable project results.
+\item request preparation by coordination staff,
+\item technician assignment through ad-hoc communication,
+\item field execution and evidence collection,
+\item supervisor quality checks,
+\item correction loop when errors are detected,
+\item final report consolidation for client communication.
 \end{enumerate}
 
-\section{Chapter Conclusion}
+Observed process weaknesses were concentrated at handoff points between stakeholders, where information loss and delay frequently occurred.
 
-This chapter established the organizational context and strategic motivation of the project. It clarified the business need, formalized the problematic, and defined objectives that guide the rest of the report. The next chapter develops the analysis phase and requirements specification that translate these objectives into actionable system requirements.
+\begin{table}[H]
+\centering
+\caption{Observed Weaknesses in the Existing Process}
+\label{tab:existing_process_weaknesses}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Process Stage} & \textbf{Observed Issue} & \textbf{Operational Impact} \\
+\hline
+Assignment and planning & Inconsistent data format between teams & Rework and interpretation errors \\
+\hline
+Field execution & Non-standardized capture structure & Data quality variability \\
+\hline
+Validation & Limited immediate access to complete evidence & Longer decision cycle time \\
+\hline
+Reporting & Manual consolidation effort & Delayed delivery and reduced scalability \\
+\hline
+Audit and compliance & Partial history tracking & Difficult incident analysis and accountability \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Critique of the Existing}
+
+The existing process can be critiqued using a quality-attribute lens:
+
+\begin{itemize}
+\item \textbf{Traceability deficit}: status transitions and decision rationale were not uniformly logged.
+\item \textbf{Standardization deficit}: different technicians used different capture practices.
+\item \textbf{Responsiveness deficit}: supervisors had delayed visibility on field outputs.
+\item \textbf{Scalability deficit}: manual aggregation could not scale with intervention growth.
+\item \textbf{Governance deficit}: control rules were implicit rather than encoded in system behavior.
+\end{itemize}
+
+Industry comparison confirms that modern field-service platforms prioritize event-driven status management, structured evidence collection, and automated report generation. The existing model did not provide these capabilities in an integrated way.
+
+\subsection{Proposed Solution}
+
+RM addresses the identified deficits through a domain-driven digital platform organized around five pillars:
+
+\begin{enumerate}
+\item \textbf{Identity and governance}: JWT authentication with role-based control.
+\item \textbf{Workflow control}: lifecycle management from planning to approval and archival.
+\item \textbf{Template-driven execution}: dynamic forms for standardized field data capture.
+\item \textbf{Evidence and traceability}: files, geolocation, and status history.
+\item \textbf{Automated reporting}: configurable Excel generation aligned with operator needs.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+% TODO: Insert as-is vs to-be process diagram here
+Process Transformation Placeholder: Existing fragmented flow versus RM integrated digital workflow.
+}}
+\caption{As-Is and To-Be Process Comparison Placeholder}
+\label{fig:as_is_to_be_placeholder}
+\end{figure}
+
+\section{Conclusion}
+
+This chapter provided the business and organizational grounding of the RM project. It demonstrated why the legacy process was insufficient for current operational demands and justified the need for a structured digital platform. The next chapter presents the planning approach, tools, and architecture decisions used to operationalize this transformation.

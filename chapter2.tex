@@ -1,205 +1,197 @@
-\chapter{Analysis and Requirements Specification}
+\chapter{Project Planning}
 
 \section{Introduction}
 
-This chapter formalizes the analysis phase of the RM project. It identifies system actors, specifies functional and non-functional requirements, models principal use cases, and states the project constraints that shape design and implementation decisions.
+This chapter presents the project planning strategy adopted to deliver the RM platform in a controlled, iterative, and traceable manner. It explains the SCRUM adaptation used in a single-developer context, the software and engineering tools selected for implementation, and the architecture decisions that structure the system at physical and logical levels.
 
-\section{Stakeholder and Actor Analysis}
+The planning objective was to guarantee progressive value delivery while preserving software quality attributes, especially security, maintainability, and performance.
 
-\subsection{Primary Actors}
+\section{SCRUM Methodology}
 
-\begin{itemize}
-\item \textbf{Technician}: executes interventions in the field, fills forms, attaches evidence, and updates intervention status.
-\item \textbf{Supervisor}: assigns interventions, verifies execution quality, and approves or rejects completed interventions.
-\item \textbf{Coordinator}: creates intervention requests, configures templates, and generates management reports.
-\item \textbf{Administrator}: manages users, roles, and global system configuration.
-\end{itemize}
+\subsection{Method Selection Rationale}
 
-\subsection{Secondary Stakeholders}
+SCRUM was selected because the project combined evolving business needs, multi-platform implementation (web and mobile), and high uncertainty around field constraints. An iterative model provided three major advantages:
 
 \begin{itemize}
-\item \textbf{Client organizations}: receive validated intervention reports.
-\item \textbf{Operational management}: monitors performance indicators and service quality.
-\item \textbf{Technical support}: ensures platform continuity and incident resolution.
+\item frequent validation of deliverables with domain expectations,
+\item early risk detection through short execution cycles,
+\item and continuous reprioritization based on implementation feedback.
 \end{itemize}
 
-\section{Roles and Access Control}
+\subsection{SCRUM Roles in a Single-Developer Context}
 
-The platform applies role-based access control (RBAC) to ensure secure and traceable operations.
+Although the project was executed by one developer, SCRUM responsibilities were explicitly maintained:
 
 \begin{table}[H]
 \centering
-\caption{Roles and Permissions Matrix}
-\label{tab:roles_permissions_reworked}
-\begin{tabularx}{\textwidth}{|l|X|X|X|X|}
+\caption{SCRUM Roles and Practical Adaptation}
+\label{tab:scrum_roles_adaptation}
+\begin{tabularx}{\textwidth}{|l|X|X|}
 \hline
-\textbf{Permission} & \textbf{Technician} & \textbf{Supervisor} & \textbf{Coordinator} & \textbf{Administrator} \\
+\textbf{Role} & \textbf{Theoretical Responsibility} & \textbf{Practical Adaptation in this Project} \\
 \hline
-View assigned interventions & \checkmark & \checkmark & \checkmark & \checkmark \\
+Product Owner & Define product vision and prioritize backlog & Backlog priorities were derived from the PRD and validated against business constraints \\
 \hline
-Update intervention status & \checkmark & \checkmark & \checkmark & \checkmark \\
+Scrum Master & Ensure process discipline and remove blockers & Sprint rituals, time-boxing, and risk monitoring were self-managed \\
 \hline
-Complete intervention forms & \checkmark & \checkmark & \checkmark & \checkmark \\
-\hline
-Assign interventions & & \checkmark & \checkmark & \checkmark \\
-\hline
-Approve interventions & & \checkmark & \checkmark & \checkmark \\
-\hline
-Create intervention requests & & & \checkmark & \checkmark \\
-\hline
-Configure templates & & & \checkmark & \checkmark \\
-\hline
-Generate reports & & & \checkmark & \checkmark \\
-\hline
-Manage users and roles & & & & \checkmark \\
-\hline
-System configuration & & & & \checkmark \\
+Development Team & Design, implement, test, and deliver increments & Full-stack implementation was executed end-to-end by the same developer \\
 \hline
 \end{tabularx}
 \end{table}
 
-\section{Functional Requirements}
+\subsection{Sprint Cadence and Governance}
 
-Functional requirements are grouped by capability domain.
-
-\subsection{Authentication and Security}
+Each sprint followed a three-week cycle:
 
 \begin{enumerate}
-\item The system shall authenticate users with secure credentials.
-\item The system shall maintain authenticated sessions using token-based authorization.
-\item The system shall enforce access control according to user roles.
-\item The system shall maintain audit information on critical operations.
+\item Sprint planning and backlog selection,
+\item architecture and design detailing,
+\item backend and frontend implementation,
+\item integration and test execution,
+\item sprint review and retrospective notes.
 \end{enumerate}
 
-\subsection{Intervention Lifecycle Management}
+This cadence was repeated for five sprints, covering foundation, core workflow, evidence handling, approval governance, and reporting optimization.
 
-\begin{enumerate}
-\item The system shall allow creation of intervention requests based on predefined templates.
-\item The system shall support assignment of interventions to technicians.
-\item The system shall support lifecycle status transitions from planning to archival.
-\item The system shall allow supervisors to approve or reject intervention submissions.
-\item The system shall keep a history of status changes and comments.
-\end{enumerate}
+\section{Software and Tools Used}
 
-\subsection{Template and Dynamic Form Management}
+\subsection{Frameworks and Technologies}
 
-\begin{enumerate}
-\item The system shall allow coordinators to create and manage reusable form templates.
-\item The system shall generate intervention forms dynamically from selected templates.
-\item The system shall validate required fields and form consistency before submission.
-\end{enumerate}
-
-\subsection{Evidence and Document Management}
-
-\begin{enumerate}
-\item The system shall allow upload and download of intervention-related files.
-\item The system shall associate evidence files with interventions and users.
-\item The system shall preserve file metadata for traceability.
-\end{enumerate}
-
-\subsection{Reporting and Monitoring}
-
-\begin{enumerate}
-\item The system shall generate report outputs for operational and managerial use.
-\item The system shall support filtered views by project, status, and date.
-\item The system shall provide dashboard information for supervision and follow-up.
-\end{enumerate}
-
-\section{Non-Functional Requirements}
-
-\subsection{Performance}
-
-\begin{itemize}
-\item Response times should remain acceptable under concurrent usage.
-\item Report generation and file operations should be optimized for operational workload.
-\end{itemize}
-
-\subsection{Reliability and Availability}
-
-\begin{itemize}
-\item The platform must ensure data persistence and recovery mechanisms.
-\item Operational continuity must be maintained during normal business activity.
-\end{itemize}
-
-\subsection{Security}
-
-\begin{itemize}
-\item Authentication and authorization must protect sensitive operational data.
-\item Input validation must reduce injection and data integrity risks.
-\item Access to evidence and reports must be controlled by roles and permissions.
-\end{itemize}
-
-\subsection{Usability}
-
-\begin{itemize}
-\item Interfaces should remain clear for both office and field users.
-\item Mobile workflows should support quick intervention data capture.
-\end{itemize}
-
-\subsection{Maintainability and Scalability}
-
-\begin{itemize}
-\item Architecture and code organization should support incremental evolution.
-\item The platform should accommodate additional modules and reporting needs.
-\end{itemize}
-
-\section{System Use Cases}
-
-\subsection{Core Use Cases by Actor}
+The selected stack addresses the requirements in the PRD with clear technology-to-requirement mapping.
 
 \begin{table}[H]
 \centering
-\caption{Main Use Cases by Actor}
-\label{tab:use_cases_by_actor}
-\begin{tabularx}{\textwidth}{|l|X|}
+\caption{Technology Stack and Justification}
+\label{tab:stack_justification}
+\begin{tabularx}{\textwidth}{|l|l|X|}
 \hline
-\textbf{Actor} & \textbf{Main Use Cases} \\
+\textbf{Layer} & \textbf{Technology} & \textbf{Justification} \\
 \hline
-Technician & Consult assigned intervention, complete dynamic form, upload evidence, submit execution output \\
+Backend & Spring Boot & Mature ecosystem, secure REST API development, modular microservice readiness \\
 \hline
-Supervisor & Assign intervention, review submission, approve or reject with feedback, monitor pending items \\
+Web Frontend & Angular & Structured enterprise UI framework with robust forms and routing \\
 \hline
-Coordinator & Create intervention request, manage templates, track project progress, generate reports \\
+Mobile Frontend & Flutter + BLoC & Cross-platform delivery and deterministic state management for field workflows \\
 \hline
-Administrator & Manage users and roles, configure system parameters, supervise platform health \\
+Database & PostgreSQL & ACID transactions, JSONB support for dynamic form payloads, strong indexing capabilities \\
+\hline
+Authentication & JWT + Spring Security & Stateless authentication suitable for web/mobile clients \\
+\hline
+Notifications & Firebase Cloud Messaging & Reliable push notification channel for intervention events \\
+\hline
+Reporting & Apache POI & Programmatic generation of configurable Excel outputs \\
 \hline
 \end{tabularx}
 \end{table}
 
-\subsection{Representative Use Case: Intervention Validation}
+\subsection{Development Environment}
 
-\textbf{Primary actor:} Supervisor
+The project environment was organized to support repeatable development and testing:
 
-\textbf{Preconditions:}
 \begin{itemize}
-\item A technician has submitted intervention data.
-\item Required form fields and evidence are available.
+\item IDEs: IntelliJ IDEA for backend, VS Code for frontend/mobile work,
+\item version control: Git-based workflow with incremental commits per sprint objective,
+\item local execution: service startup profiles for backend APIs, Angular UI, and Flutter client,
+\item database environment: PostgreSQL instance with versioned schema evolution.
 \end{itemize}
 
-\textbf{Main scenario:}
+\subsection{Supporting Software}
+
+\begin{itemize}
+\item Postman for API verification and endpoint scenario testing,
+\item pgAdmin for schema and data inspection,
+\item Swagger/OpenAPI for endpoint discoverability,
+\item Docker tooling for packaging and deployment preparation,
+\item spreadsheet tools for validating report outputs generated by Apache POI.
+\end{itemize}
+
+\section{Physical Architecture}
+
+The physical architecture is based on client applications connected to backend microservices over secure HTTP channels. Persistent data and generated artifacts are handled by dedicated storage components.
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+% TODO: Insert physical architecture diagram here
+Physical Architecture Placeholder: Angular web client, Flutter mobile client, Spring Boot microservices, PostgreSQL, file storage, and notification gateway.
+}}
+\caption{Physical Architecture of the RM Platform}
+\label{fig:physical_architecture_placeholder}
+\end{figure}
+
+\subsection{Runtime Nodes}
+
+\begin{itemize}
+\item \textbf{Web Node}: Angular interface for coordinators, supervisors, and administrators.
+\item \textbf{Mobile Node}: Flutter application used by field technicians.
+\item \textbf{Service Nodes}: Spring Boot services exposing domain APIs.
+\item \textbf{Data Node}: PostgreSQL database and file storage components.
+\item \textbf{Notification Node}: Firebase integration for event propagation.
+\end{itemize}
+
+\section{Logical Architecture}
+
+\subsection{Microservices Architecture}
+
+The logical decomposition follows business domains to keep responsibilities explicit and maintainable.
+
+\begin{table}[H]
+\centering
+\caption{Logical Service Decomposition}
+\label{tab:logical_services}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Service Domain} & \textbf{Main Responsibility} & \textbf{Key Data} \\
+\hline
+Identity and Access & Authentication, token validation, authorization checks & users, roles, permissions \\
+\hline
+Intervention Management & Request lifecycle, assignment, status transitions & rapport requests, status history \\
+\hline
+Template Management & Form schema configuration and governance & rapport templates, mapping JSON \\
+\hline
+Evidence Management & File upload, retrieval, and metadata traceability & files, execution details \\
+\hline
+Reporting and Export & Configurable Excel generation and report history & config exports, generated reports \\
+\hline
+Notification Management & Push and custom notification dispatch and history & notifications, delivery logs \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Frontend Architecture (Angular)}
+
+The Angular application adopts a modular architecture:
+
+\begin{itemize}
+\item \textbf{Core Module}: authentication guard, interceptors, and shared services.
+\item \textbf{Feature Modules}: intervention dashboard, template management, reporting, administration.
+\item \textbf{Shared Module}: reusable components, pipes, validators, and UI elements.
+\item \textbf{Routing Layer}: role-aware navigation and guarded access.
+\end{itemize}
+
+\subsection{Inter-service Communication}
+
+Communication is HTTP REST based and organized by endpoint families. Key interaction patterns include:
+
 \begin{enumerate}
-\item Supervisor opens the pending intervention.
-\item Supervisor reviews captured values and attachments.
-\item Supervisor either approves the intervention or rejects it with feedback.
-\item System updates status history and notifies relevant actors.
+\item token-based authenticated requests from web/mobile clients,
+\item domain service orchestration for lifecycle transitions,
+\item asynchronous notification dispatch after state changes,
+\item generated report storage and retrieval workflows.
 \end{enumerate}
 
-\textbf{Postconditions:}
-\begin{itemize}
-\item Intervention status is updated and traceable.
-\item Follow-up actions become available according to the new state.
-\end{itemize}
-
-\section{Project Constraints}
-
-\begin{itemize}
-\item \textbf{Time constraint}: development and validation were performed within an academic calendar.
-\item \textbf{Organizational constraint}: workflows had to align with existing operational practices.
-\item \textbf{Technical constraint}: integration had to remain compatible with selected stack components and deployment model.
-\item \textbf{Data constraint}: intervention data and evidence require controlled access and structured storage.
-\item \textbf{Quality constraint}: solution acceptance depends on traceability, consistency, and report reliability.
-\end{itemize}
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+% TODO: Insert service communication sequence diagram here
+Logical Communication Placeholder: Client request, API validation, domain transaction, status history update, notification dispatch.
+}}
+\caption{Microservices Communication Flow}
+\label{fig:microservices_communication_placeholder}
+\end{figure}
 
 \section{Chapter Conclusion}
 
-This chapter transformed operational needs into formal requirements and constraints. It established the functional perimeter of the system and defined the quality criteria that guide architecture and implementation. The next chapter presents the design decisions adopted to satisfy these requirements.
+This chapter established the planning framework used to manage the RM project across five three-week sprints. It justified the selected technology stack and architecture model, and clarified how physical components and logical services collaborate to satisfy business and technical objectives. The next chapter formalizes requirements analysis and traceability in detail.

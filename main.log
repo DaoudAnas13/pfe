@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  17 MAR 2026 09:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  24 MAR 2026 10:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,27 +710,27 @@ Package cleveref Info: `listings' support loaded on input line 3131.
 (C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count373
-) (main.aux (ded.aux) (rem.aux) (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (conclusion.aux))
+) (main.aux (ded.aux) (rem.aux) (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux) (chapter7.aux) (chapter8.aux) (conclusion.aux) (appendix_a_code_samples.aux) (appendix_b_diagrams.aux) (appendix_c_testing.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -748,8 +748,8 @@ LaTeX Font Info:    ... okay on input line 91.
 * \textheight=702.78308pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-41.1381pt
-* \headheight=15.0pt
+* \topmargin=-54.1381pt
+* \headheight=28.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
@@ -800,7 +800,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-Package hyperref Info: Link coloring ON on input line 91.
+Package hyperref Info: Link coloring ON on input line 92.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -808,10 +808,10 @@ Package hyperref Info: Link coloring ON on input line 91.
 
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=462, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=798, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf>
-Package pdftex.def Info: garde_organized.pdf  used on input line 92.
+Package pdftex.def Info: garde_organized.pdf  used on input line 93.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 
 
@@ -819,26 +819,26 @@ pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF 
 
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=464, page=1, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=800, page=1, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
-Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page1 used on input line 93.
 (pdftex.def)             Requested size: 597.551pt x 845.07518pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
-Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page1 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
-Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page1 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
-Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page1 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
-Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page1 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 [1
 
@@ -846,18 +846,18 @@ Package pdftex.def Info: garde_organized.pdf , page1 used on input line 92.
  <./garde_organized.pdf>]
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=497, page=2, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=833, page=2, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 2>
-Package pdftex.def Info: garde_organized.pdf , page2 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page2 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 2>
-Package pdftex.def Info: garde_organized.pdf , page2 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page2 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 2>
-Package pdftex.def Info: garde_organized.pdf , page2 used on input line 92.
+Package pdftex.def Info: garde_organized.pdf , page2 used on input line 93.
 (pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
 [2
 
@@ -889,109 +889,394 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] [6])
+] [6] [7] [8])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [7] (main.lof)
+ [9] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [8
+ [10
 
 ] (main.lot)
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [9
+ [11
 
 ]
 \openout2 = `introduction.aux'.
 
- (introduction.tex [10
+ (introduction.tex [12
 
 
-]) [11]
+] [13]) [14]
 \openout2 = `chapter1.aux'.
 
  (chapter1.tex
 Chapter 1.
-[12
-
-
-
-
-] [13])
-Overfull \hbox (0.65115pt too wide) in paragraph at lines 96--113
-\OT1/cmr/m/n/12 This chap-ter es-tab-lished the or-ga-ni-za-tional con-text and strate-gic mo-ti-va-tion of the project.
- []
-
-[14]
-\openout2 = `chapter2.aux'.
-
- (chapter2.tex
-Chapter 2.
-
-Overfull \hbox (1.05313pt too wide) in paragraph at lines 58--58
-[]|\OT1/cmr/bx/n/12 Technician| 
- []
-
-
-Overfull \hbox (1.45457pt too wide) in paragraph at lines 58--58
-[]|\OT1/cmr/bx/n/12 Supervisor| 
- []
-
-
-Overfull \hbox (10.40735pt too wide) in paragraph at lines 58--58
-[]|\OT1/cmr/bx/n/12 Coordinator| 
- []
-
-
-Overfull \hbox (22.5518pt too wide) in paragraph at lines 58--58
-[]|\OT1/cmr/bx/n/12 Administrator| 
- []
-
 [15
 
 
 
 
-] [16] [17] [18]) [19]
-\openout2 = `chapter3.aux'.
-
- (chapter3.tex
-Chapter 3.
-[20
+] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 119--119
+[]|\OT1/cmr/m/n/12 Non-standardized cap-ture
+ []
 
 
+Underfull \hbox (badness 3019) in paragraph at lines 119--119
+[]|\OT1/cmr/m/n/12 Delayed de-liv-ery and re-
+ []
 
 
-] [21] [22]) [23]
-\openout2 = `chapter4.aux'.
+Underfull \hbox (badness 3612) in paragraph at lines 119--119
+[]|\OT1/cmr/m/n/12 Difficult in-ci-dent anal-y-sis
+ []
 
- (chapter4.tex
-Chapter 4.
-[24
+[17]) [18]
+\openout2 = `chapter2.aux'.
+
+ (chapter2.tex
+Chapter 2.
+
+Overfull \hbox (3.87067pt too wide) in paragraph at lines 13--14
+\OT1/cmr/m/n/12 SCRUM was se-lected be-cause the project com-bined evolv-ing busi-ness needs, multi-platform
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/bx/n/12 Practical Adap-ta-tion in
+ []
 
 
-] [25] [26]) [27]
-\openout2 = `chapter5.aux'.
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+[]|\OT1/cmr/m/n/12 Sprint rit-u-als, time-boxing,
+ []
 
- (chapter5.tex
-Chapter 5.
-[28
+
+Underfull \hbox (badness 3525) in paragraph at lines 39--39
+\OT1/cmr/m/n/12 ex-e-cuted end-to-end by the
+ []
+
+[19
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in alignment at lines 83--83
-[][] 
+Underfull \hbox (badness 5985) in paragraph at lines 84--84
+\OT1/cmr/m/n/12 de-vel-op-ment, mod-u-lar mi-croser-vice
  []
 
-[29]) [30]
+
+Underfull \hbox (badness 1655) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/12 Structured en-ter-prise UI frame-work
+ []
+
+
+Underfull \hbox (badness 1400) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/12 Stateless au-then-ti-ca-tion suit-able for
+ []
+
+
+Underfull \hbox (badness 2213) in paragraph at lines 84--84
+[]|\OT1/cmr/m/n/12 Programmatic gen-er-a-tion of con-fig-
+ []
+
+[20]
+Underfull \hbox (badness 4266) in paragraph at lines 159--159
+[]|\OT1/cmr/m/n/12 Request life-cy-cle, as-sign-
+ []
+
+[21]) [22] [23]
+\openout2 = `chapter3.aux'.
+
+ (chapter3.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Execute in-ter-ven-tions,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 at-tach files, cap-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 ge-olo-ca-tion, sub-mit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Review sub-mis-sions,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 mo-tifs and feed-back,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 track pend-ing val-i-da-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 map-ping, gen-er-ate and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Manage users and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 plat-form con-fig-u-ra-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Consume gen-er-ated
+ []
+
+
+Underfull \hbox (badness 2809) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 Ex-cel for-mat for con-
+ []
+
+[24
+
+
+
+
+]
+Underfull \hbox (badness 4739) in paragraph at lines 52--52
+\OT1/cmr/m/n/12 fill template-based forms,
+ []
+
+
+Underfull \hbox (badness 7832) in paragraph at lines 52--52
+[]|\OT1/cmr/m/n/12 Review in-ter-ven-tion con-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+[]|\OT1/cmr/m/n/12 Manage tem-plates/config
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+\OT1/cmr/m/n/12 ex-port, fil-ter datasets,
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 52--52
+\OT1/cmr/m/n/12 gen-er-ate re-ports, mon-i-tor
+ []
+
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
+[]|\OT1/cmr/m/n/12 Secure au-then-ti-ca-tion with
+ []
+
+
+Underfull \hbox (badness 4353) in paragraph at lines 93--93
+\OT1/cmr/m/n/12 email/password and JWT ses-sion
+ []
+
+
+Underfull \hbox (badness 7291) in paragraph at lines 93--93
+[]|\OT1/cmr/m/n/12 Intervention cre-ation, as-sign-ment,
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 93--93
+[]|\OT1/cmr/m/n/12 Form-level val-i-da-tion for re-quired,
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/rapport-requests\OT1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (51.03294pt too wide) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/rapport-requests/id/approve\OT1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (41.59409pt too wide) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/rapport-requests/id/reject| 
+ []
+
+
+Overfull \hbox (226.84418pt too wide) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/execution-details-from-mobile/rapportRequestId/reference| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/config-exports\OT1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (90.99411pt too wide) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/config-exports/id/generate-rapport| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmr/m/n/12 Configurable Ex-cel re-port
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/files\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 122--122
+[]|\OT1/cmr/m/n/12 Evidence life-cy-cle (up-load,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/status\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 5504) in paragraph at lines 122--122
+[]|\OT1/cmr/m/n/12 Controlled tran-si-tions and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/custom-notif\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 6445) in paragraph at lines 122--122
+[]|\OT1/cmr/m/n/12 Stakeholder com-mu-ni-ca-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/clients\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/companies\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+[]|\OT1/cmtt/m/n/12 /api/admin/users\OT1/cmr/m/n/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/account\OT1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (23.06908pt too wide) in paragraph at lines 122--122
+\OT1/cmtt/m/n/12 /api/account/change-password| 
+ []
+
+[27]
+Underfull \hbox (badness 2213) in paragraph at lines 155--155
+[]|\OT1/cmr/m/n/12 API re-spon-sive-ness for op-er-a-
+ []
+
+[28] [29]
+Underfull \hbox (badness 1496) in paragraph at lines 272--272
+[]|\OT1/cmr/m/n/12 Status life-cy-cle gov-er-nance, re-jec-
+ []
+
+) [30]
+\openout2 = `chapter4.aux'.
+
+ (chapter4.tex
+Chapter 4.
+[31
+
+
+
+
+] [32] [33] [34]
+Underfull \hbox (badness 2726) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/12 Update user pass-word with pol-icy
+ []
+
+) [35]
+\openout2 = `chapter5.aux'.
+
+ (chapter5.tex
+Chapter 5.
+[36
+
+
+
+
+] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 126--126
+[]|\OT1/cmr/m/n/12 Submission blocked when con-
+ []
+
+[38] [39]) [40]
+\openout2 = `chapter6.aux'.
+
+ (chapter6.tex
+Chapter 6.
+[41
+
+
+
+
+] [42] [43] [44] [45] [46]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 388.
+
+[47]) [48]
+\openout2 = `chapter7.aux'.
+
+ (chapter7.tex
+Chapter 7.
+[49
+
+
+
+
+] [50] [51] [52] [53] [54] [55]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 475.
+
+[56]) [57]
+\openout2 = `chapter8.aux'.
+
+ (chapter8.tex
+Chapter 8.
+[58
+
+
+
+
+] [59] [60] [61] [62] [63] [64]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 439.
+
+[65] [66]) [67]
 \openout2 = `conclusion.aux'.
 
  (conclusion.tex
@@ -1004,36 +1289,121 @@ Overfull \hbox (7.4912pt too wide) in paragraph at lines 25--26
 []\OT1/cmr/bx/n/12 Business An-a-lyt-ics: \OT1/cmr/m/n/12 Ex-cel re-port gen-er-a-tion, cus-tom tem-plates, in-tel-li-gent archival,
  []
 
-[31
+[68
 
 
 
 
-] [32] [33]
+] [69] [70]
 Underfull \hbox (badness 10000) in alignment at lines 179--179
 [][] 
  []
 
-[34] [35]) [36] (main.aux (ded.aux) (rem.aux) (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (conclusion.aux))
+[71] [72]) [73]
+\openout2 = `appendix_a_code_samples.aux'.
+
+ (appendix_a_code_samples.tex
+Appendix A.
+[74
+
+
+
+
+] [75] [76] [77]) [78]
+\openout2 = `appendix_b_diagrams.aux'.
+
+ (appendix_b_diagrams.tex
+Appendix B.
+
+Overfull \hbox (36.68506pt too wide) in paragraph at lines 49--50
+ [][] 
+ []
+
+
+Overfull \hbox (16.97914pt too wide) in paragraph at lines 69--69
+ [][]\OT1/cmr/m/n/12 rapport[]template 
+ []
+
+
+Overfull \hbox (8.88478pt too wide) in paragraph at lines 70--70
+ [][]\OT1/cmr/m/n/12 rapport[]request 
+ []
+
+[79
+
+
+
+
+] [80]
+Overfull \hbox (1.82309pt too wide) in paragraph at lines 184--184
+ [][]\OT1/cmr/m/n/12 PLANNED 
+ []
+
+
+Overfull \hbox (10.63966pt too wide) in paragraph at lines 185--185
+ [][]\OT1/cmr/m/n/12 EXECUTED 
+ []
+
+
+Overfull \hbox (18.13402pt too wide) in paragraph at lines 186--186
+ []\OT1/cmr/m/n/12 VALIDATION 
+ []
+
+
+Overfull \hbox (10.80078pt too wide) in paragraph at lines 187--187
+ [][]\OT1/cmr/m/n/12 APPROVED 
+ []
+
+
+Overfull \hbox (7.53275pt too wide) in paragraph at lines 188--188
+ [][]\OT1/cmr/m/n/12 ARCHIVED 
+ []
+
+
+Overfull \hbox (17.32849pt too wide) in paragraph at lines 189--189
+ [][]\OT1/cmr/m/n/12 CANCELLED 
+ []
+
+
+Overfull \hbox (7.70638pt too wide) in paragraph at lines 190--190
+ [][]\OT1/cmr/m/n/12 REJECTED 
+ []
+
+) [81] [82]
+\openout2 = `appendix_c_testing.aux'.
+
+ (appendix_c_testing.tex
+Appendix C.
+[83
+
+
+
+
+] [84] [85] [86] [87] [88] [89] [90]
+Overfull \hbox (35.64445pt too wide) in paragraph at lines 476--486
+ [][] 
+ []
+
+[91]) [92] (main.aux (ded.aux) (rem.aux) (introduction.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux) (chapter7.aux) (chapter8.aux) (conclusion.aux) (appendix_a_code_samples.aux) (appendix_b_diagrams.aux) (appendix_c_testing.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7941C08B6F2616CC30D360676EC0ADEF;19104.
+(rerunfilecheck)             Checksum: 38A3ACB03A63F6A19504FA15F24B4409;33058.
  ) 
 Here is how much of TeX's memory you used:
- 39418 strings out of 467870
- 899526 string characters out of 5416903
- 1421457 words of memory out of 5000000
- 67402 multiletter control sequences out of 15000+600000
- 635521 words of font info for 68 fonts, out of 8000000 for 9000
+ 42213 strings out of 467870
+ 945542 string characters out of 5416903
+ 1982457 words of memory out of 5000000
+ 68410 multiletter control sequences out of 15000+600000
+ 636623 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,104p,743b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on main.pdf (36 pages, 1112114 bytes).
+ 84i,17n,104p,743b,2193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (92 pages, 1558697 bytes).
 PDF statistics:
- 975 PDF objects out of 1000 (max. 8388607)
- 247 named destinations out of 1000 (max. 500000)
- 993 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3637 PDF objects out of 4296 (max. 8388607)
+ 1989 named destinations out of 2073 (max. 500000)
+ 1665 words of extra memory for PDF output out of 10000 (max. 10000000)
 

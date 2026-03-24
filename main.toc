@@ -1,108 +1,192 @@
 \contentsline {chapter}{Contents}{5}{chapter*.1}%
-\contentsline {chapter}{List of Figures}{8}{chapter*.2}%
-\contentsline {chapter}{List of Tables}{9}{chapter*.3}%
-\contentsline {chapter}{General Introduction}{10}{chapter*.4}%
-\contentsline {section}{\numberline {0.1}Context of the Internship and Project}{10}{section.0.1}%
-\contentsline {section}{\numberline {0.2}Problem Statement and Motivation}{10}{section.0.2}%
-\contentsline {section}{\numberline {0.3}Project Objective}{10}{section.0.3}%
-\contentsline {section}{\numberline {0.4}Methodological Approach}{11}{section.0.4}%
-\contentsline {section}{\numberline {0.5}Report Organization}{11}{section.0.5}%
-\contentsline {chapter}{\numberline {1}General Presentation}{12}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{12}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Company Overview}{12}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Company Identity}{12}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Main Activity Domains}{12}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Positioning and Partnerships}{12}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Strategic Orientation}{13}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Project Context}{13}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Operational Setting}{13}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Business Need}{13}{subsection.1.3.2}%
-\contentsline {section}{\numberline {1.4}Problematic}{13}{section.1.4}%
-\contentsline {section}{\numberline {1.5}Project Objectives}{14}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}General Objective}{14}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Specific Objectives}{14}{subsection.1.5.2}%
-\contentsline {section}{\numberline {1.6}Chapter Conclusion}{14}{section.1.6}%
-\contentsline {chapter}{\numberline {2}Analysis and Requirements Specification}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Stakeholder and Actor Analysis}{15}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Primary Actors}{15}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Secondary Stakeholders}{15}{subsection.2.2.2}%
-\contentsline {section}{\numberline {2.3}Roles and Access Control}{15}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Functional Requirements}{16}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Authentication and Security}{16}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Intervention Lifecycle Management}{16}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Template and Dynamic Form Management}{16}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Evidence and Document Management}{17}{subsection.2.4.4}%
-\contentsline {subsection}{\numberline {2.4.5}Reporting and Monitoring}{17}{subsection.2.4.5}%
-\contentsline {section}{\numberline {2.5}Non-Functional Requirements}{17}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Performance}{17}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Reliability and Availability}{17}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Security}{17}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Usability}{17}{subsection.2.5.4}%
-\contentsline {subsection}{\numberline {2.5.5}Maintainability and Scalability}{17}{subsection.2.5.5}%
-\contentsline {section}{\numberline {2.6}System Use Cases}{18}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Core Use Cases by Actor}{18}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Representative Use Case: Intervention Validation}{18}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Project Constraints}{18}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Chapter Conclusion}{19}{section.2.8}%
-\contentsline {chapter}{\numberline {3}System Design}{20}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Design Principles}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Global Architecture}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Physical and Deployment View}{20}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Logical View}{21}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Domain and Data Design}{21}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Core Domain Entities}{21}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Data Modeling Strategy}{21}{subsection.3.4.2}%
-\contentsline {section}{\numberline {3.5}Process and Workflow Design}{21}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Intervention Lifecycle Model}{21}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Approval Workflow}{22}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Use Case Realization Design}{22}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Representative Realization: Dynamic Intervention Execution}{22}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Interface Design}{22}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Web Interface Design}{22}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Mobile Interface Design}{22}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Design Validation Against Requirements}{23}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Chapter Conclusion}{23}{section.3.9}%
-\contentsline {chapter}{\numberline {4}Implementation}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Implementation Environment}{24}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Method and Incremental Delivery}{24}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Technology Stack}{24}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Backend Realization}{24}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Security and Access Layer}{24}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Domain Services}{24}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Persistence and Data Access}{25}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Web Application Realization}{25}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Coordinator Features}{25}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Supervisor Features}{25}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Administrator Features}{25}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Mobile Application Realization}{26}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Field Execution Workflow}{26}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Evidence Capture and Synchronization}{26}{subsection.4.5.2}%
-\contentsline {section}{\numberline {4.6}Cross-Module Integration}{26}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Status and Traceability}{26}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Notification and Collaboration Flow}{26}{subsection.4.6.2}%
-\contentsline {section}{\numberline {4.7}Implementation by Major Functional Blocks}{26}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Block A: Foundation Services}{26}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}Block B: Intervention and Template Core}{26}{subsection.4.7.2}%
-\contentsline {subsection}{\numberline {4.7.3}Block C: Evidence and Validation Enhancements}{26}{subsection.4.7.3}%
-\contentsline {subsection}{\numberline {4.7.4}Block D: Reporting and Optimization Extensions}{27}{subsection.4.7.4}%
-\contentsline {section}{\numberline {4.8}Chapter Conclusion}{27}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Results and Discussion}{28}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introduction}{28}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluation Framework}{28}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Achieved Functional Results}{28}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Lifecycle Digitization}{28}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Role-Based Collaboration}{28}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Validation and Traceability}{28}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Evidence and Reporting}{28}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Discussion of Results}{29}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Alignment with Initial Objectives}{29}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Operational Impact}{29}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}Technical Impact}{29}{subsection.5.4.3}%
-\contentsline {section}{\numberline {5.5}Project Metrics and Delivery Summary}{29}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Limitations}{30}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Improvement Perspectives}{30}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Chapter Conclusion}{30}{section.5.8}%
-\contentsline {chapter}{Conclusion}{31}{chapter*.8}%
+\contentsline {chapter}{List of Figures}{10}{chapter*.2}%
+\contentsline {chapter}{List of Tables}{11}{chapter*.3}%
+\contentsline {chapter}{General Introduction}{12}{chapter*.4}%
+\contentsline {section}{\numberline {0.1}Context of the Internship and Project}{12}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Problem Statement and Motivation}{12}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Project Objective}{12}{section.0.3}%
+\contentsline {section}{\numberline {0.4}Methodological Approach}{13}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Report Organization}{13}{section.0.5}%
+\contentsline {chapter}{\numberline {1}General Presentation}{15}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{15}{section.1.1}%
+\contentsline {section}{\numberline {1.2}General Framework of the Project}{15}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Presentation of the Host Organization}{15}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Organizational Identity}{15}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Core Activity Areas}{16}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Operational Characteristics}{16}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Project Presentation}{16}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Project Background}{16}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Problematic}{16}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}Study of the Existent}{17}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Analysis of the Existing}{17}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Critique of the Existing}{17}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}Proposed Solution}{18}{subsection.1.5.3}%
+\contentsline {section}{\numberline {1.6}Conclusion}{18}{section.1.6}%
+\contentsline {chapter}{\numberline {2}Project Planning}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}SCRUM Methodology}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Method Selection Rationale}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}SCRUM Roles in a Single-Developer Context}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Sprint Cadence and Governance}{20}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Software and Tools Used}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Frameworks and Technologies}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Development Environment}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Supporting Software}{21}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Physical Architecture}{21}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Runtime Nodes}{21}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Logical Architecture}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Microservices Architecture}{21}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Frontend Architecture (Angular)}{22}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Inter-service Communication}{22}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Chapter Conclusion}{23}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Analysis and Requirements Specification}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{24}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Capturing Needs}{24}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Actors Identification}{24}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Role Codes and Access Scope}{26}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Requirement Identification}{26}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Functional Requirements}{27}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Non-Functional Requirements}{28}{subsubsection.3.2.3.2}%
+\contentsline {subsection}{\numberline {3.2.4}Use Cases by Actor}{29}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Use Case Diagrams (Placeholder)}{29}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Global Use Diagram (Placeholder)}{29}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Interface Prototyping (Placeholder)}{29}{section.3.4}%
+\contentsline {section}{\numberline {3.5}SCRUM Management}{30}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Team Roles}{30}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Product Backlog}{30}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Chapter Conclusion}{30}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Sprint 1: Foundation and Core Infrastructure}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{31}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Preview of Sprint}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Sprint Objectives}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Sprint Scope Statement}{31}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Sprint Backlog}{32}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Functional Specifications}{32}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Use Cases}{32}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Textual Specifications}{33}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Conception}{33}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Sequence Diagram (Placeholder)}{33}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Class Diagram (Placeholder)}{33}{subsection.4.5.2}%
+\contentsline {section}{\numberline {4.6}Realization}{33}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Backend Implementation Details (Spring Boot)}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Frontend Implementation (Angular)}{34}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Mobile Implementation (Flutter + BLoC)}{34}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Database Design (PostgreSQL)}{35}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}API and Endpoint Summary}{35}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Conclusion}{35}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Sprint 2: Rapport Request and Form Templates}{36}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{36}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Preview of Sprint}{36}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Sprint Objectives}{36}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Business Value Statement}{36}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Sprint Backlog}{37}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Functional Specifications}{37}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Use Cases}{37}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Textual Specifications}{38}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Conception}{38}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Sequence Diagram (Placeholder)}{38}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Class Diagram (Placeholder)}{39}{subsection.5.5.2}%
+\contentsline {section}{\numberline {5.6}Realization}{39}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Backend Implementation Details (Spring Boot)}{39}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Frontend Implementation (Angular)}{39}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Mobile Implementation (Flutter)}{39}{subsection.5.6.3}%
+\contentsline {subsection}{\numberline {5.6.4}Database Design (PostgreSQL)}{40}{subsection.5.6.4}%
+\contentsline {subsection}{\numberline {5.6.5}API and Endpoint Summary}{40}{subsection.5.6.5}%
+\contentsline {section}{\numberline {5.7}Conclusion}{40}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Sprint 3: File Management and Geolocation Tracking}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Introduction}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Sprint Preview and Objectives}{41}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}User Stories}{41}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Sprint Goals}{42}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Sprint Backlog}{42}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Functional Specification}{42}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Use Cases}{42}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Conception}{43}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Class Diagram}{43}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Realization}{44}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Backend Implementation}{44}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Mobile Implementation}{46}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Tests and Validation}{47}{section.6.7}%
+\contentsline {subsubsection}{\numberline {6.7.0.1}File Upload Tests}{47}{subsubsection.6.7.0.1}%
+\contentsline {section}{\numberline {6.8}Conclusion}{48}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Sprint 4: Approval Workflow and Status Management}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Sprint Preview and Objectives}{49}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}User Stories}{49}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Sprint Goals}{50}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Sprint Backlog}{50}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Functional Specification}{50}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Intervention Status Lifecycle}{50}{subsection.7.4.1}%
+\contentsline {section}{\numberline {7.5}Conception}{51}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Class Diagram}{51}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}Realization}{51}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Backend Implementation}{51}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Frontend Implementation}{55}{subsection.7.6.2}%
+\contentsline {section}{\numberline {7.7}Tests and Validation}{56}{section.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.0.1}Approval Workflow Tests}{56}{subsubsection.7.7.0.1}%
+\contentsline {section}{\numberline {7.8}Conclusion}{57}{section.7.8}%
+\contentsline {chapter}{\numberline {8}Sprint 5: Excel Report Generation and System Optimization}{58}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{58}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Sprint Preview and Objectives}{58}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}User Stories}{58}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Sprint Goals}{59}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Sprint Backlog}{59}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Functional Specification}{59}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Report Generation Process}{59}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Report Types}{60}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}Conception}{60}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Class Diagram}{60}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Realization}{60}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Backend Implementation}{60}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Performance Optimization}{64}{subsection.8.6.2}%
+\contentsline {section}{\numberline {8.7}Tests and Validation}{65}{section.8.7}%
+\contentsline {subsubsection}{\numberline {8.7.0.1}Report Generation Tests}{65}{subsubsection.8.7.0.1}%
+\contentsline {subsubsection}{\numberline {8.7.0.2}Performance Tests}{66}{subsubsection.8.7.0.2}%
+\contentsline {section}{\numberline {8.8}System Metrics and Monitoring}{66}{section.8.8}%
+\contentsline {section}{\numberline {8.9}Conclusion}{66}{section.8.9}%
+\contentsline {chapter}{General Conclusion}{68}{chapter*.45}%
+\contentsline {chapter}{\numberline {A}Code Samples}{74}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Backend Code Samples}{74}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}JWT Authentication Implementation}{74}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}JSONB Entity Mapping}{75}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Frontend Code Samples}{75}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Angular Authentication Service}{75}{subsection.A.2.1}%
+\contentsline {section}{\numberline {A.3}Mobile Code Samples}{76}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Flutter BLoC Implementation}{76}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Dynamic Form Widget}{77}{subsection.A.3.2}%
+\contentsline {chapter}{\numberline {B}Detailed Diagrams}{79}{appendix.B}%
+\contentsline {section}{\numberline {B.1}System Architecture Diagrams}{79}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Complete System Architecture}{79}{subsection.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2}Database Schema Diagram}{80}{subsection.B.1.2}%
+\contentsline {section}{\numberline {B.2}Use Case Diagrams}{80}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Complete System Use Case Diagram}{80}{subsection.B.2.1}%
+\contentsline {section}{\numberline {B.3}Sequence Diagrams}{81}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}Authentication Flow Sequence Diagram}{81}{subsection.B.3.1}%
+\contentsline {section}{\numberline {B.4}State Diagrams}{82}{section.B.4}%
+\contentsline {subsection}{\numberline {B.4.1}Intervention Lifecycle State Diagram}{82}{subsection.B.4.1}%
+\contentsline {chapter}{\numberline {C}Testing Documentation}{83}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Testing Strategy}{83}{section.C.1}%
+\contentsline {subsection}{\numberline {C.1.1}Testing Pyramid}{83}{subsection.C.1.1}%
+\contentsline {section}{\numberline {C.2}Backend Testing}{83}{section.C.2}%
+\contentsline {subsection}{\numberline {C.2.1}Unit Testing with JUnit}{83}{subsection.C.2.1}%
+\contentsline {subsubsection}{\numberline {C.2.1.1}Service Layer Testing}{83}{subsubsection.C.2.1.1}%
+\contentsline {subsubsection}{\numberline {C.2.1.2}Controller Testing with MockMvc}{84}{subsubsection.C.2.1.2}%
+\contentsline {subsection}{\numberline {C.2.2}Integration Testing}{85}{subsection.C.2.2}%
+\contentsline {subsubsection}{\numberline {C.2.2.1}Database Integration Tests}{85}{subsubsection.C.2.2.1}%
+\contentsline {section}{\numberline {C.3}Frontend Testing}{85}{section.C.3}%
+\contentsline {subsection}{\numberline {C.3.1}Angular Component Testing}{85}{subsection.C.3.1}%
+\contentsline {subsection}{\numberline {C.3.2}Angular Service Testing}{86}{subsection.C.3.2}%
+\contentsline {section}{\numberline {C.4}Mobile Testing}{87}{section.C.4}%
+\contentsline {subsection}{\numberline {C.4.1}Flutter Widget Testing}{87}{subsection.C.4.1}%
+\contentsline {subsection}{\numberline {C.4.2}Flutter BLoC Testing}{88}{subsection.C.4.2}%
+\contentsline {section}{\numberline {C.5}End-to-End Testing}{89}{section.C.5}%
+\contentsline {subsection}{\numberline {C.5.1}API Testing with Postman/Newman}{89}{subsection.C.5.1}%
+\contentsline {subsubsection}{\numberline {C.5.1.1}Authentication Test Suite}{89}{subsubsection.C.5.1.1}%
+\contentsline {section}{\numberline {C.6}Performance Testing}{90}{section.C.6}%
+\contentsline {subsection}{\numberline {C.6.1}JMeter Test Plan}{90}{subsection.C.6.1}%
+\contentsline {subsubsection}{\numberline {C.6.1.1}Authentication Load Test}{90}{subsubsection.C.6.1.1}%
+\contentsline {section}{\numberline {C.7}Test Results and Coverage}{91}{section.C.7}%
+\contentsline {subsection}{\numberline {C.7.1}Code Coverage Report}{91}{subsection.C.7.1}%
+\contentsline {subsection}{\numberline {C.7.2}Performance Test Results}{91}{subsection.C.7.2}%
+\contentsline {section}{\numberline {C.8}Continuous Integration}{91}{section.C.8}%
+\contentsline {subsection}{\numberline {C.8.1}GitHub Actions CI/CD Pipeline}{91}{subsection.C.8.1}%

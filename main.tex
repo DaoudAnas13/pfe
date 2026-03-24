@@ -1,11 +1,12 @@
 \documentclass[12pt,a4paper]{report}
 
 % Page geometry and layout
-\usepackage[margin=2.5cm, headheight=15pt]{geometry}
+\usepackage[margin=2.5cm, headheight=28pt]{geometry}
 
 % Professional headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
+\setlength{\headheight}{28pt}
 \fancyhf{}
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
@@ -121,10 +122,25 @@
 % Chapter 4: Implementation
 \include{chapter4}
 
-% Chapter 5: Results and Discussion
+% Chapter 5: Sprint 2
 \include{chapter5}
+
+% Chapter 6: Sprint 3
+\include{chapter6}
+
+% Chapter 7: Sprint 4
+\include{chapter7}
+
+% Chapter 8: Sprint 5
+\include{chapter8}
 
 % General Conclusion
 \include{conclusion}
+
+% Appendices
+\appendix
+\include{appendix_a_code_samples}
+\include{appendix_b_diagrams}
+\include{appendix_c_testing}
 
 \end{document}
