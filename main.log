@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  1 APR 2026 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  1 APR 2026 15:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1224,22 +1224,22 @@ Underfull \hbox (badness 2213) in paragraph at lines 153--153
  []
 
 [28]
-<uml1.png, id=1302, 1030.60031pt x 523.20468pt>
-File: uml1.png Graphic file (type png)
-<use uml1.png>
-Package pdftex.def Info: uml1.png  used on input line 184.
-(pdftex.def)             Requested size: 432.48051pt x 219.55286pt.
-<global.png, id=1303, 1059.96pt x 578.16pt>
-File: global.png Graphic file (type png)
-<use global.png>
-Package pdftex.def Info: global.png  used on input line 197.
-(pdftex.def)             Requested size: 432.48051pt x 235.90027pt.
- [29 <./uml1.png>]
+<umlnew.png, id=1302, 434.62375pt x 924.45375pt>
+File: umlnew.png Graphic file (type png)
+<use umlnew.png>
+Package pdftex.def Info: umlnew.png  used on input line 184.
+(pdftex.def)             Requested size: 182.09486pt x 387.32283pt.
+<glob.png, id=1303, 6227.265pt x 8222.72pt>
+File: glob.png Graphic file (type png)
+<use glob.png>
+Package pdftex.def Info: glob.png  used on input line 197.
+(pdftex.def)             Requested size: 432.48051pt x 571.0069pt.
+ [29 <./umlnew.png>] [30 <./glob.png>]
 Underfull \hbox (badness 1496) in paragraph at lines 245--245
 []|\OT1/cmr/m/n/12 Status life-cy-cle gov-er-nance, re-jec-
  []
 
-[30 <./global.png>]) [31]
+) [31]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
@@ -1439,7 +1439,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,17n,104p,743b,2193s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (93 pages, 5195749 bytes).
+Output written on main.pdf (93 pages, 4780423 bytes).
 PDF statistics:
  3645 PDF objects out of 4296 (max. 8388607)
  1984 named destinations out of 2073 (max. 500000)
