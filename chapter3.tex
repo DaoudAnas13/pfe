@@ -101,13 +101,11 @@ FR-12 & Notification and report history tracking for auditability & Governance a
 \hline
 \textbf{API Family} & \textbf{Core Endpoints} & \textbf{Business Purpose} \\
 \hline
-Rapport Requests & \api{rapport-requests}, \api{rapport-requests/{id}/approve}, \api{rapport-requests/{id}/reject} & End-to-end intervention lifecycle management \\
+Rapport Requests & \api{rapport-requests} & End-to-end intervention lifecycle management \\
 \hline
 Templates & \api{rapport-templates} & Dynamic form model governance and reuse \\
 \hline
-Execution from Mobile & \api{execution-details-from-mobile/{rapportRequestId}/{reference}} & Upload field data, files, geolocation, and device details \\
-\hline
-Config Exports & \api{config-exports}, \api{config-exports/{id}/generate-rapport} & Configurable Excel report generation \\
+Config Exports & \api{config-exports}, \api{config-exports/\allowbreak{id}/\allowbreak generate-rapport} & Configurable Excel report generation \\
 \hline
 Files & \api{files}, \api{files/{id}/download} & Evidence lifecycle (upload, storage, retrieval) \\
 \hline
@@ -117,7 +115,7 @@ Notifications & \api{custom-notif}, \api{notif-history} & Stakeholder communicat
 \hline
 Master Data & \api{clients}, \api{companies}, \api{projets} & Operational context management \\
 \hline
-Admin and Account & \api{admin/users}, \api{account}, \api{account/change-password} & Identity governance and profile management \\
+Admin and Account & \api{admin/users}, \api{account} & Identity governance and profile management \\
 \hline
 \end{tabularx}
 \end{table}
@@ -136,7 +134,7 @@ Performance & API responsiveness for operational requests & 95th percentile belo
 \hline
 Performance & Report generation throughput & 10,000 records in less than 5 minutes \\
 \hline
-Scalability & Concurrent usage support & 1,000+ concurrent users \\
+Scalability & Concurrent usage support & 200+ concurrent users \\
 \hline
 Availability & Service continuity objective & 99.5\% target availability \\
 \hline
@@ -176,54 +174,29 @@ System Administrator & Manage users and roles, enforce permissions, monitor audi
 \end{tabularx}
 \end{table}
 
-\subsection{Use Case Diagrams (Placeholder)}
+\subsection{Use Case Diagrams}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.9\textwidth}{
+\fbox{\parbox{0.95\textwidth}{
 \centering
-% TODO: Insert actor-specific use case diagrams here
-Use Case Diagram Placeholder: Technician, Supervisor, Coordinator, and Administrator interactions.
+\includegraphics[width=0.95\textwidth]{uml1.png}
 }}
-\caption{Actor-Based Use Case Diagram Placeholder}
-\label{fig:actor_usecase_placeholder}
-\end{figure}
-
-\section{Global Use Diagram (Placeholder)}
-
-\begin{figure}[H]
-\centering
-\fbox{\parbox{0.9\textwidth}{
-\centering
-% TODO: Insert global use diagram here
-Global Use Diagram Placeholder: Full system interaction map across mobile app, web app, backend services, and database.
-}}
-\caption{Global Use Diagram Placeholder}
+\caption{Actor-Based Use Case Diagram}
 \label{fig:global_use_diagram_placeholder}
 \end{figure}
 
-\section{Interface Prototyping (Placeholder)}
+\section{Global Use Diagram}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.9\textwidth}{
+\fbox{\parbox{0.95\textwidth}{
 \centering
-% TODO: Insert web interface prototype screenshots here
-Web Prototyping Placeholder: Dashboard, intervention detail, template configuration, and report generation views.
+\includegraphics[width=0.95\textwidth]{global.png}
+Use Case Diagram Placeholder: Technician, Supervisor, Coordinator, and Administrator interactions.
 }}
-\caption{Web Interface Prototypes Placeholder}
-\label{fig:web_prototype_placeholder}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\fbox{\parbox{0.9\textwidth}{
-\centering
-% TODO: Insert mobile interface prototype screenshots here
-Mobile Prototyping Placeholder: Login, intervention list, dynamic form, evidence upload, and submission confirmation screens.
-}}
-\caption{Mobile Interface Prototypes Placeholder}
-\label{fig:mobile_prototype_placeholder}
+\caption{Global Use Diagram}
+\label{fig:actor_usecase_placeholder}
 \end{figure}
 
 \section{SCRUM Management}
@@ -263,7 +236,7 @@ Sprint 1 & Foundation and Core Infrastructure & Project setup, identity and acce
 \hline
 Sprint 2 & Rapport Request and Form Templates & Intervention creation workflow, dynamic template management, form validation \\
 \hline
-Sprint 3 & File Management and Geolocation & Evidence upload, metadata capture, offline queue and synchronization \\
+Sprint 3 & File Management and Geolocation & Evidence upload, metadata capture and synchronization \\
 \hline
 Sprint 4 & Approval Workflow & Status lifecycle governance, rejection motif flow, supervisor validation workspace \\
 \hline

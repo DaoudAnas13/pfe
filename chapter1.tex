@@ -11,11 +11,11 @@ The RM project belongs to the digital transformation of field operations in tele
 From a systems engineering perspective, this context imposes five structural constraints:
 
 \begin{enumerate}
-\item distributed operations across multiple sites,
-\item heterogeneous intervention scenarios requiring configurable forms,
-\item strict accountability expectations from clients and operators,
-\item tight turnaround targets for validation and reporting,
-\item and high dependence on mobile data capture under variable connectivity.
+\item Distributed operations across multiple sites
+\item Heterogeneous intervention scenarios requiring configurable forms
+\item Strict accountability expectations from clients and operators
+\item Tight turnaround targets for validation and reporting
+\item High dependence on mobile data capture under variable connectivity
 \end{enumerate}
 
 Consequently, the project is not only a software implementation effort. It is also a process reengineering initiative where workflow governance, traceability, and data quality control are central design objectives.
@@ -26,14 +26,80 @@ Consequently, the project is not only a software implementation effort. It is al
 
 Africom Services is a Tunisian company founded in 2005 and active in telecommunications engineering, field deployment, and maintenance services. The organization supports telecom operators, enterprise clients, and institutional actors through project execution and technical operations.
 
+The company relies on specialized and versatile teams capable of handling complex projects while ensuring compliance with international quality standards. It also adopts a continuous training policy to keep its workforce aligned with the rapid evolution of technologies and industry best practices.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{logoAfricom.png}
+\caption{Africom Logo}
+\label{fig:africom_logo}
+\end{figure}
+
 \subsection{Core Activity Areas}
 
 \begin{itemize}
-\item deployment and validation of telecom transmission equipment,
-\item radio network and microwave infrastructure projects,
-\item fiber optic implementation and maintenance,
-\item preventive and corrective technical interventions,
-\item operational monitoring solutions and connected security services.
+\item Deployment and validation of telecom transmission equipment,
+\item Radio network and microwave infrastructure projects,
+\item Fiber optic implementation and maintenance,
+\item Preventive and corrective technical interventions,
+\item Operational monitoring solutions and connected security services.
+\end{itemize}
+
+\subsection{Strategic Partners and References}
+
+Africom Services collaborates with internationally recognized partners and suppliers, strengthening its technical capabilities and ensuring high-quality service delivery.
+
+\begin{itemize}
+\item \textbf{NorthStar}: A global leader in the design, manufacturing, and deployment of innovative battery solutions and on-site power systems, ensuring reliable energy supply worldwide.
+\item \textbf{MaxCell}: A flexible fabric innerduct system designed for network construction, optimizing cable space usage and improving installation efficiency compared to traditional rigid systems.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{AfricomServicesReferences.png}
+\caption{Africom Services References}
+\label{fig:africom_references}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{NorthStarLogo.png}
+\caption{NorthStar Logo}
+\label{fig:northstar_logo}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{MaxCellLogo.png}
+\caption{MaxCell Logo}
+\label{fig:maxcell_logo}
+\end{figure}
+
+\subsection{Strategy and Values}
+
+Africom Services’ strategy is structured around the following key pillars:
+
+\begin{itemize}
+\item \textbf{Innovation}: Integration of emerging technologies and the use of internal applications such as GPM, GPF, and RM.
+\item \textbf{Quality}: Strict compliance with international standards and best practices.
+\item \textbf{Customer Proximity}: Delivery of tailored solutions and personalized client support.
+\item \textbf{Work Ethics, Environment, Health, and Safety}: Commitment to regulatory compliance, environmental protection, and employee safety.
+\end{itemize}
+
+\subsection{Mission and Services}
+
+The mission of Africom Services is to provide reliable and innovative solutions in telecommunications and related technologies. The company supports its clients in modernizing their infrastructure while ensuring high service quality and operational efficiency.
+
+\subsection{Target Clients}
+
+Africom Services addresses a diverse range of clients:
+
+\begin{itemize}
+\item Telecom operators seeking infrastructure modernization,
+\item Private companies requiring electronic security and connectivity solutions,
+\item Transport and logistics companies for fleet management and geolocation,
+\item Public institutions aiming to strengthen communication and security systems,
+\item International partners involved in cooperative projects.
 \end{itemize}
 
 \subsection{Operational Characteristics}
@@ -42,13 +108,9 @@ The organization combines office-based coordination with field execution teams. 
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.88\textwidth}{
-\centering
-% TODO: Insert host organization chart here
-Organization Chart Placeholder: Operational management, coordination unit, supervision unit, field technician teams.
-}}
-\caption{Host Organization Structure Placeholder}
-\label{fig:host_org_structure_placeholder}
+\includegraphics[width=0.95\textwidth]{structureAfricom.png}
+\caption{Host Organization Structure}
+\label{fig:host_org_structure}
 \end{figure}
 
 \section{Project Presentation}
@@ -57,13 +119,13 @@ Organization Chart Placeholder: Operational management, coordination unit, super
 
 Before RM, intervention governance relied on partially fragmented practices with heterogeneous tools and significant manual effort. The operational flow from assignment to final report delivery lacked a unified digital backbone. As intervention volume increased, this model exposed scalability limits.
 
-The PRD therefore defined RM as an integrated web and mobile platform with the following business mission:
+The Product Requirements Document impemented after numerous stakeholder meetings, therefore defined RM as an integrated web and mobile platform with the following business mission:
 
 \begin{itemize}
-\item standardize intervention execution through template-driven processes,
-\item improve supervisor visibility on field progress,
-\item enforce validation and rejection governance,
-\item and automate client-ready Excel reporting.
+\item Standardize intervention execution through template-driven processes
+\item Improve supervisor visibility on field progress
+\item Enforce validation and rejection governance
+\item Automate client-ready Excel reporting
 \end{itemize}
 
 \subsection{Problematic}
@@ -77,8 +139,8 @@ How can a telecom field-operations organization move from fragmented, partly man
 This problematic combines business and technical dimensions:
 
 \begin{itemize}
-\item business dimension: cycle time reduction, quality consistency, and managerial visibility,
-\item technical dimension: secure multi-platform architecture, dynamic form support, and robust traceability.
+\item Business dimension: cycle time reduction, quality consistency, and managerial visibility
+\item Technical dimension: secure multi-platform architecture, dynamic form support, and robust traceability
 \end{itemize}
 
 \section{Study of the Existent}
@@ -88,12 +150,12 @@ This problematic combines business and technical dimensions:
 The initial process can be summarized in six stages:
 
 \begin{enumerate}
-\item request preparation by coordination staff,
-\item technician assignment through ad-hoc communication,
-\item field execution and evidence collection,
-\item supervisor quality checks,
-\item correction loop when errors are detected,
-\item final report consolidation for client communication.
+\item Request preparation by coordination staff
+\item Technician assignment through ad-hoc communication
+\item Field execution and evidence collection
+\item Supervisor quality checks
+\item Correction loop when errors are detected
+\item Final report consolidation for client communication
 \end{enumerate}
 
 Observed process weaknesses were concentrated at handoff points between stakeholders, where information loss and delay frequently occurred.
@@ -147,12 +209,12 @@ RM addresses the identified deficits through a domain-driven digital platform or
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.9\textwidth}{
+\fbox{\parbox{0.95\textwidth}{
 \centering
-% TODO: Insert as-is vs to-be process diagram here
+\includegraphics[width=0.95\textwidth]{Transformation.png}
 Process Transformation Placeholder: Existing fragmented flow versus RM integrated digital workflow.
 }}
-\caption{As-Is and To-Be Process Comparison Placeholder}
+\caption{As-Is and To-Be Process Comparison}
 \label{fig:as_is_to_be_placeholder}
 \end{figure}
 
