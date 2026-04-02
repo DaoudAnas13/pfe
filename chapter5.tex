@@ -67,7 +67,7 @@ S2-5 & Support request filtering and lookup in web interface & 8 & Completed \\
 \item Coordinator chooses rapport template.
 \item Coordinator enters planning attributes and assignment details.
 \item System validates mandatory metadata.
-\item System creates request with initial status \texttt{PLANNED}.
+\item System creates request with initial status \texttt{DRAFT}.
 \item Technician receives assignment visibility.
 \end{enumerate}
 
@@ -128,29 +128,29 @@ S2-FS-05 & Paginated filtering for intervention search & Query by status/client/
 
 \section{Conception}
 
-\subsection{Sequence Diagram (Placeholder)}
+\subsection{Sequence Diagram }
 
 \begin{figure}[H]
 \centering
 \fbox{\parbox{0.9\textwidth}{
 \centering
-% TODO: Insert Sprint 2 sequence diagram here
-Sequence Diagram Placeholder: Coordinator request creation, template retrieval, request persistence, technician retrieval, dynamic rendering.
+\includegraphics[width=0.9\textwidth]{temp.png} 
+Sequence Diagram : Coordinator request creation, template retrieval, request persistence, technician retrieval, dynamic rendering.
 }}
-\caption{Sprint 2 Request and Template Sequence Placeholder}
+\caption{Sprint 2 Request and Template Sequence}
 \label{fig:sprint2_sequence_placeholder}
 \end{figure}
 
-\subsection{Class Diagram (Placeholder)}
+\subsection{Class Diagram }
 
 \begin{figure}[H]
 \centering
 \fbox{\parbox{0.9\textwidth}{
 \centering
-% TODO: Insert Sprint 2 class diagram here
-Class Diagram Placeholder: RapportRequest, RapportTemplate, Project, Client, ReportLineData, and validation rule classes.
+\includegraphics[width=0.9\textwidth]{umlTemp.png}
+Class Diagram : RapportRequest, RapportTemplate, Project, Client, ReportLineData, and validation rule classes.
 }}
-\caption{Sprint 2 Domain Class Diagram Placeholder}
+\caption{Sprint 2 Domain Class Diagram }
 \label{fig:sprint2_class_placeholder}
 \end{figure}
 
@@ -161,11 +161,11 @@ Class Diagram Placeholder: RapportRequest, RapportTemplate, Project, Client, Rep
 Backend realization in this sprint focused on the intervention and template domains:
 
 \begin{itemize}
-\item request creation and update endpoints,
-\item status initialization and transition safeguards,
-\item template persistence with mapping JSON,
-\item validation rules at DTO and service layers,
-\item filtering and pagination specifications for operational dashboards.
+\item Request creation and update endpoints 
+\item Status initialization and transition safeguards
+\item Template persistence with mapping JSON
+\item Validation rules at DTO and service layers
+\item Filtering and pagination specifications for operational dashboards
 \end{itemize}
 
 Primary endpoint groups delivered:
@@ -181,11 +181,66 @@ Primary endpoint groups delivered:
 The Angular web application delivered:
 
 \begin{itemize}
-\item intervention list with filters by status, client, and reference,
-\item request creation forms for coordinators,
-\item template management screens (create/edit/delete),
-\item validation feedback for invalid input states.
+\item Intervention list with filters by status, client, and reference
+\item Request creation forms for coordinators
+\item Template management screens (create/edit/delete)
+\item Validation feedback for invalid input states
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+\includegraphics[width=0.9\textwidth]{rqDataGrid.png}
+Angular UI : Tickets list with filters, request creation form, template management interface.
+}}
+\caption{ Sprint 2 Angular UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.9\textwidth}{
+\centering
+\includegraphics[width=0.9\textwidth]{details.png}
+Angular UI : Intervention details view with dynamic form rendering and validation feedback.
+}}
+\caption{ Sprint 2 Angular UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{form.png}
+Angular UI : Dynamic form rendering from template mapping with validation states.
+}}
+\caption{ Sprint 2 Angular UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{editStatus.png}
+Angular UI : Request status update interface with validation and transition rules.
+}}
+\caption{ Sprint 2 Angular UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{
+\centering
+\includegraphics[width=0.95\textwidth]{templateD.png}
+Angular UI : Template management interface with JSON mapping editor.
+}}
+\caption{ Sprint 2 Angular UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
 
 \subsection{Mobile Implementation (Flutter)}
 
