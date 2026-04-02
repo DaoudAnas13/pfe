@@ -53,7 +53,7 @@ S1-5 & Establish API error handling, logging, and audit foundations & 8 & Comple
 
 \textbf{UC-S1-01: User Authentication}
 
-\textbf{Primary Actor:} Platform User (Technician, Supervisor, Coordinator, Administrator)
+\textbf{Primary Actor:} Platform User (Technician, Supervisor, Coordinator, Admin)
 
 \textbf{Preconditions:}
 \begin{itemize}
@@ -114,26 +114,26 @@ S1-FS-05 & Baseline audit logging on critical identity actions & Login and passw
 
 \section{Conception}
 
-\subsection{Sequence Diagram (Placeholder)}
+\subsection{Sequence Diagram for Authentication Flow}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.9\textwidth}{
+\fbox{\parbox{1\textwidth}{
 \centering
-% TODO: Insert Sprint 1 authentication sequence diagram here
+\includegraphics[width=1\textwidth]{seq.png} 
 Sequence Diagram Placeholder: User login request, authentication manager validation, JWT generation, response, secure client storage.
 }}
 \caption{Sprint 1 Authentication Sequence Diagram Placeholder}
 \label{fig:sprint1_sequence_placeholder}
 \end{figure}
 
-\subsection{Class Diagram (Placeholder)}
+\subsection{Class Diagram for Core Security Components}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.9\textwidth}{
+\fbox{\parbox{0.95\textwidth}{ 
 \centering
-% TODO: Insert Sprint 1 class diagram here
+\includegraphics[width=0.95\textwidth]{seq1.png} 
 Class Diagram Placeholder: User, Role, Permission, AuthToken, AuditEntry, and service components.
 }}
 \caption{Sprint 1 Core Security Class Diagram Placeholder}
@@ -147,11 +147,11 @@ Class Diagram Placeholder: User, Role, Permission, AuthToken, AuditEntry, and se
 Sprint 1 backend realization implemented:
 
 \begin{itemize}
-\item JWT token generation and validation filters,
-\item role-aware endpoint protection through Spring Security,
-\item account and password management endpoints,
-\item centralized exception handling and standardized API error payloads,
-\item initial logging and auditing hooks for identity events.
+\item JWT token generation and validation filters
+\item Role-aware endpoint protection through Spring Security
+\item Account and password management endpoints
+\item Centralized exception handling and standardized API error payloads
+\item Initial logging and auditing hooks for identity events
 \end{itemize}
 
 Representative endpoint families introduced in this sprint include:
@@ -168,42 +168,75 @@ Representative endpoint families introduced in this sprint include:
 The Angular client delivered:
 
 \begin{itemize}
-\item login page with reactive validation,
-\item route guards and role-sensitive navigation,
-\item HTTP interceptor for token propagation,
-\item unauthorized and forbidden access handling.
+\item Login page with reactive validation
+\item Route guards and role-sensitive navigation
+\item HTTP interceptor for token propagation
+\item Unauthorized and forbidden access handling
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{ 
+\centering
+\includegraphics[width=0.95\textwidth]{loginWeb.png} 
+Login Interface : Email and password fields, validation messages, and login button.
+}}
+\caption{Login Interface}
+\label{fig:sprint1_login_interface}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{ 
+\centering
+\includegraphics[width=0.95\textwidth]{loginWeb2.png} 
+User Management Interface with role assignments and status indicators.
+}}
+\caption{User Management Interface}
+\label{fig:sprint1_user_management_interface}
+\end{figure}
 
 \subsection{Mobile Implementation (Flutter + BLoC)}
 
 The Flutter client delivered:
 
 \begin{itemize}
-\item authentication flow using BLoC event/state transitions,
-\item secure token persistence,
-\item session restoration during app startup,
-\item controlled logout and token cleanup.
+\item Authentication flow using BLoC event/state transitions
+\item Secure token persistence
+\item Session restoration during app startup
+\item Controlled logout and token cleanup
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{ 
+\centering
+\includegraphics[width=0.95\textwidth]{mob2-imageonline.co-merged.png} 
+Mobile Login Interface with email and password fields, validation, and login button.
+}}
+\caption{Mobile Login Interface}
+\label{fig:sprint1_mobile_login_interface}
+\end{figure}
 
 \subsection{Database Design (PostgreSQL)}
 
 The baseline schema introduced identity and governance entities:
 
 \begin{itemize}
-\item user and authority tables,
-\item role-assignment relations,
-\item audit metadata fields for traceability,
-\item constraints for unique login identifiers and data consistency.
+\item User and authority tables
+\item Role-assignment relations
+\item Audit metadata fields for traceability
+\item Constraints for unique login identifiers and data consistency
 \end{itemize}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.88\textwidth}{
+\fbox{\parbox{0.95\textwidth}{
 \centering
-% TODO: Insert Sprint 1 database schema snapshot here
-Database Placeholder: Identity tables, role mapping relations, and audit columns.
+\includegraphics[width=0.95\textwidth]{db.png}
+Database: Identity tables, role mapping relations, and audit columns.
 }}
-\caption{Sprint 1 Database Baseline Placeholder}
+\caption{Sprint 1 Database Baseline}
 \label{fig:sprint1_db_placeholder}
 \end{figure}
 

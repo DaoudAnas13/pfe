@@ -13,24 +13,27 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Global Use Diagram}}{30}{figure.caption.23}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Sprint 1 Authentication Sequence Diagram Placeholder}}{34}{figure.caption.28}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sprint 1 Core Security Class Diagram Placeholder}}{34}{figure.caption.29}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sprint 1 Database Baseline Placeholder}}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sprint 1 Core Security Class Diagram Placeholder}}{35}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Login Interface}}{36}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces User Management Interface}}{37}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Mobile Login Interface}}{38}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Sprint 1 Database Baseline}}{39}{figure.caption.33}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Sprint 2 Request and Template Sequence Placeholder}}{39}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Sprint 2 Domain Class Diagram Placeholder}}{40}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Sprint 2 Database Schema Placeholder}}{41}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Sprint 2 Request and Template Sequence Placeholder}}{42}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Sprint 2 Domain Class Diagram Placeholder}}{43}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Sprint 2 Database Schema Placeholder}}{44}{figure.caption.39}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Sprint 3 Class Diagram - Files and Execution Details}}{44}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Sprint 3 Class Diagram - Files and Execution Details}}{47}{figure.caption.42}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Intervention Status Lifecycle}}{52}{figure.caption.41}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Sprint 4 Class Diagram - Approval Workflow}}{52}{figure.caption.42}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Intervention Status Lifecycle}}{55}{figure.caption.44}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Sprint 4 Class Diagram - Approval Workflow}}{55}{figure.caption.45}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Sprint 5 Class Diagram - Reporting and Export}}{61}{figure.caption.44}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Sprint 5 Class Diagram - Reporting and Export}}{64}{figure.caption.47}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Complete RM System Architecture}}{80}{figure.caption.48}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Database Entity-Relationship Diagram}}{81}{figure.caption.49}%
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Complete System Use Case Diagram}}{81}{figure.caption.50}%
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Authentication Flow Sequence Diagram}}{82}{figure.caption.51}%
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Intervention Lifecycle State Diagram}}{83}{figure.caption.52}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Complete RM System Architecture}}{83}{figure.caption.51}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Database Entity-Relationship Diagram}}{84}{figure.caption.52}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Complete System Use Case Diagram}}{84}{figure.caption.53}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Authentication Flow Sequence Diagram}}{85}{figure.caption.54}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Intervention Lifecycle State Diagram}}{86}{figure.caption.55}%
 \addvspace {10\p@ }
