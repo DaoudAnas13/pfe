@@ -247,31 +247,53 @@ Angular UI : Template management interface with JSON mapping editor.
 The Flutter mobile realization delivered:
 
 \begin{itemize}
-\item assigned intervention retrieval with pagination,
-\item dynamic form rendering from template mapping,
-\item local form state handling before final submission,
-\item client-side validation for mandatory fields and field format rules.
+\item Assigned intervention retrieval with pagination
+\item Dynamic form rendering from template mapping
+\item Local form state handling before final submission
+\item Client-side validation for mandatory fields and field format rules
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{
+\centering
+\includegraphics[width=0.95\textwidth]{suivi.png}
+Flutter Mobile UI : Assigned interventions list with status indicators and dynamic form access.
+}}
+\caption{ Sprint 2 Flutter UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.95\textwidth}{
+\centering
+\includegraphics[width=0.95\textwidth]{ticket.png}
+Flutter Mobile UI : Intervention details with dynamic form rendering and validation feedback.
+}}
+\caption{ Sprint 2 Flutter UI }
+\label{fig:sprint2_class_placeholder}
+\end{figure}
 
 \subsection{Database Design (PostgreSQL)}
 
 Sprint 2 extended the schema with business entities required by intervention workflows:
 
 \begin{itemize}
-\item \texttt{rapport\_request} table for intervention records,
-\item \texttt{rapport\_template} table for form definitions,
-\item JSONB columns for flexible template mapping and dynamic line data,
-\item foreign key relationships to project, client, and assignee contexts.
+\item \texttt{rapport\_request} table for intervention records
+\item \texttt{rapport\_template} table for form definitions
+\item JSONB columns for flexible template mapping and dynamic line data
+\item Foreign key relationships to project, client, and assignee contexts
 \end{itemize}
 
 \begin{figure}[H]
 \centering
-\fbox{\parbox{0.88\textwidth}{
+\fbox{\parbox{1\textwidth}{
 \centering
-% TODO: Insert Sprint 2 database relational diagram here
-Database Placeholder: Rapport request and template schema with project/client/user relations.
+\includegraphics[width=1\textwidth]{dbReq.png}
+Database : Rapport request and template schema with project/client/company relations.
 }}
-\caption{Sprint 2 Database Schema Placeholder}
+\caption{Sprint 2 Database Schema }
 \label{fig:sprint2_db_placeholder}
 \end{figure}
 
