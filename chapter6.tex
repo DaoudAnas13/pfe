@@ -128,256 +128,125 @@ Sequence diagram illustrating the file upload and management process during Spri
 
 \section{Realization}
 
-\subsection{Backend Implementation}
+\subsection{Backend Implementation Details}
 
-\textbf{Files Entity:}
-\begin{lstlisting}
-@Entity
-@Table(name = "files")
-public class Files extends AbstractAuditingEntity {
+The backend implementation in Sprint 3 focused on extending the intervention domain with file management and geolocation tracking capabilities.
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+\begin{itemize}
+\item Secure file upload and storage with metadata persistence
+\item Image compression and optimization before storage
+\item File-to-intervention association management
+\item Geolocation data capture and persistence linked to intervention execution
+\item Access control for file retrieval and download operations
+\end{itemize}
 
-    @NotNull
-    @Column(name = "filename")
-    private String filename;
+File management is handled through a dedicated service layer responsible for validating file size and type, applying compression for image files, and delegating storage to the file system or storage provider. Each uploaded file is persisted with metadata including filename, type, size, and storage path, and is linked to a specific intervention request.
 
-    @Column(name = "file_type")
-    private String fileType;
+Geolocation tracking is integrated into the execution workflow by associating latitude, longitude, and timestamps with each intervention. This enables traceability of technician activities and verification of intervention locations.
 
-    @Column(name = "file_size")
-    private Long fileSize;
+Primary endpoint groups delivered:
 
-    @Column(name = "file_path")
-    private String filePath;
+\begin{itemize}
+\item \api{files}
+\item \api{files/download}
+\item \api{execution-details}
+\end{itemize}
 
-    @Column(name = "upload_date")
-    private ZonedDateTime uploadDate;
+\subsection{Frontend Implementation}
 
-    @ManyToOne
-    private RapportRequest rapportRequest;
+The Angular web application was extended to support file management and evidence visualization features for supervisors and coordinators.
 
-    // getters, setters
-}
-\end{lstlisting}
+\begin{itemize}
+\item File listing interface within intervention details view
+\item Download and preview functionality for uploaded documents and images
+\item Integration of evidence files into intervention tracking screens
+\item Visualization of geolocation data associated with interventions
+\end{itemize}
 
-\textbf{ExecutionDetails Entity:}
-\begin{lstlisting}
-@Entity
-@Table(name = "execution_details")
-public class ExecutionDetails {
+The UI enables users to access all files attached to an intervention, download them securely, and share them with external stakeholders. Location data is displayed in a structured format, allowing supervisors to verify execution locations.
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{fnial.png}
+Angular UI : Intervention evidence management with file listing, download, and preview.
+}}
+\caption{Sprint 3 Angular UI - File Management}
+\label{fig:sprint3_angular_files}
+\end{figure}
 
-    @Column(name = "latitude", precision = 10, scale = 8)
-    private Double latitude;
+\subsection{Mobile Implementation }
 
-    @Column(name = "longitude", precision = 11, scale = 8)
-    private Double longitude;
+The Flutter mobile application was enhanced to support real-time file capture and geolocation tracking during intervention execution.
 
-    @Column(name = "start_time")
-    private ZonedDateTime startTime;
+\begin{itemize}
+\item Capture and upload of images and documents from device storage or camera
+\item Client-side image compression before upload
+\item Integration of file upload within intervention workflow
+\item GPS location capture with permission handling
+\item Association of location data with intervention execution
+\end{itemize}
 
-    @Column(name = "end_time")
-    private ZonedDateTime endTime;
+The mobile application ensures efficient data transfer by compressing images before upload and provides fallback handling for connectivity issues. Geolocation services are integrated to capture accurate position data during intervention execution.
 
-    @OneToOne
-    private RapportRequest rapportRequest;
-}
-\end{lstlisting}
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{filesFinal.png}
+Flutter Mobile UI : File upload and intervention evidence capture.
+}}
+\caption{Sprint 3 Flutter UI - File Upload}
+\label{fig:sprint3_flutter_files}
+\end{figure}
 
-\textbf{File Upload Service:}
-\begin{lstlisting}
-@Service
-public class FileUploadService {
+\subsection{Database Design (PostgreSQL)}
 
-    private final FilesRepository filesRepository;
-    private final FileStorageService storageService;
-    private final ImageCompressionService compressionService;
+Sprint 3 extended the database schema to support file storage metadata and geolocation tracking.
 
-    public FileDTO uploadFile(MultipartFile file, Long requestId) {
-        // Validate file
-        validateFileUpload(file);
+\begin{itemize}
+\item \texttt{files} table for storing file metadata (name, type, size, path)
+\item Relationship between files and intervention requests
+\item \texttt{execution\_details} table for storing geolocation coordinates and timestamps
+\item One-to-one association between execution details and intervention request
+\end{itemize}
 
-        // Compress if image
-        MultipartFile processedFile = file;
-        if (isImageFile(file)) {
-            processedFile = compressionService.compress(file);
-        }
+The database design ensures efficient storage of file references while delegating actual file content storage to the file system or external storage service. Geolocation data is structured to allow future analytics and reporting on technician movements.
 
-        // Store file
-        String filePath = storageService.saveFile(processedFile);
+\begin{figure}[H]
+\centering
+\fbox{\parbox{0.8\textwidth}{
+\centering
+\includegraphics[width=0.8\textwidth]{dbFiles.png}
+Database : File metadata
+}}
+\caption{Sprint 3 Database Schema}
+\label{fig:sprint3_db}
+\end{figure}
 
-        // Create file record
-        Files fileEntity = new Files();
-        fileEntity.setFilename(file.getOriginalFilename());
-        fileEntity.setFileType(file.getContentType());
-        fileEntity.setFileSize(processedFile.getSize());
-        fileEntity.setFilePath(filePath);
-        fileEntity.setUploadDate(ZonedDateTime.now());
+\subsection{API and Endpoint Summary}
 
-        RapportRequest request = requestRepository.findById(requestId)
-            .orElseThrow();
-        fileEntity.setRapportRequest(request);
-
-        fileEntity = filesRepository.save(fileEntity);
-        return mapper.toDto(fileEntity);
-    }
-
-    private void validateFileUpload(MultipartFile file) {
-        if (file.isEmpty()) {
-            throw new IllegalArgumentException("File is empty");
-        }
-        if (file.getSize() > 50 * 1024 * 1024) { // 50MB limit
-            throw new IllegalArgumentException("File too large");
-        }
-    }
-
-    private boolean isImageFile(MultipartFile file) {
-        String contentType = file.getContentType();
-        return contentType != null && contentType.startsWith("image/");
-    }
-}
-\end{lstlisting}
-
-\subsection{Mobile Implementation}
-
-\textbf{File Upload BLoC:}
-\begin{lstlisting}
-class FileUploadBloc extends Bloc<FileUploadEvent, FileUploadState> {
-  final FileUploadRepository fileRepository;
-  final ImageCompressionService compressionService;
-
-  FileUploadBloc(this.fileRepository, this.compressionService)
-      : super(FileUploadInitial()) {
-    on<UploadFile>(_onUploadFile);
-    on<QueueFileOffline>(_onQueueFileOffline);
-  }
-
-  Future<void> _onUploadFile(
-    UploadFile event,
-    Emitter<FileUploadState> emit,
-  ) async {
-    emit(FileUploading());
-    try {
-      // Compress image if needed
-      File processedFile = event.file;
-      if (_isImageFile(event.file)) {
-        processedFile = await compressionService.compressImage(event.file);
-      }
-
-      // Upload file
-      final response = await fileRepository.uploadFile(
-        processedFile,
-        event.requestId,
-      );
-
-      emit(FileUploadSuccess(file: response));
-    } on DioError catch (e) {
-      if (e.type == DioErrorType.other) {
-        // Queue offline
-        await _queueOffline(event.file, event.requestId);
-        emit(FileQueuedOffline());
-      } else {
-        emit(FileUploadFailure(error: e.message ?? 'Upload failed'));
-      }
-    }
-  }
-
-  bool _isImageFile(File file) {
-    final ext = file.path.split('.').last.toLowerCase();
-    return ['jpg', 'jpeg', 'png', 'gif'].contains(ext);
-  }
-
-  Future<void> _queueOffline(File file, int requestId) async {
-    // Store in local database for later sync
-  }
-}
-\end{lstlisting}
-
-\textbf{Geolocation Service:}
-\begin{lstlisting}
-class GeolocationService {
-  final GeolocatorPlatform _geolocatorPlatform = GeolocatorPlatform.instance;
-
-  Future<Position?> getCurrentLocation() async {
-    try {
-      final hasPermission = await _handleLocationPermission();
-      if (!hasPermission) {
-        return null;
-      }
-
-      const LocationSettings locationSettings = LocationSettings(
-        accuracy: LocationAccuracy.best,
-        distanceFilter: 5, // 5 meters
-      );
-
-      return await _geolocatorPlatform.getCurrentPosition(
-        locationSettings: locationSettings,
-      );
-    } catch (e) {
-      print('Error getting location: $e');
-      return null;
-    }
-  }
-
-  Future<bool> _handleLocationPermission() async {
-    bool serviceEnabled = await _geolocatorPlatform.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      return false;
-    }
-
-    LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-    }
-
-    return permission != LocationPermission.denied &&
-        permission != LocationPermission.deniedForever;
-  }
-}
-\end{lstlisting}
-
-\section{Tests and Validation}
-
-\subsubsection{File Upload Tests}
-
-\begin{lstlisting}
-@SpringBootTest
-class FileUploadServiceTest {
-
-    @Autowired
-    private FileUploadService service;
-
-    @Mock
-    private FileStorageService storageService;
-
-    @Test
-    void uploadValidFile() {
-        MultipartFile file = new MockMultipartFile(
-            "file", "test.jpg", "image/jpeg", "test data".getBytes());
-
-        FileDTO result = service.uploadFile(file, 1L);
-
-        assertThat(result).isNotNull();
-        assertThat(result.getFilename()).isEqualTo("test.jpg");
-    }
-
-    @Test
-    void rejectOversizedFile() {
-        MockMultipartFile file = new MockMultipartFile(
-            "file", "large.jpg", "image/jpeg",
-            new byte[51 * 1024 * 1024]);
-
-        assertThatThrownBy(() -> service.uploadFile(file, 1L))
-            .isInstanceOf(IllegalArgumentException.class);
-    }
-}
-\end{lstlisting}
+\begin{table}[H]
+\centering
+\caption{Sprint 3 API Summary}
+\label{tab:sprint3_api_summary}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Method} & \textbf{Endpoint} & \textbf{Purpose} \\
+\hline
+POST & \api{files/upload} & Upload file and attach it to an intervention \\
+\hline
+GET & \api{files/{id}} & Retrieve file metadata \\
+\hline
+GET & \api{files/download/{id}} & Download file content securely \\
+\hline
+POST & \api{execution-details} & Store geolocation data for an intervention \\
+\hline
+GET & \api{execution-details/{requestId}} & Retrieve execution location data \\
+\hline
+\end{tabularx}
+\end{table}
 
 \section{Conclusion}
 
