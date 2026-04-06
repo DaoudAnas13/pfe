@@ -98,39 +98,18 @@ The intervention lifecycle includes the following statuses with specific transit
 
 \begin{figure}[H]
 \centering
-\IfFileExists{figures/sprint4_status_lifecycle.png}{
-  \includegraphics[width=\textwidth]{figures/sprint4_status_lifecycle.png}
-}{
-  \fbox{\parbox{0.95\textwidth}{\centering
-  Placeholder image: Sprint 4 status lifecycle\\
-  Expected file: figures/sprint4\_status\_lifecycle.png
-  }}
-}
-\caption{Intervention Status Lifecycle}
-\label{fig:sprint4_lifecycle}
-\end{figure}
-
-\section{Conception}
-
-\subsection{Class Diagram}
-
-\begin{figure}[H]
+\fbox{\parbox{1\textwidth}{
 \centering
-\IfFileExists{figures/sprint4_class_diagram.png}{
-  \includegraphics[width=\textwidth]{figures/sprint4_class_diagram.png}
-}{
-  \fbox{\parbox{0.95\textwidth}{\centering
-  Placeholder image: Sprint 4 class diagram\\
-  Expected file: figures/sprint4\_class\_diagram.png
-  }}
-}
-\caption{Sprint 4 Class Diagram - Approval Workflow}
-\label{fig:sprint4_class}
+\includegraphics[width=1\textwidth]{trans.png}
+Intervention Status Lifecycle with Approval Workflow
+}}
+\caption{Sprint 4 Status Lifecycle}
+\label{fig:sprint4_lifecycle}
 \end{figure}
 
 \section{Realization}
 
-\subsection{Backend Implementation (Spring Boot)}
+\subsection{Backend Implementation}
 
 Sprint 4 backend implementation focused on \textbf{approval workflow, status transitions, rejection feedback, and notifications}. Key deliverables include:
 
@@ -142,7 +121,7 @@ Sprint 4 backend implementation focused on \textbf{approval workflow, status tra
     \item Supervisor-only endpoints for approval, rejection, and pending requests
 \end{itemize}
 
-\subsection{Frontend Implementation (Angular)}
+\subsection{Frontend Implementation}
 
 The Angular frontend provides \textbf{supervisors with actionable dashboards and feedback mechanisms}:
 
@@ -153,6 +132,94 @@ The Angular frontend provides \textbf{supervisors with actionable dashboards and
     \item Status history viewer for transparency
     \item Notifications to inform the supervisor of backend operation results
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{flow.png}
+Status Transition Flow with Approval and Rejection Paths
+}}
+\caption{Sprint 4 Status Transition Flow}
+\label{fig:sprint4_lifecycle}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{rejects.png}
+Rejection List and Reason with evidence
+}}
+\caption{Sprint 4 Rejection List}
+\label{fig:sprint4_rejection_list}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{rej.png}
+Rejection History with Feedback and Timestamps
+}}
+\caption{Sprint 4 Rejection History}
+\label{fig:sprint4_rejection_history}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{notif.png}
+Notification System for Status Updates
+}}
+\caption{Sprint 4 Notification System}
+\label{fig:sprint4_notifications}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{send.png}
+Send Custom Notifications 
+}}
+\caption{Sprint 4 custom notification interface}
+\label{fig:sprint4_notifications}
+\end{figure}
+
+\subsection{Mobile Implementation}
+
+The mobile implementation is designed for \textbf{field technicians and supervisors}, providing real-time communication and operational support:
+
+\begin{itemize}
+    \item Real-time notifications to alert technicians about newly assigned tickets
+    \item Ability for technicians to reject assigned tickets with reasons such as incorrect location or unreachable contact
+    \item Push notifications sent by supervisors to communicate urgent updates or instructions
+    \item Status updates from technicians to reflect intervention progress
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{sendMob.png}
+Reject Intervention with Feedback mobile interface
+}}
+\caption{Sprint 4 rejection mobile interface}
+\label{fig:sprint4_rejection}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{notifMob.png}
+Notification System for Status Updates mobile interface
+}}
+\caption{Sprint 4 notification mobile interface}
+\label{fig:sprint4_notifications}
+\end{figure}
 
 \subsection{Database Design (PostgreSQL)}
 
@@ -171,6 +238,7 @@ Here are the main tables and constraints used in Sprint 4:
 \centering
 \fbox{\parbox{1\textwidth}{
 \centering
+\includegraphics[width=1\textwidth]{dbR.png}
 Database: Approval workflow and status history schema
 }}
 \caption{Sprint 4 Database Schema}
