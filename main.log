@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  3 APR 2026 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  6 APR 2026 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1437,10 +1437,21 @@ Chapter 6.
 
 
 
-] [54] [55] [56] [57] [58]
+] [54]
+<seqFile.png, id=1515, 1413.28pt x 770.88pt>
+File: seqFile.png Graphic file (type png)
+<use seqFile.png>
+Package pdftex.def Info: seqFile.png  used on input line 124.
+(pdftex.def)             Requested size: 455.24411pt x 248.30989pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 124--125
+ [][] 
+ []
+
+[55 <./seqFile.png>] [56] [57] [58]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 388.
+(hyperref)                than one, level fixed on input line 347.
 
 [59]) [60]
 \openout2 = `chapter7.aux'.
@@ -1590,20 +1601,20 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AB4C7E231D19FA3572C26F17AE2296C2;32242.
+(rerunfilecheck)             Checksum: 7BE421483FDFC542625E94212C58E89C;32232.
  ) 
 Here is how much of TeX's memory you used:
- 42393 strings out of 467870
- 948904 string characters out of 5416903
+ 42391 strings out of 467870
+ 948877 string characters out of 5416903
  1983278 words of memory out of 5000000
  68581 multiletter control sequences out of 15000+600000
  636623 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,104p,743b,2193s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1000.pk> <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (104 pages, 10285625 bytes).
+Output written on main.pdf (104 pages, 10806394 bytes).
 PDF statistics:
- 3747 PDF objects out of 4296 (max. 8388607)
- 2005 named destinations out of 2073 (max. 500000)
- 1771 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3746 PDF objects out of 4296 (max. 8388607)
+ 2003 named destinations out of 2073 (max. 500000)
+ 1776 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,7 +4,7 @@
 
 \section{Introduction}
 
-Sprint 3 extends the core intervention management system with file management capabilities and geolocation tracking. This sprint enables technicians to capture and upload photographic evidence, attach documents, and track intervention location data. The implementation provides secure file storage, offline file queuing for mobile devices, and location-aware intervention tracking.
+Sprint 3 extends the core intervention management system with file management capabilities and geolocation tracking. This sprint enables technicians to capture and upload photographic evidence, attach documents, and track intervention location data. The implementation provides secure file storage and location-aware intervention tracking.
 
 The sprint delivers critical functionality for evidence management, allowing supervisors and clients to access comprehensive documentation of completed interventions. Geolocation tracking provides accountability and operational insights into technician activities and intervention execution locations.
 
@@ -44,22 +44,12 @@ The sprint delivers critical functionality for evidence management, allowing sup
   \item \textbf{So that} storage space is used efficiently and downloads are fast
   \item \textbf{Story Points:} 8
   \end{itemize}
-
-\item \textbf{US-S3-005: Offline File Queue}
-  \begin{itemize}
-  \item \textbf{As a} technician
-  \item \textbf{I want} to queue files for upload when offline
-  \item \textbf{So that} I can continue working without internet connectivity
-  \item \textbf{Story Points:} 8
-  \end{itemize}
 \end{enumerate}
-
 \subsection{Sprint Goals}
 
 \begin{enumerate}
 \item \textbf{File Management:} Implement secure file upload, storage, and retrieval with access control
 \item \textbf{Location Services:} Integrate GPS tracking with intervention data capture
-\item \textbf{Mobile Optimization:} Implement image compression and offline file queuing
 \item \textbf{Evidence Management:} Enable supervisors to manage and share intervention evidence
 \end{enumerate}
 
@@ -83,9 +73,7 @@ S3-3 & File download and sharing & 8 & Completed \\
 \hline
 S3-4 & Image compression & 8 & Completed \\
 \hline
-S3-5 & Offline file queue & 8 & Completed \\
-\hline
-\textbf{Total} & & \textbf{45} & \\
+\textbf{Total} & & \textbf{37} & \\
 \hline
 \end{tabularx}
 \end{table}
@@ -125,46 +113,17 @@ S3-5 & Offline file queue & 8 & Completed \\
 
 \section{Conception}
 
-\subsection{Class Diagram}
+\subsection{Use Diagram}
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[node distance=2cm, auto]
-  \node[umlclass] (request) at (0, 2) {
-    RapportRequest\\
-    --------------------\\
-    - id: Long\\
-    - reference: String\\
-    - files: Set<Files>
-  };
-
-  \node[umlclass] (files) at (3, 2) {
-    Files\\
-    --------------------\\
-    - id: Long\\
-    - filename: String\\
-    - fileType: String\\
-    - fileSize: Long\\
-    - filePath: String\\
-    - uploadDate: ZonedDateTime
-  };
-
-  \node[umlclass] (execDetails) at (0, -1) {
-    ExecutionDetails\\
-    --------------------\\
-    - id: Long\\
-    - latitude: Double\\
-    - longitude: Double\\
-    - startTime: ZonedDateTime\\
-    - endTime: ZonedDateTime
-  };
-
-  \draw[->] (request) -- (files) node[midway, above] {has};
-  \draw[->] (request) -- (execDetails) node[midway, left] {includes};
-
-\end{tikzpicture}
-\caption{Sprint 3 Class Diagram - Files and Execution Details}
-\label{fig:sprint3_class}
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{seqFile.png} 
+Sequence diagram illustrating the file upload and management process during Sprint 3.
+}}
+\caption{Sprint 3 File Upload and Management Sequence}
+\label{fig:sprint3_sequence_file}
 \end{figure}
 
 \section{Realization}
@@ -422,14 +381,13 @@ class FileUploadServiceTest {
 
 \section{Conclusion}
 
-Sprint 3 successfully extended the system with comprehensive file management and geolocation capabilities. Technicians can now capture and upload evidence files, with automatic image compression optimizing storage. The offline file queue ensures continuity of work even without internet connectivity, while geolocation tracking provides accountability and operational insights.
+Sprint 3 successfully extended the system with comprehensive file management and geolocation capabilities. Technicians can now capture and upload evidence files, with automatic image compression optimizing storage while geolocation tracking provides accountability and operational insights.
 
 Key achievements:
 \begin{itemize}
 \item Secure file upload and storage with access control
 \item Automatic image compression and optimization
 \item Mobile geolocation tracking integration
-\item Offline file queuing for offline-first functionality
 \item File download and sharing capabilities
 \end{itemize}
 

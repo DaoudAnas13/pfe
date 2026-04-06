@@ -99,10 +99,10 @@
 \contentsline {section}{\numberline {6.4}Functional Specification}{54}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Use Cases}{54}{subsection.6.4.1}%
 \contentsline {section}{\numberline {6.5}Conception}{55}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Class Diagram}{55}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}Realization}{56}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Backend Implementation}{56}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Mobile Implementation}{58}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.5.1}Use Diagram}{55}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}Realization}{55}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Backend Implementation}{55}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Mobile Implementation}{57}{subsection.6.6.2}%
 \contentsline {section}{\numberline {6.7}Tests and Validation}{59}{section.6.7}%
 \contentsline {subsubsection}{\numberline {6.7.0.1}File Upload Tests}{59}{subsubsection.6.7.0.1}%
 \contentsline {section}{\numberline {6.8}Conclusion}{60}{section.6.8}%

@@ -694,8 +694,13 @@ OUTPUT chapter6.aux
 INPUT .\chapter6.tex
 INPUT .\chapter6.tex
 INPUT chapter6.tex
-INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
+INPUT .\seqFile.png
+INPUT .\seqFile.png
+INPUT .\seqFile.png
+INPUT .\seqFile.png
+INPUT .\seqFile.png
+INPUT .\seqFile.png
+INPUT .\seqFile.png
 INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tctt1000.tfm
 INPUT .\chapter7.tex
@@ -704,6 +709,8 @@ OUTPUT chapter7.aux
 INPUT .\chapter7.tex
 INPUT .\chapter7.tex
 INPUT chapter7.tex
+INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\mahjoubo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT .\chapter8.tex
 INPUT .\chapter8.tex
 OUTPUT chapter8.aux
