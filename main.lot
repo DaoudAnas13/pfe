@@ -1,38 +1,33 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces Observed Weaknesses in the Existing Process}}{18}{table.caption.9}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces Observed Weaknesses in the Existing Process}}{16}{table.caption.9}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces SCRUM Roles and Practical Adaptation}}{20}{table.caption.11}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Technology Stack and Justification}}{21}{table.caption.12}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Logical Service Decomposition}}{23}{table.caption.14}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces SCRUM Roles and Practical Adaptation}}{18}{table.caption.11}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Technology Stack and Justification}}{19}{table.caption.12}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Logical Service Decomposition}}{21}{table.caption.14}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Actors and Operational Responsibilities}}{26}{table.caption.16}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces Role Codes and Access Scope}}{27}{table.caption.17}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Functional Requirements Catalogue (Extracted from PRD)}}{28}{table.caption.18}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Detailed API-Centric Functional Scope}}{29}{table.caption.19}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces Non-Functional Requirements and Acceptance Targets}}{29}{table.caption.20}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces Use Cases by Actor}}{30}{table.caption.21}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces Project Team Roles in SCRUM Execution}}{32}{table.caption.24}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces Product Backlog Overview by Sprint Theme}}{32}{table.caption.25}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Actors and Operational Responsibilities}}{24}{table.caption.16}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Role Codes and Access Scope}}{25}{table.caption.17}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Functional Requirements Catalogue (Extracted from PRD)}}{26}{table.caption.18}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Detailed API-Centric Functional Scope}}{27}{table.caption.19}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Non-Functional Requirements and Acceptance Targets}}{27}{table.caption.20}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Use Cases by Actor}}{28}{table.caption.21}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Project Team Roles in SCRUM Execution}}{30}{table.caption.24}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Product Backlog Overview by Sprint Theme}}{30}{table.caption.25}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Sprint 1 Backlog}}{34}{table.caption.26}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Sprint 1 Functional Specification Summary}}{35}{table.caption.27}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Sprint 1 API Summary}}{40}{table.caption.34}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Sprint 1 Backlog}}{32}{table.caption.26}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Sprint 1 Functional Specification Summary}}{33}{table.caption.27}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Sprint 1 API Summary}}{38}{table.caption.34}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Sprint 2 Backlog}}{42}{table.caption.35}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Sprint 2 Functional Specification Summary}}{43}{table.caption.36}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Sprint 2 API Summary}}{52}{table.caption.47}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Sprint 2 Backlog}}{40}{table.caption.35}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Sprint 2 Functional Specification Summary}}{41}{table.caption.36}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Sprint 2 API Summary}}{50}{table.caption.47}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Sprint 3 Backlog}}{55}{table.caption.48}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Sprint 3 API Summary}}{60}{table.caption.53}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Sprint 3 Backlog}}{53}{table.caption.48}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Sprint 3 API Summary}}{58}{table.caption.53}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Sprint 4 Backlog}}{62}{table.caption.54}%
-\contentsline {table}{\numberline {7.2}{\ignorespaces Sprint 4 API Summary}}{64}{table.caption.58}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Sprint 4 Backlog}}{60}{table.caption.54}%
+\contentsline {table}{\numberline {7.2}{\ignorespaces Sprint 4 API Summary}}{62}{table.caption.58}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Sprint 5 Backlog}}{67}{table.caption.59}%
-\contentsline {table}{\numberline {8.2}{\ignorespaces Key Monitored Metrics}}{74}{table.caption.61}%
-\contentsline {table}{\numberline {8.3}{\ignorespaces Project Statistics}}{79}{table.caption.63}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces Test Coverage Summary}}{99}{table.caption.69}%
-\contentsline {table}{\numberline {C.2}{\ignorespaces API Performance Benchmarks}}{99}{table.caption.70}%
+\contentsline {table}{\numberline {8.1}{\ignorespaces Sprint 5 Backlog}}{65}{table.caption.59}%
+\contentsline {table}{\numberline {8.2}{\ignorespaces Key Monitored Metrics}}{68}{table.caption.61}%
+\contentsline {table}{\numberline {8.3}{\ignorespaces Project Statistics}}{73}{table.caption.63}%
