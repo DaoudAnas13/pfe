@@ -98,26 +98,14 @@ The intervention lifecycle includes the following statuses with specific transit
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[
-    state/.style={rectangle, draw=black, fill=lightgray, minimum width=2cm, minimum height=0.8cm},
-    arrow/.style={->, thick}
-  ]
-  
-  \node[state] (planned) at (0, 0) {PLANNED};
-  \node[state] (executed) at (2.5, 0) {EXECUTED};
-  \node[state] (pending) at (5, 0) {PENDING\_VALIDATION};
-  \node[state] (approved) at (7.5, 0) {APPROVED};
-  \node[state] (archived) at (10, 0) {ARCHIVED};
-  \node[state] (rejected) at (5, -2) {REJECTED};
-
-  \draw[arrow] (planned) -- node[above, font=\small] {Execute} (executed);
-  \draw[arrow] (executed) -- node[above, font=\small] {Submit} (pending);
-  \draw[arrow] (pending) -- node[above, font=\small] {Approve} (approved);
-  \draw[arrow] (approved) -- node[above, font=\small] {Archive} (archived);
-  \draw[arrow] (pending) -- node[left, font=\small] {Reject} (rejected);
-  \draw[arrow] (rejected) -- node[below, font=\small] {Resubmit} (pending);
-  
-\end{tikzpicture}
+\IfFileExists{figures/sprint4_status_lifecycle.png}{
+  \includegraphics[width=\textwidth]{figures/sprint4_status_lifecycle.png}
+}{
+  \fbox{\parbox{0.95\textwidth}{\centering
+  Placeholder image: Sprint 4 status lifecycle\\
+  Expected file: figures/sprint4\_status\_lifecycle.png
+  }}
+}
 \caption{Intervention Status Lifecycle}
 \label{fig:sprint4_lifecycle}
 \end{figure}
@@ -128,396 +116,96 @@ The intervention lifecycle includes the following statuses with specific transit
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[node distance=2cm, auto]
-  \node[umlclass] (request) at (0, 2) {
-    RapportRequest\\
-    --------------------\\
-    - id: Long\\
-    - status: Status\\
-    - statusHistory: Set<StatusHistory>
-  };
-
-  \node[umlclass] (status) at (3, 2) {
-    StatusHistory\\
-    --------------------\\
-    - id: Long\\
-    - previousStatus: Status\\
-    - newStatus: Status\\
-    - changedAt: ZonedDateTime\\
-    - changedBy: User
-  };
-
-  \node[umlclass] (reject) at (3, -1) {
-    Reject\\
-    --------------------\\
-    - id: Long\\
-    - reason: String\\
-    - feedback: String\\
-    - rejectedAt: ZonedDateTime
-  };
-
-  \node[umlclass] (user) at (7, 2) {
-    User\\
-    --------------------\\
-    - id: Long\\
-    - login: String\\
-    - role: Role
-  };
-
-  \draw[->] (request) -- (status) node[midway, above] {has};
-  \draw[->] (status) -- (user) node[midway, above] {trackedBy};
-  \draw[->] (request) -- (reject) node[midway, right] {may have};
-
-\end{tikzpicture}
+\IfFileExists{figures/sprint4_class_diagram.png}{
+  \includegraphics[width=\textwidth]{figures/sprint4_class_diagram.png}
+}{
+  \fbox{\parbox{0.95\textwidth}{\centering
+  Placeholder image: Sprint 4 class diagram\\
+  Expected file: figures/sprint4\_class\_diagram.png
+  }}
+}
 \caption{Sprint 4 Class Diagram - Approval Workflow}
 \label{fig:sprint4_class}
 \end{figure}
 
 \section{Realization}
 
-\subsection{Backend Implementation}
-
-\textbf{Status Enumeration:}
-\begin{lstlisting}
-public enum RapportStatus {
-    PLANNED("Planifie"),
-    EXECUTED("Excute"),
-    PENDING_VALIDATION("En attente de validation"),
-    APPROVED("Approuve"),
-    REJECTED("Rejete"),
-    ARCHIVED("Archive");
-
-    private final String label;
-
-    RapportStatus(String label) {
-        this.label = label;
-    }
-}
-\end{lstlisting}
-
-\textbf{StatusHistory Entity:}
-\begin{lstlisting}
-@Entity
-@Table(name = "status_history")
-public class StatusHistory extends AbstractAuditingEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-
-    @Enumerated(EnumType.STRING)
-    private RapportStatus previousStatus;
-
-    @Enumerated(EnumType.STRING)
-    private RapportStatus newStatus;
-
-    @Column(name = "changed_at")
-    private ZonedDateTime changedAt;
-
-    @ManyToOne
-    private User changedBy;
-
-    @ManyToOne
-    private RapportRequest rapportRequest;
-}
-\end{lstlisting}
-
-\textbf{Rejection Entity:}
-\begin{lstlisting}
-@Entity
-@Table(name = "rejection")
-public class Rejection {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-
-    @Column(name = "reason")
-    private String reason;
-
-    @Column(name = "feedback", columnDefinition = "TEXT")
-    private String feedback;
-
-    @Column(name = "rejected_at")
-    private ZonedDateTime rejectedAt;
-
-    @ManyToOne
-    private User rejectedBy;
-
-    @OneToOne
-    private RapportRequest rapportRequest;
-}
-\end{lstlisting}
-
-\textbf{Approval Service:}
-\begin{lstlisting}
-@Service
-@Transactional
-public class ApprovalService {
-
-    private final RapportRequestRepository requestRepository;
-    private final StatusHistoryRepository historyRepository;
-    private final RejectionRepository rejectionRepository;
-    private final NotificationService notificationService;
-    private final CurrentUserService currentUser;
-
-    public RapportRequestDTO approveIntervention(Long requestId) {
-        RapportRequest request = requestRepository.findById(requestId)
-            .orElseThrow();
-
-        if (request.getStatus() != RapportStatus.PENDING_VALIDATION) {
-            throw new InvalidStatusTransitionException();
-        }
-
-        // Record status change
-        StatusHistory history = new StatusHistory();
-        history.setPreviousStatus(request.getStatus());
-        history.setNewStatus(RapportStatus.APPROVED);
-        history.setChangedAt(ZonedDateTime.now());
-        history.setChangedBy(currentUser.getCurrentUser());
-        history.setRapportRequest(request);
-        historyRepository.save(history);
-
-        // Update request
-        request.setStatus(RapportStatus.APPROVED);
-        request = requestRepository.save(request);
-
-        // Send notification
-        notificationService.notifyApproval(request);
-
-        return mapper.toDto(request);
-    }
-
-    public RapportRequestDTO rejectIntervention(
-        Long requestId,
-        String reason,
-        String feedback) {
-
-        RapportRequest request = requestRepository.findById(requestId)
-            .orElseThrow();
-
-        if (request.getStatus() != RapportStatus.PENDING_VALIDATION) {
-            throw new InvalidStatusTransitionException();
-        }
-
-        // Create rejection record
-        Rejection rejection = new Rejection();
-        rejection.setReason(reason);
-        rejection.setFeedback(feedback);
-        rejection.setRejectedAt(ZonedDateTime.now());
-        rejection.setRejectedBy(currentUser.getCurrentUser());
-        rejection.setRapportRequest(request);
-        rejectionRepository.save(rejection);
-
-        // Update status
-        StatusHistory history = new StatusHistory();
-        history.setPreviousStatus(request.getStatus());
-        history.setNewStatus(RapportStatus.REJECTED);
-        history.setChangedAt(ZonedDateTime.now());
-        history.setChangedBy(currentUser.getCurrentUser());
-        history.setRapportRequest(request);
-        historyRepository.save(history);
-
-        request.setStatus(RapportStatus.REJECTED);
-        request = requestRepository.save(request);
-
-        // Notify technician of rejection
-        notificationService.notifyRejection(request, feedback);
-
-        return mapper.toDto(request);
-    }
-}
-\end{lstlisting}
-
-\textbf{REST Controller:}
-\begin{lstlisting}
-@RestController
-@RequestMapping("/api/rapport-requests")
-public class ApprovalController {
-
-    private final ApprovalService approvalService;
-
-    @PostMapping("/{id}/approve")
-    @PreAuthorize("hasRole('SUPERVISOR')")
-    public ResponseEntity<RapportRequestDTO> approve(@PathVariable Long id) {
-        return ResponseEntity.ok(approvalService.approveIntervention(id));
-    }
-
-    @PostMapping("/{id}/reject")
-    @PreAuthorize("hasRole('SUPERVISOR')")
-    public ResponseEntity<RapportRequestDTO> reject(
-        @PathVariable Long id,
-        @RequestBody RejectionDTO rejectionDTO) {
-
-        return ResponseEntity.ok(approvalService.rejectIntervention(
-            id,
-            rejectionDTO.getReason(),
-            rejectionDTO.getFeedback()
-        ));
-    }
-
-    @GetMapping("/pending")
-    @PreAuthorize("hasRole('SUPERVISOR')")
-    public ResponseEntity<Page<RapportRequestDTO>> getPendingRequests(
-        @PageableDefault(size = 20) Pageable pageable) {
-
-        Page<RapportRequest> pending = requestRepository.findByStatus(
-            RapportStatus.PENDING_VALIDATION,
-            pageable);
-
-        return ResponseEntity.ok(pending.map(mapper::toDto));
-    }
-
-    @GetMapping("/{id}/history")
-    public ResponseEntity<List<StatusHistoryDTO>> getStatusHistory(@PathVariable Long id) {
-        List<StatusHistory> history = historyRepository.findByRapportRequestId(id);
-        return ResponseEntity.ok(history.stream()
-            .map(mapper::toDto)
-            .collect(Collectors.toList()));
-    }
-}
-\end{lstlisting}
-
-\subsection{Frontend Implementation}
-
-\textbf{Approval Component:}
-\begin{lstlisting}
-@Component({
-  selector: 'app-approval',
-  templateUrl: './approval.component.html',
-  styleUrls: ['./approval.component.css']
-})
-export class ApprovalComponent implements OnInit {
-  pendingInterventions: RapportRequest[] = [];
-  selectedIntervention: RapportRequest | null = null;
-  rejectionForm: FormGroup;
-  isLoading = false;
-
-  constructor(
-    private rapportService: RapportRequestService,
-    private formBuilder: FormBuilder,
-    private notificationService: NotificationService
-  ) {
-    this.rejectionForm = this.formBuilder.group({
-      reason: ['', Validators.required],
-      feedback: ['', Validators.required]
-    });
-  }
-
-  ngOnInit(): void {
-    this.loadPendingInterventions();
-  }
-
-  loadPendingInterventions(): void {
-    this.isLoading = true;
-    this.rapportService.getPendingApprovals()
-      .subscribe({
-        next: (data) => {
-          this.pendingInterventions = data;
-          this.isLoading = false;
-        },
-        error: () => this.isLoading = false
-      });
-  }
-
-  approve(intervention: RapportRequest): void {
-    if (!confirm('Are you sure you want to approve this intervention?')) {
-      return;
-    }
-
-    this.rapportService.approveIntervention(intervention.id)
-      .subscribe({
-        next: () => {
-          this.notificationService.showSuccess(
-            'Intervention approved successfully');
-          this.loadPendingInterventions();
-        },
-        error: (error) => {
-          this.notificationService.showError(
-            'Failed to approve intervention');
-        }
-      });
-  }
-
-  reject(intervention: RapportRequest): void {
-    if (this.rejectionForm.invalid) {
-      return;
-    }
-
-    this.rapportService.rejectIntervention(
-      intervention.id,
-      this.rejectionForm.value)
-      .subscribe({
-        next: () => {
-          this.notificationService.showSuccess(
-            'Intervention rejected');
-          this.rejectionForm.reset();
-          this.loadPendingInterventions();
-        },
-        error: () => {
-          this.notificationService.showError(
-            'Failed to reject intervention');
-        }
-      });
-  }
-
-  viewHistory(intervention: RapportRequest): void {
-    this.rapportService.getStatusHistory(intervention.id)
-      .subscribe((history) => {
-        // Display status history dialog
-      });
-  }
-}
-\end{lstlisting}
-
-\section{Tests and Validation}
-
-\subsubsection{Approval Workflow Tests}
-
-\begin{lstlisting}
-@SpringBootTest
-class ApprovalServiceTest {
-
-    @Autowired
-    private ApprovalService approvalService;
-
-    @MockBean
-    private NotificationService notificationService;
-
-    @Test
-    void approveIntervention() {
-        RapportRequest request = createPendingIntervention();
-
-        RapportRequestDTO result = approvalService
-            .approveIntervention(request.getId());
-
-        assertThat(result.getStatus()).isEqualTo(RapportStatus.APPROVED);
-        verify(notificationService).notifyApproval(any());
-    }
-
-    @Test
-    void rejectIntervention() {
-        RapportRequest request = createPendingIntervention();
-
-        RapportRequestDTO result = approvalService.rejectIntervention(
-            request.getId(),
-            "Missing information",
-            "Please provide additional photos");
-
-        assertThat(result.getStatus()).isEqualTo(RapportStatus.REJECTED);
-        verify(notificationService).notifyRejection(any(), anyString());
-    }
-
-    @Test
-    void validateStatusTransitions() {
-        RapportRequest request = createArchivedIntervention();
-
-        assertThatThrownBy(() -> 
-            approvalService.approveIntervention(request.getId()))
-            .isInstanceOf(InvalidStatusTransitionException.class);
-    }
-}
-\end{lstlisting}
+\subsection{Backend Implementation (Spring Boot)}
+
+Sprint 4 backend implementation focused on \textbf{approval workflow, status transitions, rejection feedback, and notifications}. Key deliverables include:
+
+\begin{itemize}
+    \item Status management using enumerations and audit history
+    \item Approval and rejection services with validation of allowed transitions
+    \item Rejection feedback persistence
+    \item Notifications triggered on status changes
+    \item Supervisor-only endpoints for approval, rejection, and pending requests
+\end{itemize}
+
+\subsection{Frontend Implementation (Angular)}
+
+The Angular frontend provides \textbf{supervisors with actionable dashboards and feedback mechanisms}:
+
+\begin{itemize}
+    \item Pending interventions list with pagination and filters
+    \item Approval and rejection actions for each intervention
+    \item Rejection form with reason and feedback validation
+    \item Status history viewer for transparency
+    \item Notifications to inform the supervisor of backend operation results
+\end{itemize}
+
+\subsection{Database Design (PostgreSQL)}
+
+Sprint 4 database extensions include:
+
+Here are the main tables and constraints used in Sprint 4:
+
+\begin{itemize}
+    \item \texttt{status\_history} table for full audit trail of interventions
+    \item \texttt{rejection} table for storing rejection reasons and feedback
+    \item Foreign key constraints linking \texttt{status\_history} and \texttt{rejection} to \texttt{rapport\_request} and \texttt{user}
+    \item Indexes on \texttt{rapport\_request\_id} for fast retrieval of status changes and pending interventions
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+Database: Approval workflow and status history schema
+}}
+\caption{Sprint 4 Database Schema}
+\label{fig:sprint4_db}
+\end{figure}
+
+\subsection{API and Endpoint Summary}
+
+\begin{table}[H]
+\centering
+\caption{Sprint 4 API Summary}
+\label{tab:sprint4_api_summary}
+\begin{tabularx}{\textwidth}{|l|l|X|}
+\hline
+\textbf{Method} & \textbf{Endpoint} & \textbf{Purpose} \\
+\hline
+POST & /api/rapport-requests/{id}/approve & Approve a pending intervention \\
+\hline
+POST & /api/rapport-requests/{id}/reject & Reject a pending intervention with reason/feedback \\
+\hline
+GET & /api/rapport-requests/pending & Retrieve all pending interventions for supervisor \\
+\hline
+GET & /api/rapport-requests/{id}/history & Retrieve status history for a specific intervention \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Testing and Validation}
+
+\begin{itemize}
+    \item Approval and rejection unit tests verify status transitions, exception handling, and notifications
+    \item Integration tests validate end-to-end workflow from intervention execution to supervisor approval
+    \item Frontend validation tests ensure rejection form fields are required and feedback is submitted correctly
+    \item Audit trail validation ensures \texttt{status\_history} accurately records all transitions
+\end{itemize}
 
 \section{Conclusion}
 
