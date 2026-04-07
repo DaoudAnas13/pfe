@@ -121,47 +121,12 @@ The Excel report generation process involves:
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[node distance=2cm, auto]
-  \node[umlclass] (request) at (0, 2) {
-    RapportRequest\\
-    --------------------\\
-    - id: Long\\
-    - reference: String\\
-    - status: Status
-  };
-
-  \node[umlclass] (config) at (3, 2) {
-    ConfigExport\\
-    --------------------\\
-    - id: Long\\
-    - name: String\\
-    - templatePath: String\\
-    - columns: Map<String, String>
-  };
-
-  \node[umlclass] (archive) at (0, -1) {
-    ArchiveLog\\
-    --------------------\\
-    - id: Long\\
-    - archivedDate: ZonedDateTime\\
-    - recordCount: Long\\
-    - status: String
-  };
-
-  \node[umlclass] (report) at (3, -1) {
-    MyReport\\
-    --------------------\\
-    - id: Long\\
-    - filename: String\\
-    - createdAt: ZonedDateTime\\
-    - downloadUrl: String
-  };
-
-  \draw[->] (config) -- node[midway, above] {defines} (request);
-  \draw[->] (report) -- node[midway, right] {generated from} (config);
-
-\end{tikzpicture}
-\caption{Sprint 5 Class Diagram - Reporting and Export}
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{class.png}
+Class diagram illustrating the Report Manager system
+}}
+\caption{Sprint 5 Class Diagram}
 \label{fig:sprint5_class}
 \end{figure}
 
@@ -176,11 +141,11 @@ Sprint 5 realization focused on two main goals:
 \item \textbf{System Optimization:} Ensure scalability, query efficiency, caching, and automated archival for high-volume intervention data.
 \end{itemize}
 
-The system leverages existing intervention and template domains while adding new services and configurations for reporting and optimization.
+% The system leverages existing intervention and template domains while adding new services and configurations for reporting and optimization.
 
 \subsection{Backend Implementation Logic}
 
-Backend services were designed to handle configurable, scalable, and reusable reporting operations:
+% Backend services were designed to handle configurable, scalable, and reusable reporting operations:
 
 \begin{itemize}
 \item \textbf{ConfigExport Service:} Manages report templates with dynamic column mapping and template activation.
@@ -195,7 +160,9 @@ Backend services were designed to handle configurable, scalable, and reusable re
   \begin{itemize}
     \item Implements automatic archival of old interventions.
     \item Integrates with external storage solutions for cold data.
-    \item Maintains an archive log for traceability.
+    \item A scheduled Maven-based cron job runs every day at 3:00 AM according to project specifications.
+    \item It retrieves and processes images of tickets exceeding the days to archive threshold in the \texttt{rapport\_template} table.
+    \item It stores archived images in a backup machine, ensuring consistent and reliable data preservation.
   \end{itemize}
 \item \textbf{REST Controllers:} Expose endpoints for:
   \begin{itemize}
@@ -217,11 +184,81 @@ Backend services were designed to handle configurable, scalable, and reusable re
 \subsection{Frontend and Integration Logic}
 
 \begin{itemize}
-\item Web application dynamically renders report generation options based on active templates.
+\item Dynamic Rendering of report generation options based on selected templates.
 \item Users select filters and templates without hard-coded column mapping.
-\item Report download is handled as a file stream to allow seamless interaction with large datasets.
+\item Report download is handled as a fileStream allowing seamless interaction with large datasets.
 \item Archival operations are invisible to users but logged for audit purposes.
 \end{itemize}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{outputDef.png}
+Example of a configurable Excel report template with dynamic column mapping
+}}
+\caption{Sprint 5 Output Definition}
+\label{fig:sprint5_output}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{gen.png}
+Example of a dynamically generated Excel report based on intervention data
+}}
+\caption{Sprint 5 Generated Report}
+\label{fig:sprint5_generated}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{conf1.png}
+Example of a configurable Excel activity report template with dynamic column mapping
+}}
+\caption{Sprint 5 Configurable Template}
+\label{fig:sprint5_configurable}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{conf2.png}
+File configuration for a custom Excel report template with dynamic column mapping
+}}
+\caption{Sprint 5 File Configuration}
+\label{fig:sprint5_file_config}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{conf3.png}
+List of Generated Activity Report Excel Files with timestamps and download links
+}}
+\caption{Sprint 5 List of Generated Reports Links}
+\label{fig:sprint5_generated}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{conf4.png}
+Example of a generated Excel report with dynamic data population and formatting
+}}
+\caption{Sprint 5 Generated Report}
+\label{fig:sprint5_generated}
+\end{figure}
 
 \subsection{Key Achievements}
 
@@ -258,6 +295,17 @@ Failed Requests & Error rates and error type distribution \\
 \hline
 \end{tabularx}
 \end{table}
+
+\begin{figure}[H]
+\centering
+\fbox{\parbox{1\textwidth}{
+\centering
+\includegraphics[width=1\textwidth]{mzt.png}
+System monitoring dashboard illustrating key performance metrics
+}}
+\caption{Sprint 5 Monitoring Dashboard}
+\label{fig:sprint5_monitoring}
+\end{figure}
 
 \section{Conclusion}
 

@@ -134,12 +134,12 @@
 \contentsline {subsection}{\numberline {8.4.2}Report Types}{73}{subsection.8.4.2}%
 \contentsline {section}{\numberline {8.5}Conception}{73}{section.8.5}%
 \contentsline {subsection}{\numberline {8.5.1}Class Diagram}{73}{subsection.8.5.1}%
-\contentsline {section}{\numberline {8.6}Realization}{73}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}Architecture Overview}{73}{subsection.8.6.1}%
+\contentsline {section}{\numberline {8.6}Realization}{74}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Architecture Overview}{74}{subsection.8.6.1}%
 \contentsline {subsection}{\numberline {8.6.2}Backend Implementation Logic}{74}{subsection.8.6.2}%
 \contentsline {subsection}{\numberline {8.6.3}Performance and Optimization Logic}{74}{subsection.8.6.3}%
 \contentsline {subsection}{\numberline {8.6.4}Frontend and Integration Logic}{75}{subsection.8.6.4}%
-\contentsline {subsection}{\numberline {8.6.5}Key Achievements}{75}{subsection.8.6.5}%
-\contentsline {section}{\numberline {8.7}System Metrics and Monitoring}{75}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Conclusion}{75}{section.8.8}%
-\contentsline {chapter}{General Conclusion}{77}{chapter*.68}%
+\contentsline {subsection}{\numberline {8.6.5}Key Achievements}{78}{subsection.8.6.5}%
+\contentsline {section}{\numberline {8.7}System Metrics and Monitoring}{79}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Conclusion}{80}{section.8.8}%
+\contentsline {chapter}{General Conclusion}{81}{chapter*.75}%
