@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  7 APR 2026 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.17)  7 APR 2026 13:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -888,7 +888,7 @@ Package hyperref Info: Link coloring ON on input line 93.
 
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=610, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=606, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf>
 Package pdftex.def Info: garde_organized.pdf  used on input line 94.
@@ -899,7 +899,7 @@ pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF 
 
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=612, page=1, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=608, page=1, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 1>
 Package pdftex.def Info: garde_organized.pdf , page1 used on input line 94.
@@ -926,7 +926,7 @@ Package pdftex.def Info: garde_organized.pdf , page1 used on input line 94.
  <./garde_organized.pdf>]
 
 pdfTeX warning: pdflatex (file ./garde_organized.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<garde_organized.pdf, id=645, page=2, 597.55246pt x 845.07724pt>
+<garde_organized.pdf, id=641, page=2, 597.55246pt x 845.07724pt>
 File: garde_organized.pdf Graphic file (type pdf)
 <use garde_organized.pdf, page 2>
 Package pdftex.def Info: garde_organized.pdf , page2 used on input line 94.
@@ -990,7 +990,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  (chapter1.tex
 Chapter 1.
-<logoAfricom.png, id=1011, 443.40656pt x 182.18062pt>
+<logoAfricom.png, id=1004, 443.40656pt x 182.18062pt>
 File: logoAfricom.png Graphic file (type png)
 <use logoAfricom.png>
 Package pdftex.def Info: logoAfricom.png  used on input line 33.
@@ -999,24 +999,24 @@ Package pdftex.def Info: logoAfricom.png  used on input line 33.
 
 
 ]
-<AfricomServicesReferences.png, id=1022, 459.21562pt x 271.0125pt>
+<AfricomServicesReferences.png, id=1015, 459.21562pt x 271.0125pt>
 File: AfricomServicesReferences.png Graphic file (type png)
 <use AfricomServicesReferences.png>
 Package pdftex.def Info: AfricomServicesReferences.png  used on input line 59.
 (pdftex.def)             Requested size: 409.71692pt x 241.81238pt.
  [13 <./logoAfricom.png>]
-<NorthStarLogo.png, id=1030, 435.87843pt x 135.50626pt>
+<NorthStarLogo.png, id=1023, 435.87843pt x 135.50626pt>
 File: NorthStarLogo.png Graphic file (type png)
 <use NorthStarLogo.png>
 Package pdftex.def Info: NorthStarLogo.png  used on input line 66.
 (pdftex.def)             Requested size: 273.14923pt x 84.91656pt.
-<MaxCellLogo.png, id=1031, 343.2825pt x 123.46124pt>
+<MaxCellLogo.png, id=1024, 343.2825pt x 123.46124pt>
 File: MaxCellLogo.png Graphic file (type png)
 <use MaxCellLogo.png>
 Package pdftex.def Info: MaxCellLogo.png  used on input line 73.
 (pdftex.def)             Requested size: 273.14923pt x 98.23785pt.
  [14 <./AfricomServicesReferences.png> <./NorthStarLogo.png> <./MaxCellLogo.png>]
-<structureAfricom.png, id=1039, 708.39656pt x 475.7775pt>
+<structureAfricom.png, id=1032, 708.39656pt x 475.7775pt>
 File: structureAfricom.png Graphic file (type png)
 <use structureAfricom.png>
 Package pdftex.def Info: structureAfricom.png  used on input line 111.
@@ -1037,7 +1037,7 @@ Underfull \hbox (badness 3612) in paragraph at lines 181--181
  []
 
 [16]
-<Transformation.png, id=1054, 1381.16pt x 770.88pt>
+<Transformation.png, id=1047, 1381.16pt x 770.88pt>
 File: Transformation.png Graphic file (type png)
 <use Transformation.png>
 Package pdftex.def Info: Transformation.png  used on input line 216.
@@ -1117,7 +1117,7 @@ Overfull \hbox (2.63458pt too wide) in paragraph at lines 95--96
 []\OT1/cmr/m/n/12 Database en-vi-ron-ment: Post-greSQL in-stance with ver-sioned schema evo-lu-tion scripts 
  []
 
-<PhyArch.png, id=1084, 1059.96pt x 529.22719pt>
+<PhyArch.png, id=1077, 1059.96pt x 529.22719pt>
 File: PhyArch.png Graphic file (type png)
 <use PhyArch.png>
 Package pdftex.def Info: PhyArch.png  used on input line 117.
@@ -1128,7 +1128,7 @@ Underfull \hbox (badness 4266) in paragraph at lines 158--158
  []
 
 [22]
-<LogicArch.png, id=1094, 1059.96pt x 529.22719pt>
+<LogicArch.png, id=1087, 1059.96pt x 529.22719pt>
 File: LogicArch.png Graphic file (type png)
 <use LogicArch.png>
 Package pdftex.def Info: LogicArch.png  used on input line 187.
@@ -1139,66 +1139,26 @@ Package pdftex.def Info: LogicArch.png  used on input line 187.
  (chapter3.tex
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/12 Execute in-ter-ven-tions,
+Underfull \hbox (badness 1838) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Execute in-ter-ven-tions, com-plete
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 at-tach files, cap-ture
+[]|\OT1/cmr/m/n/12 Review sub-mis-sions, ap-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 ge-olo-ca-tion, sub-mit
+Underfull \hbox (badness 4954) in paragraph at lines 31--31
+\OT1/cmr/m/n/12 re-jec-tion mo-tifs and feed-back,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/12 Review sub-mis-sions,
+Underfull \hbox (badness 2103) in paragraph at lines 31--31
+[]|\OT1/cmr/m/n/12 Create re-quests and tem-plates,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 mo-tifs and feed-back,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 track pend-ing val-i-da-
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 map-ping, gen-er-ate and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/12 Manage users and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 plat-form con-fig-u-ra-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
-[]|\OT1/cmr/m/n/12 Consume gen-er-ated
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 31--31
-\OT1/cmr/m/n/12 Ex-cel for-mat for con-
- []
-
-[24
-
-
-
-
-]
 Underfull \hbox (badness 4739) in paragraph at lines 52--52
 \OT1/cmr/m/n/12 fill template-based forms,
  []
@@ -1223,7 +1183,12 @@ Underfull \hbox (badness 2932) in paragraph at lines 52--52
 \OT1/cmr/m/n/12 gen-er-ate re-ports, mon-i-tor
  []
 
-[25]
+[24
+
+
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []|\OT1/cmr/m/n/12 Secure au-then-ti-ca-tion with
  []
@@ -1243,7 +1208,7 @@ Underfull \hbox (badness 2591) in paragraph at lines 93--93
 []|\OT1/cmr/m/n/12 Form-level val-i-da-tion for re-quired,
  []
 
-[26]
+[25]
 Underfull \hbox (badness 1163) in paragraph at lines 120--120
 []|\OT1/cmr/m/n/12 Dynamic form model gov-er-
  []
@@ -1298,39 +1263,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--120
 []|\OT1/cmtt/m/n/12 /api/admin/users\OT1/cmr/m/n/12 ,
  []
 
-[27]
+[26]
 Underfull \hbox (badness 2213) in paragraph at lines 153--153
 []|\OT1/cmr/m/n/12 API re-spon-sive-ness for op-er-a-
  []
 
-[28]
-<umlnew.png, id=1126, 434.62375pt x 924.45375pt>
+[27]
+<umlnew.png, id=1115, 434.62375pt x 924.45375pt>
 File: umlnew.png Graphic file (type png)
 <use umlnew.png>
 Package pdftex.def Info: umlnew.png  used on input line 184.
 (pdftex.def)             Requested size: 182.09486pt x 387.32283pt.
-<glob.png, id=1127, 6227.265pt x 8222.72pt>
+<glob.png, id=1116, 6227.265pt x 8222.72pt>
 File: glob.png Graphic file (type png)
 <use glob.png>
 Package pdftex.def Info: glob.png  used on input line 196.
 (pdftex.def)             Requested size: 432.48051pt x 571.0069pt.
- [29 <./umlnew.png>] [30 <./glob.png>]
+ [28 <./umlnew.png>] [29 <./glob.png>]
 Underfull \hbox (badness 1496) in paragraph at lines 244--244
 []|\OT1/cmr/m/n/12 Status life-cy-cle gov-er-nance, re-jec-
  []
 
-) [31]
+) [30]
 \openout2 = `chapter4.aux'.
 
  (chapter4.tex
 Chapter 4.
-[32
+[31
 
 
 
 
-] [33]
-<seq.png, id=1162, 1059.96pt x 520.94624pt>
+] [32]
+<seq.png, id=1151, 1059.96pt x 520.94624pt>
 File: seq.png Graphic file (type png)
 <use seq.png>
 Package pdftex.def Info: seq.png  used on input line 125.
@@ -1340,67 +1305,67 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 125--126
  [][] 
  []
 
-<seq1.png, id=1163, 3505.095pt x 2394.69656pt>
+<seq1.png, id=1152, 3505.095pt x 2394.69656pt>
 File: seq1.png Graphic file (type png)
 <use seq1.png>
 Package pdftex.def Info: seq1.png  used on input line 138.
 (pdftex.def)             Requested size: 432.48051pt x 295.46309pt.
-[34 <./seq.png>] [35 <./seq1.png>]
-<loginWeb.png, id=1178, 953.81343pt x 347.79938pt>
+[33 <./seq.png>] [34 <./seq1.png>]
+<loginWeb.png, id=1167, 953.81343pt x 347.79938pt>
 File: loginWeb.png Graphic file (type png)
 <use loginWeb.png>
 Package pdftex.def Info: loginWeb.png  used on input line 183.
 (pdftex.def)             Requested size: 432.48051pt x 157.70233pt.
-<loginWeb2.png, id=1179, 1928.20375pt x 1940.24875pt>
+<loginWeb2.png, id=1168, 1928.20375pt x 1940.24875pt>
 File: loginWeb2.png Graphic file (type png)
 <use loginWeb2.png>
 Package pdftex.def Info: loginWeb2.png  used on input line 194.
 (pdftex.def)             Requested size: 432.48051pt x 435.17528pt.
- [36 <./loginWeb.png>]
-<mob2-imageonline.co-merged.png, id=1185, 1084.05pt x 1204.5pt>
+ [35 <./loginWeb.png>]
+<mob2-imageonline.co-merged.png, id=1174, 1084.05pt x 1204.5pt>
 File: mob2-imageonline.co-merged.png Graphic file (type png)
 <use mob2-imageonline.co-merged.png>
 Package pdftex.def Info: mob2-imageonline.co-merged.png  used on input line 216.
 (pdftex.def)             Requested size: 432.48051pt x 480.5233pt.
- [37 <./loginWeb2.png>]
-<db.png, id=1192, 1540.75626pt x 963.6pt>
+ [36 <./loginWeb2.png>]
+<db.png, id=1180, 1540.75626pt x 963.6pt>
 File: db.png Graphic file (type png)
 <use db.png>
 Package pdftex.def Info: db.png  used on input line 238.
 (pdftex.def)             Requested size: 432.48051pt x 270.4678pt.
- [38 <./mob2-imageonline.co-merged.png>]
+ [37 <./mob2-imageonline.co-merged.png>]
 Underfull \hbox (badness 2726) in paragraph at lines 263--263
 []|\OT1/cmr/m/n/12 Update user pass-word with pol-icy
  []
 
-) [39 <./db.png>]
+) [38 <./db.png>]
 \openout2 = `chapter5.aux'.
 
  (chapter5.tex
 Chapter 5.
-[40
+[39
 
 
 
 
-] [41]
+] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 126--126
 []|\OT1/cmr/m/n/12 Submission blocked when con-
  []
 
-<temp.png, id=1224, 1059.96pt x 542.77782pt>
+<temp.png, id=1213, 1059.96pt x 542.77782pt>
 File: temp.png Graphic file (type png)
 <use temp.png>
 Package pdftex.def Info: temp.png  used on input line 139.
 (pdftex.def)             Requested size: 409.71692pt x 209.80246pt.
-[42]
-<umlTemp.png, id=1237, 1413.28pt x 770.88pt>
+[41]
+<umlTemp.png, id=1226, 1413.28pt x 770.88pt>
 File: umlTemp.png Graphic file (type png)
 <use umlTemp.png>
 Package pdftex.def Info: umlTemp.png  used on input line 152.
 (pdftex.def)             Requested size: 409.71692pt x 223.4789pt.
- [43 <./temp.png> <./umlTemp.png>]
-<rqDataGrid.png, id=1245, 1928.20375pt x 2420.04124pt>
+ [42 <./temp.png> <./umlTemp.png>]
+<rqDataGrid.png, id=1233, 1928.20375pt x 2420.04124pt>
 File: rqDataGrid.png Graphic file (type png)
 <use rqDataGrid.png>
 Package pdftex.def Info: rqDataGrid.png  used on input line 196.
@@ -1410,8 +1375,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
-[44]
-<det.png, id=1250, 1928.20375pt x 1698.345pt>
+[43]
+<det.png, id=1239, 1928.20375pt x 1698.345pt>
 File: det.png Graphic file (type png)
 <use det.png>
 Package pdftex.def Info: det.png  used on input line 207.
@@ -1421,17 +1386,17 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 207--208
  [][] 
  []
 
-[45 <./rqDataGrid.png>]
-<details.png, id=1256, 1928.20375pt x 3114.63625pt>
+[44 <./rqDataGrid.png>]
+<details.png, id=1245, 1928.20375pt x 3114.63625pt>
 File: details.png Graphic file (type png)
 <use details.png>
 Package pdftex.def Info: details.png  used on input line 218.
 (pdftex.def)             Requested size: 409.71692pt x 661.79205pt.
- [46 <./det.png>]
+ [45 <./det.png>]
 Overfull \vbox (19.30894pt too high) has occurred while \output is active []
 
- [47 <./details.png>]
-<form.png, id=1267, 1928.20375pt x 1045.9075pt>
+ [46 <./details.png>]
+<form.png, id=1256, 1928.20375pt x 1045.9075pt>
 File: form.png Graphic file (type png)
 <use form.png>
 Package pdftex.def Info: form.png  used on input line 229.
@@ -1441,7 +1406,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 229--230
  [][] 
  []
 
-<editStatus.png, id=1268, 1928.20375pt x 994.71625pt>
+<editStatus.png, id=1257, 1928.20375pt x 994.71625pt>
 File: editStatus.png Graphic file (type png)
 <use editStatus.png>
 Package pdftex.def Info: editStatus.png  used on input line 240.
@@ -1451,27 +1416,27 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 240--241
  [][] 
  []
 
-<templateD.png, id=1269, 1928.20375pt x 3115.64pt>
+<templateD.png, id=1258, 1928.20375pt x 3115.64pt>
 File: templateD.png Graphic file (type png)
 <use templateD.png>
 Package pdftex.def Info: templateD.png  used on input line 251.
 (pdftex.def)             Requested size: 432.48051pt x 698.8019pt.
-[48 <./form.png> <./editStatus.png>]
+[47 <./form.png> <./editStatus.png>]
 Overfull \vbox (44.1521pt too high) has occurred while \output is active []
 
- [49 <./templateD.png>]
-<suivi.png, id=1282, 1084.05pt x 1204.5pt>
+ [48 <./templateD.png>]
+<suivi.png, id=1270, 1084.05pt x 1204.5pt>
 File: suivi.png Graphic file (type png)
 <use suivi.png>
 Package pdftex.def Info: suivi.png  used on input line 273.
 (pdftex.def)             Requested size: 432.48051pt x 480.5233pt.
-<ticket.png, id=1283, 1084.05pt x 1204.5pt>
+<ticket.png, id=1271, 1084.05pt x 1204.5pt>
 File: ticket.png Graphic file (type png)
 <use ticket.png>
 Package pdftex.def Info: ticket.png  used on input line 284.
 (pdftex.def)             Requested size: 432.48051pt x 480.5233pt.
- [50 <./suivi.png>]
-<dbReq.png, id=1289, 8222.72pt x 6217.2275pt>
+ [49 <./suivi.png>]
+<dbReq.png, id=1278, 8222.72pt x 6217.2275pt>
 File: dbReq.png Graphic file (type png)
 <use dbReq.png>
 Package pdftex.def Info: dbReq.png  used on input line 306.
@@ -1481,18 +1446,18 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
-[51 <./ticket.png>]) [52 <./dbReq.png>] [53]
+[50 <./ticket.png>]) [51 <./dbReq.png>]
 \openout2 = `chapter6.aux'.
 
  (chapter6.tex
 Chapter 6.
-[54
+[52
 
 
 
 
-] [55]
-<seqFile.png, id=1326, 1413.28pt x 770.88pt>
+] [53]
+<seqFile.png, id=1310, 1413.28pt x 770.88pt>
 File: seqFile.png Graphic file (type png)
 <use seqFile.png>
 Package pdftex.def Info: seqFile.png  used on input line 124.
@@ -1502,8 +1467,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 124--125
  [][] 
  []
 
-[56 <./seqFile.png>]
-<fnial.png, id=1339, 843.15pt x 805.50937pt>
+[54 <./seqFile.png>]
+<fnial.png, id=1323, 843.15pt x 805.50937pt>
 File: fnial.png Graphic file (type png)
 <use fnial.png>
 Package pdftex.def Info: fnial.png  used on input line 174.
@@ -1513,8 +1478,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
-[57]
-<filesFinal.png, id=1344, 1626.075pt x 1204.5pt>
+[55]
+<filesFinal.png, id=1329, 1626.075pt x 1204.5pt>
 File: filesFinal.png Graphic file (type png)
 <use filesFinal.png>
 Package pdftex.def Info: filesFinal.png  used on input line 199.
@@ -1524,24 +1489,24 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
-[58 <./fnial.png>]
-<dbFiles.png, id=1350, 1413.28pt x 770.88pt>
+[56 <./fnial.png>]
+<dbFiles.png, id=1335, 1413.28pt x 770.88pt>
 File: dbFiles.png Graphic file (type png)
 <use dbFiles.png>
 Package pdftex.def Info: dbFiles.png  used on input line 223.
 (pdftex.def)             Requested size: 364.19667pt x 198.6479pt.
- [59 <./filesFinal.png>]) [60 <./dbFiles.png>]
+ [57 <./filesFinal.png>]) [58 <./dbFiles.png>]
 \openout2 = `chapter7.aux'.
 
  (chapter7.tex
 Chapter 7.
-[61
+[59
 
 
 
 
 ]
-<trans.png, id=1369, 1381.16pt x 770.88pt>
+<trans.png, id=1353, 1381.16pt x 770.88pt>
 File: trans.png Graphic file (type png)
 <use trans.png>
 Package pdftex.def Info: trans.png  used on input line 105.
@@ -1551,8 +1516,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 105--106
  [][] 
  []
 
-[62]
-<flow.png, id=1380, 720.44156pt x 329.73187pt>
+[60]
+<flow.png, id=1364, 720.44156pt x 329.73187pt>
 File: flow.png Graphic file (type png)
 <use flow.png>
 Package pdftex.def Info: flow.png  used on input line 142.
@@ -1562,8 +1527,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 142--143
  [][] 
  []
 
-[63 <./trans.png>]
-<rejects.png, id=1386, 1928.20375pt x 1784.6675pt>
+[61 <./trans.png>]
+<rejects.png, id=1371, 1928.20375pt x 1784.6675pt>
 File: rejects.png Graphic file (type png)
 <use rejects.png>
 Package pdftex.def Info: rejects.png  used on input line 153.
@@ -1573,8 +1538,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
-[64 <./flow.png (PNG copy)>]
-<rej.png, id=1391, 1242.6425pt x 904.37875pt>
+[62 <./flow.png (PNG copy)>]
+<rej.png, id=1376, 1242.6425pt x 904.37875pt>
 File: rej.png Graphic file (type png)
 <use rej.png>
 Package pdftex.def Info: rej.png  used on input line 164.
@@ -1584,8 +1549,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 164--165
  [][] 
  []
 
-[65 <./rejects.png>]
-<notif.png, id=1397, 1431.09656pt x 714.41907pt>
+[63 <./rejects.png>]
+<notif.png, id=1382, 1431.09656pt x 714.41907pt>
 File: notif.png Graphic file (type png)
 <use notif.png>
 Package pdftex.def Info: notif.png  used on input line 175.
@@ -1595,7 +1560,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
-<send.png, id=1398, 745.28438pt x 700.86844pt>
+<send.png, id=1383, 745.28438pt x 700.86844pt>
 File: send.png Graphic file (type png)
 <use send.png>
 Package pdftex.def Info: send.png  used on input line 186.
@@ -1605,8 +1570,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
-[66 <./rej.png> <./notif.png>]
-<sendMob.png, id=1405, 1084.05pt x 1204.5pt>
+[64 <./rej.png> <./notif.png>]
+<sendMob.png, id=1390, 1084.05pt x 1204.5pt>
 File: sendMob.png Graphic file (type png)
 <use sendMob.png>
 Package pdftex.def Info: sendMob.png  used on input line 208.
@@ -1616,8 +1581,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 208--209
  [][] 
  []
 
-[67 <./send.png>]
-<notifMob.png, id=1412, 1626.075pt x 1204.5pt>
+[65 <./send.png>]
+<notifMob.png, id=1396, 1626.075pt x 1204.5pt>
 File: notifMob.png Graphic file (type png)
 <use notifMob.png>
 Package pdftex.def Info: notifMob.png  used on input line 219.
@@ -1627,12 +1592,12 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 219--220
  [][] 
  []
 
-[68 <./sendMob.png>]
+[66 <./sendMob.png>]
 Overfull \hbox (1.93524pt too wide) in paragraph at lines 233--234
 []\OT1/cmr/m/n/12 Foreign key con-straints link-ing \OT1/cmtt/m/n/12 status[]history \OT1/cmr/m/n/12 and \OT1/cmtt/m/n/12 rejection \OT1/cmr/m/n/12 to \OT1/cmtt/m/n/12 rapport[]request
  []
 
-<dbR.png, id=1418, 682.80093pt x 578.16pt>
+<dbR.png, id=1402, 682.80093pt x 578.16pt>
 File: dbR.png Graphic file (type png)
 <use dbR.png>
 Package pdftex.def Info: dbR.png  used on input line 243.
@@ -1642,18 +1607,18 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 243--244
  [][] 
  []
 
-[69 <./notifMob.png>] [70 <./dbR.png>]) [71]
+[67 <./notifMob.png>] [68 <./dbR.png>]) [69]
 \openout2 = `chapter8.aux'.
 
  (chapter8.tex
 Chapter 8.
-[72
+[70
 
 
 
 
-] [73]
-<class.png, id=1453, 1413.28pt x 770.88pt>
+] [71]
+<class.png, id=1437, 1413.28pt x 770.88pt>
 File: class.png Graphic file (type png)
 <use class.png>
 Package pdftex.def Info: class.png  used on input line 128.
@@ -1663,8 +1628,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 128--129
  [][] 
  []
 
-[74 <./class.png>] [75]
-<outputDef.png, id=1468, 1928.20375pt x 1586.92876pt>
+[72 <./class.png>] [73]
+<outputDef.png, id=1453, 1928.20375pt x 1586.92876pt>
 File: outputDef.png Graphic file (type png)
 <use outputDef.png>
 Package pdftex.def Info: outputDef.png  used on input line 199.
@@ -1674,7 +1639,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
-<gen.png, id=1469, 1263.72125pt x 875.27pt>
+<gen.png, id=1454, 1263.72125pt x 875.27pt>
 File: gen.png Graphic file (type png)
 <use gen.png>
 Package pdftex.def Info: gen.png  used on input line 210.
@@ -1684,8 +1649,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 210--211
  [][] 
  []
 
-[76 <./outputDef.png>]
-<conf1.png, id=1475, 1446.15282pt x 1122.44344pt>
+[74 <./outputDef.png>]
+<conf1.png, id=1460, 1446.15282pt x 1122.44344pt>
 File: conf1.png Graphic file (type png)
 <use conf1.png>
 Package pdftex.def Info: conf1.png  used on input line 222.
@@ -1695,8 +1660,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 222--223
  [][] 
  []
 
-[77 <./gen.png>]
-<conf2.png, id=1481, 1928.20375pt x 954.56625pt>
+[75 <./gen.png>]
+<conf2.png, id=1466, 1928.20375pt x 954.56625pt>
 File: conf2.png Graphic file (type png)
 <use conf2.png>
 Package pdftex.def Info: conf2.png  used on input line 234.
@@ -1706,7 +1671,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 234--235
  [][] 
  []
 
-<conf3.png, id=1482, 1928.20375pt x 1261.71375pt>
+<conf3.png, id=1467, 1928.20375pt x 1261.71375pt>
 File: conf3.png Graphic file (type png)
 <use conf3.png>
 Package pdftex.def Info: conf3.png  used on input line 246.
@@ -1716,8 +1681,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-[78 <./conf1.png> <./conf2.png>]
-<conf4.png, id=1489, 1424.32124pt x 633.11531pt>
+[76 <./conf1.png> <./conf2.png>]
+<conf4.png, id=1474, 1424.32124pt x 633.11531pt>
 File: conf4.png Graphic file (type png)
 <use conf4.png>
 Package pdftex.def Info: conf4.png  used on input line 258.
@@ -1727,8 +1692,8 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
-[79 <./conf3.png> <./conf4.png (PNG copy)>]
-<mzt.png, id=1496, 1446.15282pt x 1093.08376pt>
+[77 <./conf3.png> <./conf4.png (PNG copy)>]
+<mzt.png, id=1480, 1446.15282pt x 1093.08376pt>
 File: mzt.png Graphic file (type png)
 <use mzt.png>
 Package pdftex.def Info: mzt.png  used on input line 305.
@@ -1738,7 +1703,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 305--306
  [][] 
  []
 
-[80 <./mzt.png>]) [81]
+[78 <./mzt.png>]) [79]
 \openout2 = `conclusion.aux'.
 
  (conclusion.tex
@@ -1751,12 +1716,51 @@ Overfull \hbox (7.4912pt too wide) in paragraph at lines 25--26
 []\OT1/cmr/bx/n/12 Business An-a-lyt-ics: \OT1/cmr/m/n/12 Ex-cel re-port gen-er-a-tion, cus-tom tem-plates, in-tel-li-gent archival,
  []
 
-[82
+[80
 
 
 
 
-] [83] [84] [85]) [86] (main.aux (ded.aux) (rem.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux) (chapter7.aux) (chapter8.aux) (conclusion.aux))
+] [81] [82] [83]) [84]
+
+pdfTeX warning: pdflatex (file ./dos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<dos.pdf, id=1541, 597.55246pt x 845.07724pt>
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf>
+Package pdftex.def Info: dos.pdf  used on input line 146.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+
+
+pdfTeX warning: pdflatex (file ./dos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file ./dos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<dos.pdf, id=1543, page=1, 597.55246pt x 845.07724pt>
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf, page 1>
+Package pdftex.def Info: dos.pdf , page1 used on input line 146.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf, page 1>
+Package pdftex.def Info: dos.pdf , page1 used on input line 146.
+(pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf, page 1>
+Package pdftex.def Info: dos.pdf , page1 used on input line 146.
+(pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf, page 1>
+Package pdftex.def Info: dos.pdf , page1 used on input line 146.
+(pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
+File: dos.pdf Graphic file (type pdf)
+<use dos.pdf, page 1>
+Package pdftex.def Info: dos.pdf , page1 used on input line 146.
+(pdftex.def)             Requested size: 597.57834pt x 845.11386pt.
+[85
+
+
+
+ <./dos.pdf>] (main.aux (ded.aux) (rem.aux) (chapter1.aux) (chapter2.aux) (chapter3.aux) (chapter4.aux) (chapter5.aux) (chapter6.aux) (chapter7.aux) (chapter8.aux) (conclusion.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
@@ -1766,20 +1770,20 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 228DC66CD55C160795069C97155163BE;24786.
+(rerunfilecheck)             Checksum: 5EF8BB36CA0AF0C28CCE6FFB22B17A17;24594.
  ) 
 Here is how much of TeX's memory you used:
- 40155 strings out of 467870
- 913112 string characters out of 5416903
+ 40161 strings out of 467870
+ 913228 string characters out of 5416903
  1421278 words of memory out of 5000000
- 67931 multiletter control sequences out of 15000+600000
+ 67940 multiletter control sequences out of 15000+600000
  635690 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,104p,743b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\mahjoubo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/mahjoubo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (86 pages, 15177928 bytes).
+Output written on main.pdf (85 pages, 15384803 bytes).
 PDF statistics:
- 1675 PDF objects out of 1728 (max. 8388607)
- 440 named destinations out of 1000 (max. 500000)
- 1529 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1676 PDF objects out of 1728 (max. 8388607)
+ 437 named destinations out of 1000 (max. 500000)
+ 1536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
