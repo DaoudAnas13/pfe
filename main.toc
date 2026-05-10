@@ -117,28 +117,28 @@
 \contentsline {section}{\numberline {7.5}Realization}{61}{section.7.5}%
 \contentsline {subsection}{\numberline {7.5.1}Backend Implementation}{61}{subsection.7.5.1}%
 \contentsline {subsection}{\numberline {7.5.2}Frontend Implementation}{61}{subsection.7.5.2}%
-\contentsline {subsection}{\numberline {7.5.3}Mobile Implementation}{65}{subsection.7.5.3}%
-\contentsline {subsection}{\numberline {7.5.4}Database Design (PostgreSQL)}{67}{subsection.7.5.4}%
-\contentsline {subsection}{\numberline {7.5.5}API and Endpoint Summary}{68}{subsection.7.5.5}%
-\contentsline {subsection}{\numberline {7.5.6}Testing and Validation}{68}{subsection.7.5.6}%
-\contentsline {section}{\numberline {7.6}Conclusion}{69}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Sprint 5: Excel Report Generation and System Optimization}{70}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Introduction}{70}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Sprint Preview and Objectives}{70}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}User Stories}{70}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Sprint Goals}{71}{subsection.8.2.2}%
-\contentsline {section}{\numberline {8.3}Sprint Backlog}{71}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Functional Specification}{71}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Report Generation Process}{71}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Report Types}{72}{subsection.8.4.2}%
-\contentsline {section}{\numberline {8.5}Conception}{72}{section.8.5}%
-\contentsline {subsection}{\numberline {8.5.1}Class Diagram}{72}{subsection.8.5.1}%
-\contentsline {section}{\numberline {8.6}Realization}{73}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}Architecture Overview}{73}{subsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.6.2}Backend Implementation Logic}{73}{subsection.8.6.2}%
-\contentsline {subsection}{\numberline {8.6.3}Performance and Optimization Logic}{73}{subsection.8.6.3}%
-\contentsline {subsection}{\numberline {8.6.4}Frontend and Integration Logic}{74}{subsection.8.6.4}%
-\contentsline {subsection}{\numberline {8.6.5}Key Achievements}{77}{subsection.8.6.5}%
-\contentsline {section}{\numberline {8.7}System Metrics and Monitoring}{78}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Conclusion}{79}{section.8.8}%
-\contentsline {chapter}{General Conclusion}{80}{chapter*.75}%
+\contentsline {subsection}{\numberline {7.5.3}Mobile Implementation}{64}{subsection.7.5.3}%
+\contentsline {subsection}{\numberline {7.5.4}Database Design (PostgreSQL)}{66}{subsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.5.5}API and Endpoint Summary}{67}{subsection.7.5.5}%
+\contentsline {subsection}{\numberline {7.5.6}Testing and Validation}{67}{subsection.7.5.6}%
+\contentsline {section}{\numberline {7.6}Conclusion}{68}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Sprint 5: Excel Report Generation and System Optimization}{69}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Introduction}{69}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Sprint Preview and Objectives}{69}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}User Stories}{69}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Sprint Goals}{70}{subsection.8.2.2}%
+\contentsline {section}{\numberline {8.3}Sprint Backlog}{70}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Functional Specification}{70}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Report Generation Process}{70}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Report Types}{71}{subsection.8.4.2}%
+\contentsline {section}{\numberline {8.5}Conception}{71}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Class Diagram}{71}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Realization}{72}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Architecture Overview}{72}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Backend Implementation Logic}{72}{subsection.8.6.2}%
+\contentsline {subsection}{\numberline {8.6.3}Performance and Optimization Logic}{72}{subsection.8.6.3}%
+\contentsline {subsection}{\numberline {8.6.4}Frontend and Integration Logic}{73}{subsection.8.6.4}%
+\contentsline {subsection}{\numberline {8.6.5}Key Achievements}{76}{subsection.8.6.5}%
+\contentsline {section}{\numberline {8.7}System Metrics and Monitoring}{77}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Conclusion}{78}{section.8.8}%
+\contentsline {chapter}{General Conclusion}{79}{chapter*.75}%
